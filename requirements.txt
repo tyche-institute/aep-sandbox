@@ -1,0 +1,3 @@
+# The only runtime dependency: Ed25519 signatures for the mandate/AEP layer.
+# (Layer 1, the unsigned ledger, is pure standard library.)
+cryptography>=42

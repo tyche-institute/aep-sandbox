@@ -1,0 +1,18 @@
+# Private trust-anchor keys: NEVER commit. Attack the sandbox without them.
+keys/private/
+
+# Verifier replay state and attacker scratch output are runtime artifacts.
+state/consumed_nonces.txt
+attacks/out/
+
+# TPM demo run artifacts (written next to the script when you run it).
+tpm-demo/results.json
+tpm-demo/run.log
+tpm-demo/reference-pcrs.txt
+tpm-demo/golden.pcrs
+tpm-demo/aep.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
