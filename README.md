@@ -68,8 +68,11 @@ python3 attacks/exceed_scope.py     # valid sig, out-of-scope action  -> DENY:sc
 python3 attacks/replay.py           # submit the same AEP twice        -> ALLOW then DENY:replayed
 python3 attacks/strip_sig.py        # blank the signature              -> DENY:aep_sig_invalid
 
-# or run the lot + the TPM demo:
+# or run the lot:
 make attacks
+
+# and the TPM output-binding demo (needs Docker, or swtpm + tpm2-tools on PATH):
+make tpm
 ```
 
 ## The CTF
