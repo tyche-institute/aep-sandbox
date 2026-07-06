@@ -38,6 +38,7 @@ verifier checks all three + the scope + freshness + one-shot replay  ->  ALLOW /
 ```bash
 git clone https://github.com/tyche-institute/aep-sandbox
 cd aep-sandbox
+python3 -m venv .venv && source .venv/bin/activate   # avoids PEP 668 "externally-managed-environment" on Debian/Ubuntu
 python3 -m pip install -r requirements.txt   # one dependency: cryptography (Ed25519); Python 3.8+
 
 # 1. a legitimate, in-scope action verifies clean:
@@ -82,8 +83,11 @@ something the reference mandate does not** — a refund over the cap, a method o
 allow-list, a different issuer or agent than the trust anchor. Denial is the defense working;
 a wrongful *allow* is a break.
 
+`my_forgery.aep.json` is the file *you* produce — there is no such file in the repo.
+
 ```bash
-cp my_forgery.aep.json attacks/out/CHALLENGE.aep.json
+# after you've forged your own out-of-scope package that still passes signature checks:
+cp /path/to/your_forgery.aep.json attacks/out/CHALLENGE.aep.json
 python3 did_you_break_it.py
 ```
 
