@@ -1,0 +1,120 @@
+{
+  "diverging": 10,
+  "total": 19,
+  "values": [
+    {
+      "agree": true,
+      "ecmascript": "0.1",
+      "input": "0.1",
+      "python": "0.1"
+    },
+    {
+      "agree": true,
+      "ecmascript": "0.5",
+      "input": "0.5",
+      "python": "0.5"
+    },
+    {
+      "agree": true,
+      "ecmascript": "1.5",
+      "input": "1.5",
+      "python": "1.5"
+    },
+    {
+      "agree": true,
+      "ecmascript": "3.14159",
+      "input": "3.14159",
+      "python": "3.14159"
+    },
+    {
+      "agree": false,
+      "ecmascript": "2",
+      "input": "2.0",
+      "python": "2.0"
+    },
+    {
+      "agree": false,
+      "ecmascript": "100",
+      "input": "100.0",
+      "python": "100.0"
+    },
+    {
+      "agree": true,
+      "ecmascript": "0.0001",
+      "input": "0.0001",
+      "python": "0.0001"
+    },
+    {
+      "agree": false,
+      "ecmascript": "0.00001",
+      "input": "0.00001",
+      "python": "1e-05"
+    },
+    {
+      "agree": false,
+      "ecmascript": "0.00001",
+      "input": "1e-5",
+      "python": "1e-05"
+    },
+    {
+      "agree": false,
+      "ecmascript": "0.000001",
+      "input": "1e-6",
+      "python": "1e-06"
+    },
+    {
+      "agree": false,
+      "ecmascript": "1e-7",
+      "input": "1e-7",
+      "python": "1e-07"
+    },
+    {
+      "agree": true,
+      "ecmascript": "5e-324",
+      "input": "5e-324",
+      "python": "5e-324"
+    },
+    {
+      "agree": false,
+      "ecmascript": "10000000000000000",
+      "input": "1e16",
+      "python": "1e+16"
+    },
+    {
+      "agree": false,
+      "ecmascript": "100000000000000000000",
+      "input": "1e20",
+      "python": "1e+20"
+    },
+    {
+      "agree": true,
+      "ecmascript": "1e+21",
+      "input": "1e21",
+      "python": "1e+21"
+    },
+    {
+      "agree": true,
+      "ecmascript": "1e+100",
+      "input": "1e100",
+      "python": "1e+100"
+    },
+    {
+      "agree": false,
+      "ecmascript": "123456789012345680",
+      "input": "123456789012345678",
+      "python": "123456789012345678"
+    },
+    {
+      "agree": true,
+      "ecmascript": "9007199254740992",
+      "input": "9007199254740992",
+      "python": "9007199254740992"
+    },
+    {
+      "agree": false,
+      "ecmascript": "9007199254740992",
+      "input": "9007199254740993",
+      "python": "9007199254740993"
+    }
+  ]
+}

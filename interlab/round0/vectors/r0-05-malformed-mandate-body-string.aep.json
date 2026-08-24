@@ -1,0 +1,45 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:refund-assistant-1",
+  "agent_pub": "e1b0280c9b4d1fe7291222cfec0921a8b876ee48f682cce2dd2eaa60de48ebe8",
+  "action": {
+    "method": "issue_refund",
+    "args": {
+      "order_id": "ORD-4471",
+      "amount": 250,
+      "currency": "EUR"
+    },
+    "context": {
+      "channel": "support-queue",
+      "ticket": "T-9012"
+    }
+  },
+  "outcome": {
+    "status": "ok",
+    "refund_id": "RF-22317",
+    "human_signoff": false
+  },
+  "measurements": {
+    "action_sha256": "d9727036c2789e7acf7c49ec9cc4b80ce796f795ae2ec7871826028b5bc4bab8",
+    "outcome_sha256": "d96457bd3c2958e8ac48ff3ab2df058e593a185426c31b533ce8818f860c17c4"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "demo-issuer:tyche-sandbox",
+      "issuer_pub": "4ce43d5f76807730eb2e4523d946702999bcc156b7662fd20e45df6cd0e7b8c2",
+      "principal_id": "operator:alice",
+      "principal_pub": "f5ce517dc82bd7c9d561a69dc651b8665749d1a09b84bef36d2292c2353cb553"
+    },
+    "sig": "f667e69f7d34a7efe697a894b31c038e1c8f80eb546632168cb22ad2b8aa2d60f356ae4f8527b80428939d85d03ab690d0d59bfe82a506cf41169d4f508c6a0e"
+  },
+  "mandate": {
+    "body": "not-an-object",
+    "sig": "6b9c79fe630d7182721a379e74cdce68fe5d3b530d01ce944ff4b9b174351e7dcd2782f0c5bfef1100ce773c4476d84df49f5878b7697d24512a82c368f5890d"
+  },
+  "nonce": "aep-nonce-e",
+  "issued_at": 1750000000,
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "aep_sig": "fc009a8c7eb61239fbe7798ae8114455bc7b599fa0e0b0bb469fa72aae69049dc8ef5c7c0dcf123e77916aba05fc1a73b9db24025cc7cf276bba7c4af7cec401",
+  "receipt_hash": "ce11815e58163589c88552c65eb255c7e48af875a30008c31f7e03caf6409ec0"
+}

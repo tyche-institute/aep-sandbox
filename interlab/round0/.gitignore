@@ -1,0 +1,6 @@
+# Round-0 ground truth is deliberately NOT published: the sealed commitment
+# (sha256 of assigned-values.json, printed in RULES-draft.md) is the public
+# artefact, the values themselves stay private until the round closes.
+assigned-values.json
+verdicts-python.json
+verdicts-js.json

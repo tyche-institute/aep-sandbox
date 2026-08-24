@@ -1,0 +1,59 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:refund-assistant-1",
+  "agent_pub": "e1b0280c9b4d1fe7291222cfec0921a8b876ee48f682cce2dd2eaa60de48ebe8",
+  "action": {
+    "method": "issue_refund",
+    "args": {
+      "order_id": "ORD-4471",
+      "amount": "5",
+      "currency": "EUR"
+    },
+    "context": {
+      "channel": "support-queue",
+      "ticket": "T-9012"
+    }
+  },
+  "outcome": {
+    "status": "ok",
+    "refund_id": "RF-22317",
+    "human_signoff": false
+  },
+  "measurements": {
+    "action_sha256": "a3aed31d9f0bad18143c8e45b22388be9fdcb9310bac96be351d4dc23bf5a3a9",
+    "outcome_sha256": "d96457bd3c2958e8ac48ff3ab2df058e593a185426c31b533ce8818f860c17c4"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "demo-issuer:tyche-sandbox",
+      "issuer_pub": "4ce43d5f76807730eb2e4523d946702999bcc156b7662fd20e45df6cd0e7b8c2",
+      "principal_id": "operator:alice",
+      "principal_pub": "f5ce517dc82bd7c9d561a69dc651b8665749d1a09b84bef36d2292c2353cb553"
+    },
+    "sig": "f667e69f7d34a7efe697a894b31c038e1c8f80eb546632168cb22ad2b8aa2d60f356ae4f8527b80428939d85d03ab690d0d59bfe82a506cf41169d4f508c6a0e"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "operator:alice",
+      "agent_id": "agent:refund-assistant-1",
+      "agent_pub": "e1b0280c9b4d1fe7291222cfec0921a8b876ee48f682cce2dd2eaa60de48ebe8",
+      "scope": {
+        "allowed_methods": [
+          "issue_refund",
+          "send_receipt"
+        ],
+        "max_amount": 999999
+      },
+      "iat": 1750000000,
+      "exp": 2000000000
+    },
+    "sig": "23ad9987afc8c800b9750cb6d0f4cb6979db74f6adac8953f788324b0c3490751ee1d3f1c0cf66d445bfa21dcd8eaed602f71b7322e434a131442f83446ffa04"
+  },
+  "nonce": "aep-nonce-k",
+  "issued_at": 1750000000,
+  "prev_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+  "aep_sig": "3d97a32b4bdc34350172d0301a1d0f381e2920254314ed56a6310e8aa0b7ade3f3aa712878059fb0850e4bd032ed984eb5e14ac3c8161c7ac8e3324b7224c308",
+  "receipt_hash": "ae18c85a7c65fc65264a288064345326e30d11c15c3d87bdc5ecc1d923738c66"
+}

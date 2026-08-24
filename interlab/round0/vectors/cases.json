@@ -1,0 +1,184 @@
+[
+  {
+    "file": "r0-01-malformed-missing-key.aep.json",
+    "slug": "malformed-missing-key",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:malformed_aep",
+    "note": "required key 'nonce' absent -> structure check (presence) fails closed"
+  },
+  {
+    "file": "r0-02-malformed-action-list.aep.json",
+    "slug": "malformed-action-list",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:malformed_aep",
+    "note": "action is a JSON array -> structure check (type) fails closed"
+  },
+  {
+    "file": "r0-03-measurement-mismatch-tampered.aep.json",
+    "slug": "measurement-mismatch-tampered",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:measurement_mismatch",
+    "note": "measurements.action_sha256 replaced then core re-signed; structure/chain/aep_sig pass, self-consistency check fires"
+  },
+  {
+    "file": "r0-04-measurement-absent.aep.json",
+    "slug": "measurement-absent",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:measurement_mismatch",
+    "note": "no measurements key: structure treats absent-as-{} (dict) so it passes; the measurements check then sees None != digest"
+  },
+  {
+    "file": "r0-05-malformed-mandate-body-string.aep.json",
+    "slug": "malformed-mandate-body-string",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:malformed_mandate",
+    "note": "mandate.body is a str -> check_mandate returns malformed_mandate"
+  },
+  {
+    "file": "r0-06-credential-sig-invalid.aep.json",
+    "slug": "credential-sig-invalid",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:credential_sig_invalid",
+    "note": "credential.body.principal_id changed, credential.sig stale; issuer still listed so the issuer's signature check is what fails"
+  },
+  {
+    "file": "r0-07-principal-sig-invalid.aep.json",
+    "slug": "principal-sig-invalid",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:principal_sig_invalid",
+    "note": "mandate.body.scope widened, mandate.sig stale; credential intact so the principal's signature over the mandate is what fails"
+  },
+  {
+    "file": "r0-08-agent-binding-mismatch.aep.json",
+    "slug": "agent-binding-mismatch",
+    "class": "coverage",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:agent_binding_mismatch",
+    "note": "mandate authorises agent:other-1 / a different pubkey; AEP signed by our agent -> mb.agent_pub != agent_pub"
+  },
+  {
+    "file": "r0-09-boundary-now-eq-exp.aep.json",
+    "slug": "boundary-now-eq-exp",
+    "class": "boundary",
+    "now": 1750000500,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "ALLOW",
+    "note": "appraised at now == exp == 1750000500; strict > means not expired"
+  },
+  {
+    "file": "r0-10-boundary-amount-eq-max.aep.json",
+    "slug": "boundary-amount-eq-max",
+    "class": "boundary",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "ALLOW",
+    "note": "args.amount == scope.max_amount == 1000; strict > means in scope"
+  },
+  {
+    "file": "r0-11-amount-string.aep.json",
+    "slug": "amount-string",
+    "class": "boundary",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:scope_violation",
+    "note": "args.amount == \"5\" (string) under a numeric cap -> out of scope, not < 5"
+  },
+  {
+    "file": "r0-12-mandate-no-exp.aep.json",
+    "slug": "mandate-no-exp",
+    "class": "boundary",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:expired",
+    "note": "mandate.body has no exp; check uses mb.get('exp', 0)=0 -> now > 0 -> expired"
+  },
+  {
+    "file": "r0-13-action-no-method.aep.json",
+    "slug": "action-no-method",
+    "class": "boundary",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": true,
+    "design_expectation": "DENY:scope_violation",
+    "note": "action has no method; None not in allowed_methods -> out of scope"
+  },
+  {
+    "file": "r0-14-probe-float-0_1.aep.json",
+    "slug": "probe-float-0_1",
+    "class": "probe",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": false,
+    "design_expectation": "ALLOW (both) — control probe",
+    "note": "float 0.1: Python canonical '0.1' == JS '0.1'; canonicalisation agrees"
+  },
+  {
+    "file": "r0-15-probe-float-1e-7.aep.json",
+    "slug": "probe-float-1e-7",
+    "class": "probe",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": false,
+    "design_expectation": "DIVERGENCE — Python ALLOW, JS DENY:content_mutated",
+    "note": "float 1e-07: Python canonical '1e-07' vs JS '1e-7' -> JS recomputes a different receipt_hash and fails chain_integrity"
+  },
+  {
+    "file": "r0-16-probe-unicode.aep.json",
+    "slug": "probe-unicode",
+    "class": "probe",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": false,
+    "design_expectation": "ALLOW (both) — control probe",
+    "note": "emoji+combining+U+2212+Cyrillic in a signed field; UTF-8 bytes identical across Python ensure_ascii=False and JS JSON.stringify"
+  },
+  {
+    "file": "r0-17-probe-dup-key.aep.json",
+    "slug": "probe-dup-key",
+    "class": "probe",
+    "now": 1750000100,
+    "consumed": [],
+    "scored": false,
+    "design_expectation": "ALLOW (both) — confirms last-key-wins",
+    "note": "raw text carries outcome.status twice (\"DECOY\" then \"ok\"); both parsers keep the last, so the digest matches the signed value"
+  },
+  {
+    "file": "r0-18-probe-numeric-nonce.aep.json",
+    "slug": "probe-numeric-nonce",
+    "class": "probe",
+    "now": 1750000100,
+    "consumed": [
+      "12345"
+    ],
+    "scored": false,
+    "design_expectation": "ALLOW (both) — replay type-semantics",
+    "note": "nonce is the number 12345; consumed set holds the string '12345'; neither impl matches across types, so it is NOT flagged replayed"
+  }
+]
