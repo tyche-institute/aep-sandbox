@@ -23,6 +23,10 @@ import argparse, collections, glob, json, os, pathlib, sys
 HERE = pathlib.Path(__file__).resolve().parent
 HUB_EU = "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
 HUB_MB = "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+# The EU's second list of lists, for mutual-recognition agreements. Named separately because
+# the main LOTL does not mention it, so it is a hub that no crawl arrives at.
+HUB_MRA = "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml"
+HUBS = (HUB_EU, HUB_MB, HUB_MRA)
 
 # Class from the probe -> state shown on the page. The page never invents a state.
 STATE = {
@@ -110,7 +114,7 @@ def main() -> int:
         state = STATE.get(m.get("class", ""), None)
         if state is None:
             state = "ok" if c.get("fetched") else "fail"
-        if u in (HUB_EU, HUB_MB):
+        if u in HUBS:
             state = "hub"
         elif f.get("terminal_next_update"):
             # An empty NextUpdate is the standard's way of saying "never again". The UK entry
@@ -146,6 +150,8 @@ def main() -> int:
             "in": indeg.get(u, 0),
             "out": outdeg.get(u, 0),
             "bloc": ("pacific_alliance" if f.get("group") == "pacific_alliance" else None),
+            "hub_role": ("eu_lotl" if u == HUB_EU else "eu_mra" if u == HUB_MRA
+                         else "mercosur" if u == HUB_MB else None),
             "zip_wrapped": f.get("zip_wrapped"),
         })
 
@@ -195,6 +201,12 @@ def main() -> int:
                                  if {e["s"], e["d"]} == {HUB_EU, HUB_MB}]),
         "pointers_declared_over_plain_http": plain_http,
         "islands": [n["t"] for n in nodes if n["in"] == 0 and n["state"] != "hub"],
+        "eu_has_two_hubs": {
+            "main_lotl_pointers": len([e for e in edges if e["s"] == HUB_EU]),
+            "mra_lotl_pointers": len([e for e in edges if e["s"] == HUB_MRA]),
+            "mra_targets": [by_id[e["d"]]["t"] for e in edges if e["s"] == HUB_MRA],
+            "main_mentions_mra": any(e["s"] == HUB_EU and e["d"] == HUB_MRA for e in edges),
+        },
         "runs_in_series": run_count("runs"),
         "series_window": series_window(),
         "pacific_alliance": [{"t": n["t"], "overdue": n["overdue"], "state": n["state"]}

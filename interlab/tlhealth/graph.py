@@ -17,6 +17,11 @@ MAX_DEPTH = 3
 TIMEOUT = 30
 SEEDS = {
     "https://ec.europa.eu/tools/lotl/eu-lotl.xml": "EU list of lists",
+    # The EU publishes a SECOND list of lists, for mutual-recognition agreements, and the
+    # first one does not mention it. Seeded because a crawl that starts at the famous hub
+    # never arrives here, which is exactly why we recorded Moldova and Ukraine as lists
+    # nobody points at. They are pointed at - from a hub almost nobody knows exists.
+    "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml": "EU MRA list of lists",
 }
 # Non-EU lists discovered by census; included as seeds so the walk can find edges the EU
 # hub does not reach. Each is a published national artefact, fetched as any client would.
@@ -32,6 +37,8 @@ SEEDS.update({
     "https://validar.iti.gov.br/trustlist/trust-list-MB.xml": "MERCOSUR (Brazilian copy)",
     "https://pki.jgm.gov.ar/TSL/TSL-MB.xml": "MERCOSUR (Argentine copy)",
     "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0": "Russia",
+    "https://czo.gov.ua/download/tl/TL-UA-EC.xml": "Ukraine (EU-facing list)",
+    "https://trusteid.mdt.gov.mk/tl/TL_MK.xml": "North Macedonia",
 })
 
 # Where a list cannot be fetched and nothing points at it, the territory cannot be taken from
@@ -47,6 +54,7 @@ SEED_TERRITORY = {
     "https://validar.iti.gov.br/trustlist/trust-list-MB.xml": "MB",
     "https://pki.jgm.gov.ar/TSL/TSL-MB.xml": "MB",
     "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0": "RU",
+    "https://trusteid.mdt.gov.mk/tl/TL_MK.xml": "MK",
 }
 
 

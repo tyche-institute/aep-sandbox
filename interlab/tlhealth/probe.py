@@ -51,6 +51,21 @@ POPULATIONS = {
     "mercosur_pointers": "National pointers declared by the MERCOSUR regional list of lists",
     "mercosur_copies": "Copies of the MERCOSUR regional list of lists, published across three states",
     "pacific_alliance": "Trust lists of the Alianza del Pacifico bloc, published as zip files on a ministry page",
+    "eu_mra_pointers": "Pointers inside the EU's second list of lists, the one for mutual-recognition agreements",
+    "other_national": "National trust lists outside the EU/EEA found by census, measured individually",
+}
+
+# The EU's mutual-recognition list of lists. The main LOTL does not mention it, so a crawl
+# from the famous hub never reaches it - which is how Moldova and Ukraine came to be recorded
+# as lists nobody points at. They are pointed at, from here.
+EU_MRA = {
+    "mra_lotl": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml",
+    "mra_md": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+    "mra_ua": "https://czo.gov.ua/download/tl/TL-UA-EC.xml",
+}
+
+OTHER_NATIONAL = {
+    "mk_north_macedonia": "https://trusteid.mdt.gov.mk/tl/TL_MK.xml",
 }
 
 # A second Latin-American bloc, found 25.08.2026 while checking prior art. Chile, Colombia,
@@ -205,6 +220,8 @@ def main() -> int:
     targets += [("mercosur_pointers", k, v) for k, v in MERCOSUR.items()]
     targets += [("mercosur_copies", k, v) for k, v in MERCOSUR_COPIES.items()]
     targets += [("pacific_alliance", k, v) for k, v in PACIFIC_ALLIANCE.items()]
+    targets += [("eu_mra_pointers", k, v) for k, v in EU_MRA.items()]
+    targets += [("other_national", k, v) for k, v in OTHER_NATIONAL.items()]
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
