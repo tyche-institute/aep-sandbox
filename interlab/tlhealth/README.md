@@ -74,3 +74,31 @@ Two in the first hour, both found by us, both recorded rather than quietly patch
 
 Both defects would have produced publishable-looking numbers. That is the argument for
 keeping the corpus, the classifier and the failures in the open.
+
+## What the first series showed
+
+Sixteen observations, 2026-08-24T21:45 → 2026-08-25T04:22, 51 endpoints each time.
+`analyse.py` reads every run and sorts endpoints into three states that a single
+observation cannot tell apart:
+
+| state | n | what it means |
+|---|---|---|
+| always reachable | 47 | nothing to report, and reporting it matters |
+| never reachable | 2 | a persistent defect |
+| flapping | 2 | intermittent — neither healthy nor broken |
+
+**Persistent (16 of 16 failures):** the Irish trusted-list endpoint, and the documented
+address of the US Federal PKI repository. Both fail TLS validation every time, for
+different reasons — an incomplete chain in one case, a certificate that does not cover the
+hostname in the other.
+
+**Flapping (14 of 16 reachable):** both Hungarian endpoints, the XML and the PDF, failing
+together at exactly the same two observations. Failing together points at the host rather
+than the file. The second failure exhausted the retry, so it is the endpoint that was
+briefly unavailable, not the probe being impatient — which is precisely the distinction the
+retry rule was added to make.
+
+This is the argument for a series in one table. On the first night, a single observation
+would have reported Hungary as broken and reported it alongside Ireland, as though a
+momentary timeout and a five-month-old misconfiguration were the same kind of fact. They
+are not, and only repetition separates them.

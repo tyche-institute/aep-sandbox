@@ -1,7 +1,7 @@
 {
  "caveat": "Transport-layer reachability under a strict TLS client only. Not signature validation, not supervision, not a conformity assessment, and not a vulnerability assessment.",
  "classifier": "see classify() in probe.py; published before any percentage",
- "finished_utc": "2026-08-25T04:53:25.380302+00:00",
+ "finished_utc": "2026-08-25T01:51:04.615548+00:00",
  "instrument": "tlhealth",
  "lotl_sha256": "09b50b1766f3c460826de90cc6620c6accd754fb6fd6a82dcba4516132cf3fb0",
  "lotl_url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
@@ -544,30 +544,30 @@
    "url": "https://www.nccert.pl/tsl/PL_TSL.xml"
   },
   {
-   "attempts": 1,
-   "bytes": "4776953",
-   "class": "ok",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://nmhh.hu/tl/pub/HU_TL.pdf",
-   "http_code": "200",
+   "attempts": 2,
+   "bytes": "0",
+   "class": "transport_failed",
+   "curl_error": "curl: (28) Connection timed out after 25002 milliseconds",
+   "curl_exit": 28,
+   "final_url": "https://www.nmhh.hu/tl/pub/HU_TL.pdf",
+   "http_code": "000",
    "name": "https://www.nmhh.hu/tl/pub/HU_TL.pdf",
    "population": "eu_lotl_pointers",
-   "redirects": "1",
+   "redirects": "0",
    "ssl_verify_result": "0",
    "url": "https://www.nmhh.hu/tl/pub/HU_TL.pdf"
   },
   {
-   "attempts": 1,
-   "bytes": "1461573",
-   "class": "ok",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://nmhh.hu/tl/pub/HU_TL.xml",
-   "http_code": "200",
+   "attempts": 2,
+   "bytes": "0",
+   "class": "transport_failed",
+   "curl_error": "curl: (28) Connection timed out after 25002 milliseconds",
+   "curl_exit": 28,
+   "final_url": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
+   "http_code": "000",
    "name": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
    "population": "eu_lotl_pointers",
-   "redirects": "1",
+   "redirects": "0",
    "ssl_verify_result": "0",
    "url": "https://www.nmhh.hu/tl/pub/HU_TL.xml"
   },
@@ -643,7 +643,7 @@
   },
   {
    "attempts": 1,
-   "bytes": "238466",
+   "bytes": "238464",
    "class": "ok",
    "curl_error": "",
    "curl_exit": 0,
@@ -657,7 +657,7 @@
   },
   {
    "attempts": 1,
-   "bytes": "472917",
+   "bytes": "472739",
    "class": "ok",
    "curl_error": "",
    "curl_exit": 0,
@@ -728,12 +728,13 @@
  ],
  "retry_policy": "transport failures retried 1x at 3 workers; attempts recorded per row",
  "schema": 1,
- "started_utc": "2026-08-25T04:53:06.370516+00:00",
+ "started_utc": "2026-08-25T01:50:04.891929+00:00",
  "summary": {
   "eu_lotl_pointers": {
    "by_class": {
-    "ok": 42,
-    "tls_validation_failed": 1
+    "ok": 40,
+    "tls_validation_failed": 1,
+    "transport_failed": 2
    },
    "total": 43
   },

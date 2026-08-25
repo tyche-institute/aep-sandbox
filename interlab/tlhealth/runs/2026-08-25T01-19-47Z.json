@@ -1,7 +1,7 @@
 {
  "caveat": "Transport-layer reachability under a strict TLS client only. Not signature validation, not supervision, not a conformity assessment, and not a vulnerability assessment.",
  "classifier": "see classify() in probe.py; published before any percentage",
- "finished_utc": "2026-08-25T04:53:25.380302+00:00",
+ "finished_utc": "2026-08-25T01:20:04.848342+00:00",
  "instrument": "tlhealth",
  "lotl_sha256": "09b50b1766f3c460826de90cc6620c6accd754fb6fd6a82dcba4516132cf3fb0",
  "lotl_url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
@@ -643,7 +643,7 @@
   },
   {
    "attempts": 1,
-   "bytes": "238466",
+   "bytes": "238461",
    "class": "ok",
    "curl_error": "",
    "curl_exit": 0,
@@ -657,7 +657,7 @@
   },
   {
    "attempts": 1,
-   "bytes": "472917",
+   "bytes": "472328",
    "class": "ok",
    "curl_error": "",
    "curl_exit": 0,
@@ -728,7 +728,7 @@
  ],
  "retry_policy": "transport failures retried 1x at 3 workers; attempts recorded per row",
  "schema": 1,
- "started_utc": "2026-08-25T04:53:06.370516+00:00",
+ "started_utc": "2026-08-25T01:19:47.173574+00:00",
  "summary": {
   "eu_lotl_pointers": {
    "by_class": {
