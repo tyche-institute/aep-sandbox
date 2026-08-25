@@ -47,6 +47,16 @@ def newest(dirname: str) -> dict:
     return json.load(open(files[-1], encoding="utf-8"))
 
 
+def newest_optional(dirname: str) -> dict:
+    """Like newest(), but a missing directory is not an error — the world layer is optional."""
+    files = sorted(f for f in glob.glob(str(HERE / dirname / "*.json")) if "latest" not in f)
+    return json.load(open(files[-1], encoding="utf-8")) if files else {}
+
+
+def host_of(url: str) -> str:
+    return url.split("://", 1)[-1].split("/", 1)[0].split(":")[0]
+
+
 def run_count(dirname: str) -> int:
     return len([f for f in glob.glob(str(HERE / dirname / "*.json")) if "latest" not in f])
 
@@ -80,6 +90,11 @@ def main() -> int:
     probe = newest("runs")
     fresh = newest("runs-freshness")
     graph = newest("runs-graph")
+    # A worldwide vantage (RIPE Atlas, sslcert with SNI), reconciled against per-pointer fetches.
+    # Optional: absent until an Atlas run is recorded. A gated host publishes no detail — only that
+    # a finding exists and has been disclosed to its operator.
+    world = newest_optional("runs-world")
+    world_hosts = (world.get("hosts") or {}) if world else {}
 
     # --- what the crawl saw: identity, attribution, structure ----------------
     crawled = {n["url"]: n for n in graph["nodes"]}
@@ -153,6 +168,9 @@ def main() -> int:
             "hub_role": ("eu_lotl" if u == HUB_EU else "eu_mra" if u == HUB_MRA
                          else "mercosur" if u == HUB_MB else None),
             "zip_wrapped": f.get("zip_wrapped"),
+            # Worldwide vantage for this host, if measured. A gated host carries only {gated:true};
+            # no certificate detail is published until its operator has been notified.
+            "world": world_hosts.get(host_of(u)),
         })
 
     keep = {n["id"] for n in nodes}
@@ -217,6 +235,11 @@ def main() -> int:
         "vantage_agreements": [{"t": by_id[u]["t"], "code": v["there"]}
                                for u, v in vantage.items()
                                if u in by_id and v["agrees"]],
+        # The worldwide layer: reach, the clean control, the one gated exception, and the method.
+        # No cert detail for the gated host — the page must be safe to publish before disclosure.
+        "world": ({k: world[k] for k in
+                   ("measured_utc", "reach", "control", "exception", "methodology", "measurements")
+                   if k in world} if world else None),
     }
 
     out = {

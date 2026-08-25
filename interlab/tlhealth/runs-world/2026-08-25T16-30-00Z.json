@@ -1,0 +1,54 @@
+{
+ "measured_utc": "2026-08-25T16:30:00Z",
+ "instrument": "RIPE Atlas one-off sslcert (SNI), one probe per country; reconciled against per-pointer fetch",
+ "probe_home": "1016856 (Zeus1, Helsinki)",
+ "measurements": {
+  "sk_maxcov": 204372076,
+  "ie_maxcov": 204372082,
+  "sk_deep": 204352622,
+  "ie_deep": 204352623
+ },
+ "reach": {
+  "countries": 177,
+  "continents": {
+   "Asia": 45,
+   "Europe": 44,
+   "N.America": 22,
+   "Africa": 40,
+   "Oceania": 13,
+   "S.America": 12
+  },
+  "probes_per_endpoint": "one per country"
+ },
+ "control": {
+  "territory": "IE",
+  "host": "eidas.gov.ie",
+  "valid": 165,
+  "probes": 177,
+  "no_answer": 12,
+  "valid_worldwide": true
+ },
+ "exception": {
+  "territory": "SK",
+  "host": "tl.nbu.gov.sk",
+  "probes": 177,
+  "valid": 0,
+  "no_answer": 1,
+  "valid_worldwide": false,
+  "gated": true,
+  "public_note": "One member state's endpoint failed TLS validation from every one of the countries measured; disclosed to its operator, detail withheld pending a reasonable interval."
+ },
+ "methodology": "A bare TLS probe with no SNI reports a CDN's default certificate as a defect; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation exactly one endpoint fails from every country and every method; all others validate when fetched the way software fetches them, with SNI.",
+ "hosts": {
+  "eidas.gov.ie": {
+   "territory": "IE",
+   "valid_worldwide": true,
+   "countries": 177
+  },
+  "tl.nbu.gov.sk": {
+   "territory": "SK",
+   "gated": true,
+   "valid_worldwide": false
+  }
+ }
+}

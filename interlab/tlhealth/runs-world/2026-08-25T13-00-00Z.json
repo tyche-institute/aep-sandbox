@@ -1,0 +1,93 @@
+{
+ "measured_utc": "2026-08-25T13:00:00Z",
+ "instrument": "RIPE Atlas one-off sslcert (SNI), worldwide; reconciled against per-pointer fetch",
+ "probe_home": "1016856 (Zeus1, Helsinki)",
+ "measurements": {
+  "sk_deep": 204352622,
+  "ie_deep": 204352623,
+  "all_hosts_sni": [
+   204347890,
+   204347891,
+   204347892,
+   204347893,
+   204347894,
+   204347895,
+   204347896,
+   204347897,
+   204347898,
+   204347899,
+   204347900,
+   204347901,
+   204347902,
+   204347903,
+   204347904,
+   204347905,
+   204347906,
+   204347907,
+   204347908,
+   204347909,
+   204347910,
+   204347911,
+   204347912,
+   204347913,
+   204347914,
+   204347915,
+   204347916,
+   204347917,
+   204347918,
+   204347919,
+   204347920,
+   204347921,
+   204347922,
+   204347923
+  ],
+  "sk_ie_150": [
+   204343583,
+   204343584
+  ]
+ },
+ "reach": {
+  "countries": 74,
+  "continents": {
+   "Europe": 303,
+   "Asia": 36,
+   "S.America": 24,
+   "N.America": 88,
+   "Oceania": 13,
+   "Africa": 10,
+   "Other": 4
+  },
+  "probes_per_endpoint": 500
+ },
+ "control": {
+  "territory": "IE",
+  "host": "eidas.gov.ie",
+  "valid": 459,
+  "probes": 478,
+  "no_answer": 19,
+  "valid_worldwide": true
+ },
+ "exception": {
+  "territory": "SK",
+  "host": "tl.nbu.gov.sk",
+  "probes": 476,
+  "valid": 0,
+  "no_answer": 2,
+  "valid_worldwide": false,
+  "gated": true,
+  "public_note": "One member state's endpoint fails TLS validation from every vantage measured; disclosed to its operator, detail withheld pending a reasonable interval."
+ },
+ "methodology": "A bare TLS probe with no SNI reports CDN default certificates as defects; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation exactly one endpoint fails from every vantage and every method; all others validate when fetched the way software fetches them, with SNI.",
+ "hosts": {
+  "eidas.gov.ie": {
+   "territory": "IE",
+   "valid_worldwide": true,
+   "countries": 74
+  },
+  "tl.nbu.gov.sk": {
+   "territory": "SK",
+   "gated": true,
+   "valid_worldwide": false
+  }
+ }
+}
