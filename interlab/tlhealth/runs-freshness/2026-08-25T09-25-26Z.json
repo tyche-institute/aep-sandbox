@@ -1,16 +1,10 @@
 {
  "caveat": "Declared currency only. A stale list is not necessarily a wrong list, and a terminal list is correctly terminal. This measures what the artefacts say about themselves, not whether anyone downstream honours it.",
  "instrument": "tlfreshness",
- "observed_utc": "2026-08-25T09:27:18.396810+00:00",
+ "observed_utc": "2026-08-25T09:25:26.600202+00:00",
  "rows": [
   {
    "age_days": 70,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-15T14:44:12Z",
@@ -30,12 +24,6 @@
   },
   {
    "age_days": 70,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-15T15:00:00Z",
@@ -55,12 +43,6 @@
   },
   {
    "age_days": 84,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-01T11:07:50Z",
@@ -80,7 +62,6 @@
   },
   {
    "age_days": 12,
-   "declares_pointers": [],
    "fetch_error": "",
    "group": "islands",
    "issued": "2026-08-13T03:45:00Z",
@@ -100,12 +81,6 @@
   },
   {
    "age_days": 2468,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
-     "territory": "AP"
-    }
-   ],
    "fetch_error": "",
    "group": "pacific_alliance",
    "issued": "2019-11-22T01:00:00Z",
@@ -125,12 +100,6 @@
   },
   {
    "age_days": 265,
-   "declares_pointers": [
-    {
-     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
-     "territory": "AR"
-    }
-   ],
    "fetch_error": "",
    "group": "islands",
    "issued": "2025-12-02T18:00:00Z",
@@ -150,12 +119,6 @@
   },
   {
    "age_days": 2448,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
-     "territory": "AP"
-    }
-   ],
    "fetch_error": "",
    "group": "pacific_alliance",
    "issued": "2019-12-12T01:00:00Z",
@@ -175,12 +138,6 @@
   },
   {
    "age_days": 147,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-03-31T07:56:45Z",
@@ -200,12 +157,6 @@
   },
   {
    "age_days": 48,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-07-07T12:30:00Z",
@@ -225,12 +176,6 @@
   },
   {
    "age_days": 96,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-05-20T11:00:00Z",
@@ -250,12 +195,6 @@
   },
   {
    "age_days": 19,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-05T16:00:00Z",
@@ -275,12 +214,6 @@
   },
   {
    "age_days": 19,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-06T04:00:00Z",
@@ -300,180 +233,6 @@
   },
   {
    "age_days": 5,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    },
-    {
-     "location": "https://www.signatur.rtr.at/vertrauensliste.xml",
-     "territory": "AT"
-    },
-    {
-     "location": "https://tsl.belgium.be/tsl-be-v6.xml",
-     "territory": "BE"
-    },
-    {
-     "location": "https://crc.bg/files/_en/TSL_BG.pdf",
-     "territory": "BG"
-    },
-    {
-     "location": "https://crc.bg/files/_en/TSL_BG.xml",
-     "territory": "BG"
-    },
-    {
-     "location": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml",
-     "territory": "CY"
-    },
-    {
-     "location": "https://tsl.gov.cz/publ/TSL_CZ.pdf",
-     "territory": "CZ"
-    },
-    {
-     "location": "https://tsl.gov.cz/publ/TSL_CZ.xtsl",
-     "territory": "CZ"
-    },
-    {
-     "location": "https://tl.bundesnetzagentur.de/TL-DE.XML",
-     "territory": "DE"
-    },
-    {
-     "location": "https://www.digst.dk/TSLDK_v6pdf",
-     "territory": "DK"
-    },
-    {
-     "location": "https://www.digst.dk/TSLDK_v6xml",
-     "territory": "DK"
-    },
-    {
-     "location": "https://sr.riik.ee/tsl/estonian-tsl.pdf",
-     "territory": "EE"
-    },
-    {
-     "location": "https://sr.riik.ee/tsl/estonian-tsl.xml",
-     "territory": "EE"
-    },
-    {
-     "location": "https://www.eett.gr/tsl/tl-el.xml",
-     "territory": "EL"
-    },
-    {
-     "location": "https://tsl.digital.gob.es/TSL.pdf",
-     "territory": "ES"
-    },
-    {
-     "location": "https://tsl.digital.gob.es/TSL.xml",
-     "territory": "ES"
-    },
-    {
-     "location": "https://dp.trustedlist.fi/fi-tl-v6.xml",
-     "territory": "FI"
-    },
-    {
-     "location": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.pdf",
-     "territory": "FR"
-    },
-    {
-     "location": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml",
-     "territory": "FR"
-    },
-    {
-     "location": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml",
-     "territory": "HR"
-    },
-    {
-     "location": "https://www.nmhh.hu/tl/pub/HU_TL.pdf",
-     "territory": "HU"
-    },
-    {
-     "location": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
-     "territory": "HU"
-    },
-    {
-     "location": "https://eidas.gov.ie/Irelandtslsignedv6.xml",
-     "territory": "IE"
-    },
-    {
-     "location": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.pdf",
-     "territory": "IS"
-    },
-    {
-     "location": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml",
-     "territory": "IS"
-    },
-    {
-     "location": "https://eidas.agid.gov.it/TL/TSL-IT.xml",
-     "territory": "IT"
-    },
-    {
-     "location": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml",
-     "territory": "LI"
-    },
-    {
-     "location": "https://elektroninisparasas.lt/LT-TSL.xml",
-     "territory": "LT"
-    },
-    {
-     "location": "https://trusted-list.lu/tsl.pdf",
-     "territory": "LU"
-    },
-    {
-     "location": "https://trusted-list.lu/tsl.xml",
-     "territory": "LU"
-    },
-    {
-     "location": "https://trustlist.gov.lv/tsl/latvian-tsl.xml",
-     "territory": "LV"
-    },
-    {
-     "location": "https://tsl.mca.org.mt/MT_TSL.xml",
-     "territory": "MT"
-    },
-    {
-     "location": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml",
-     "territory": "NL"
-    },
-    {
-     "location": "https://nkom.no/files/TL/NO_TL.pdf",
-     "territory": "NO"
-    },
-    {
-     "location": "https://nkom.no/files/TL/NO_TL.xml",
-     "territory": "NO"
-    },
-    {
-     "location": "https://www.nccert.pl/tsl/PL_TSL.xml",
-     "territory": "PL"
-    },
-    {
-     "location": "https://www.gns.gov.pt/media/TSLPT.pdf",
-     "territory": "PT"
-    },
-    {
-     "location": "https://www.gns.gov.pt/media/TSLPT.xml",
-     "territory": "PT"
-    },
-    {
-     "location": "https://trustedlist.adr.gov.ro/trustedlist.xml",
-     "territory": "RO"
-    },
-    {
-     "location": "https://trustedlist.pts.se/tlv6/SE-TL.xml",
-     "territory": "SE"
-    },
-    {
-     "location": "https://www.tl.gov.si/SI_TL.xml",
-     "territory": "SI"
-    },
-    {
-     "location": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml",
-     "territory": "SK"
-    },
-    {
-     "location": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml",
-     "territory": "UK"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-19T17:25:00Z",
@@ -493,12 +252,6 @@
   },
   {
    "age_days": 4,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-21T06:00:00Z",
@@ -518,12 +271,6 @@
   },
   {
    "age_days": 20,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-05T07:31:24Z",
@@ -543,12 +290,6 @@
   },
   {
    "age_days": 36,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-07-20T07:55:00Z",
@@ -568,12 +309,6 @@
   },
   {
    "age_days": 41,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-07-15T09:00:00Z",
@@ -593,12 +328,6 @@
   },
   {
    "age_days": 11,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-13T11:49:01Z",
@@ -618,12 +347,6 @@
   },
   {
    "age_days": 5,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-19T11:01:32Z",
@@ -643,12 +366,6 @@
   },
   {
    "age_days": 28,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-07-27T09:33:49Z",
@@ -668,12 +385,6 @@
   },
   {
    "age_days": 70,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-15T15:05:23Z",
@@ -693,12 +404,6 @@
   },
   {
    "age_days": 68,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-18T06:27:16Z",
@@ -718,12 +423,6 @@
   },
   {
    "age_days": 97,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-05-20T05:02:52Z",
@@ -743,12 +442,6 @@
   },
   {
    "age_days": 118,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-04-28T19:00:48Z",
@@ -768,28 +461,6 @@
   },
   {
    "age_days": 291,
-   "declares_pointers": [
-    {
-     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
-     "territory": "AR"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
-     "territory": "BR"
-    },
-    {
-     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
-     "territory": "PY"
-    },
-    {
-     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
-     "territory": "UY"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
-     "territory": "MB"
-    }
-   ],
    "fetch_error": "",
    "group": "mercosur_copies",
    "issued": "2025-11-07T03:00:00Z",
@@ -809,28 +480,6 @@
   },
   {
    "age_days": 291,
-   "declares_pointers": [
-    {
-     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
-     "territory": "AR"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
-     "territory": "BR"
-    },
-    {
-     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
-     "territory": "PY"
-    },
-    {
-     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
-     "territory": "UY"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
-     "territory": "MB"
-    }
-   ],
    "fetch_error": "",
    "group": "mercosur_copies",
    "issued": "2025-11-07T03:00:00Z",
@@ -850,28 +499,6 @@
   },
   {
    "age_days": 291,
-   "declares_pointers": [
-    {
-     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
-     "territory": "AR"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
-     "territory": "BR"
-    },
-    {
-     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
-     "territory": "PY"
-    },
-    {
-     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
-     "territory": "UY"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
-     "territory": "MB"
-    }
-   ],
    "fetch_error": "",
    "group": "mercosur_copies",
    "issued": "2025-11-07T03:00:00Z",
@@ -891,28 +518,6 @@
   },
   {
    "age_days": 110,
-   "declares_pointers": [
-    {
-     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
-     "territory": "AR"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
-     "territory": "BR"
-    },
-    {
-     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
-     "territory": "PY"
-    },
-    {
-     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
-     "territory": "UY"
-    },
-    {
-     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
-     "territory": "MB"
-    }
-   ],
    "fetch_error": "",
    "group": "mercosur_copies",
    "issued": "2026-05-07T03:00:00Z",
@@ -932,12 +537,6 @@
   },
   {
    "age_days": 118,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "islands",
    "issued": "2026-04-28T22:00:00Z",
@@ -957,12 +556,6 @@
   },
   {
    "age_days": 63,
-   "declares_pointers": [
-    {
-     "location": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
-     "territory": "RS"
-    }
-   ],
    "fetch_error": "",
    "group": "islands",
    "issued": "2026-06-23T01:00:00Z",
@@ -982,12 +575,6 @@
   },
   {
    "age_days": 120,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-04-27T07:47:30Z",
@@ -1007,12 +594,6 @@
   },
   {
    "age_days": 2448,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
-     "territory": "AP"
-    }
-   ],
    "fetch_error": "",
    "group": "pacific_alliance",
    "issued": "2019-12-12T01:00:00Z",
@@ -1032,12 +613,6 @@
   },
   {
    "age_days": 59,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-26T09:30:00Z",
@@ -1057,12 +632,6 @@
   },
   {
    "age_days": 118,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-04-28T20:00:23Z",
@@ -1082,12 +651,6 @@
   },
   {
    "age_days": 2448,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
-     "territory": "AP"
-    }
-   ],
    "fetch_error": "",
    "group": "pacific_alliance",
    "issued": "2019-12-12T01:00:00Z",
@@ -1107,12 +670,6 @@
   },
   {
    "age_days": 82,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-06-03T10:35:23Z",
@@ -1132,12 +689,6 @@
   },
   {
    "age_days": 7,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-17T14:36:07Z",
@@ -1157,12 +708,6 @@
   },
   {
    "age_days": 4,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-20T15:10:32Z",
@@ -1182,16 +727,6 @@
   },
   {
    "age_days": 97,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    },
-    {
-     "location": "https://tl.gov.me/ME_TL.xml",
-     "territory": "ME"
-    }
-   ],
    "fetch_error": "",
    "group": "islands",
    "issued": "2026-05-20T01:00:00Z",
@@ -1211,12 +746,6 @@
   },
   {
    "age_days": 5,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-19T13:56:19Z",
@@ -1236,12 +765,6 @@
   },
   {
    "age_days": 48,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-07-07T10:21:12Z",
@@ -1261,12 +784,6 @@
   },
   {
    "age_days": 7,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2026-08-17T12:00:00Z",
@@ -1286,7 +803,6 @@
   },
   {
    "age_days": 1,
-   "declares_pointers": [],
    "fetch_error": "",
    "group": "islands",
    "issued": "2026-08-24T08:58:00Z",
@@ -1306,12 +822,6 @@
   },
   {
    "age_days": 2062,
-   "declares_pointers": [
-    {
-     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
-     "territory": "EU"
-    }
-   ],
    "fetch_error": "",
    "group": "eu_lotl_pointers",
    "issued": "2020-12-31T22:59:59Z",
@@ -1329,7 +839,6 @@
   },
   {
    "age_days": 30,
-   "declares_pointers": [],
    "fetch_error": "",
    "group": "islands",
    "issued": "2026-07-26T00:00:00Z",

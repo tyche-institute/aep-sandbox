@@ -36,10 +36,33 @@ def fetch(url: str) -> tuple[str, str]:
         r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url],
                            capture_output=True, timeout=TIMEOUT + 20)
         if r.returncode == 0 and r.stdout:
-            return r.stdout.decode("utf-8", "ignore"), ""
+            # surrogateescape, not ignore: a zip-wrapped list must survive the round trip to
+            # bytes, and "ignore" drops the bytes it cannot decode without saying so.
+            return r.stdout.decode("utf-8", "surrogateescape"), ""
         if attempt == 1:
             time.sleep(2)
     return "", (r.stderr or b"").decode("utf-8", "ignore").strip().splitlines()[-1][:120] if r.stderr else "fetch failed"
+
+
+def unwrap_zip(raw: str) -> str:
+    """Some publishers ship the list inside a zip. Unwrap so the same fields are read.
+
+    The Alianza del Pacifico bloc publishes its four national lists as zip attachments on a
+    ministry page rather than at a followable TSLLocation, which is why a pointer crawl cannot
+    reach them at all - the fact that they need unwrapping is itself part of the finding.
+    """
+    if not raw.startswith("PK\x03\x04"):
+        return raw
+    import io, zipfile
+    try:
+        z = zipfile.ZipFile(io.BytesIO(raw.encode("utf-8", "surrogateescape")))
+        for n in z.namelist():
+            inner = z.read(n).decode("utf-8", "ignore")
+            if "TrustServiceStatusList" in inner:
+                return inner
+    except Exception:
+        pass
+    return raw
 
 
 def parse(url: str) -> dict:
@@ -48,6 +71,8 @@ def parse(url: str) -> dict:
     if not raw:
         out["state"] = "unfetchable"
         return out
+    raw = unwrap_zip(raw)
+    out["zip_wrapped"] = url.lower().endswith(".zip")
     if not re.search(r"<(?:\w+:)?TrustServiceStatusList", raw) and "TSLTag" not in raw:
         out["state"] = "not_a_tsl"          # PDF or other human-readable artefact
         return out
@@ -69,6 +94,19 @@ def parse(url: str) -> dict:
     out["provider_section"] = bool(re.search(r"<(?:\w+:)?TrustServiceProviderList", raw))
     out["tsl_type"] = (m.group(1) if (m := re.search(r"<(?:\w+:)?TSLType>([^<]+)</", raw)) else None)
     out["pointers_out"] = len(re.findall(r"<(?:\w+:)?TSLLocation>", raw))
+    # Recorded so an edge can be drawn from what the document declares rather than from
+    # anybody's memory of it. The Pacific Alliance lists reach the graph only this way: they
+    # are zip attachments on a web page, so no pointer crawl can arrive at them.
+    out["declares_pointers"] = [
+        {"location": loc, "territory": (ter[0].strip() if ter else None)}
+        for loc, ter in (
+            (re.search(r"<(?:\w+:)?TSLLocation>([^<]+)</", b).group(1).strip(),
+             re.findall(r"SchemeTerritory\"[^>]*>\s*<(?:\w+:)?String[^>]*>([^<]+)</", b)
+             or re.findall(r"<(?:\w+:)?SchemeTerritory>([^<]+)</", b))
+            for b in re.findall(r"<(?:\w+:)?OtherTSLPointer>(.*?)</(?:\w+:)?OtherTSLPointer>", raw, re.S)
+            if re.search(r"<(?:\w+:)?TSLLocation>([^<]+)</", b)
+        )
+    ]
 
     if issued:
         t = datetime.datetime.fromisoformat(issued.group(1).replace("Z", "+00:00"))
@@ -120,12 +158,22 @@ def main() -> int:
     ]
     extra += islands
 
+    # The Pacific Alliance bloc: zip-wrapped, no followable hub, and every list years overdue.
+    pacific = [
+        "https://cdn.www.gob.pe/uploads/document/file/541707/TSL-PERU.xml.zip",
+        "https://cdn.www.gob.pe/uploads/document/file/541708/TSL-COLOMBIA.xml.zip",
+        "https://cdn.www.gob.pe/uploads/document/file/541709/TSL-CHILE.xml.zip",
+        "https://cdn.www.gob.pe/uploads/document/file/541710/TSL-MEXICO.xml.zip",
+    ]
+    extra += pacific
+
     rows = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
         for row in ex.map(parse, xml_pointers + extra):
             rows.append(row)
     for row in rows:
-        row["group"] = ("islands" if row["url"] in islands
+        row["group"] = ("pacific_alliance" if row["url"] in pacific
+                        else "islands" if row["url"] in islands
                         else "mercosur_copies" if row["url"] in extra
                         else "eu_lotl_pointers")
     rows.sort(key=lambda x: (x.get("territory") or "zz", x["url"]))

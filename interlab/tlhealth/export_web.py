@@ -124,10 +124,30 @@ def main() -> int:
                          "agrees": vantage[u]["agrees"]} if u in vantage else None),
             "in": indeg.get(u, 0),
             "out": outdeg.get(u, 0),
+            "bloc": ("pacific_alliance" if f.get("group") == "pacific_alliance" else None),
+            "zip_wrapped": f.get("zip_wrapped"),
         })
 
     keep = {n["id"] for n in nodes}
     edges = [e for e in edges if e["s"] in keep and e["d"] in keep]
+
+    # Edges a list declares but no crawl can find. The Pacific Alliance publishes its four
+    # national lists as zip attachments on a ministry page, so nothing can be followed TO
+    # them; each of them, though, declares a pointer OUT - naming an ec.europa.eu address as
+    # the list of lists for territory "AP". The redirect target is the EU LOTL. Drawn because
+    # it was read out of the retrieved documents, and because an unreciprocated pointer into
+    # another bloc's hub is exactly the kind of thing a picture should not hide.
+    LOTL_ALIASES = {HUB_EU,
+                    "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml"}
+    have = {(e["s"], e["d"]) for e in edges}
+    for u, f in freshness.items():
+        if u not in keep:
+            continue
+        for d in (f.get("declares_pointers") or []):
+            tgt = HUB_EU if d.get("location") in LOTL_ALIASES else d.get("location")
+            if tgt in keep and (u, tgt) not in have and u != tgt:
+                edges.append({"s": u, "d": tgt, "declared_only": True})
+                have.add((u, tgt))
 
     # --- the counts the page quotes, computed here and only here --------------
     eu_kids = [e["d"] for e in edges if e["s"] == HUB_EU]
@@ -155,6 +175,8 @@ def main() -> int:
         "pointers_declared_over_plain_http": plain_http,
         "islands": [n["t"] for n in nodes if n["in"] == 0 and n["state"] != "hub"],
         "runs_in_series": run_count("runs"),
+        "pacific_alliance": [{"t": n["t"], "overdue": n["overdue"], "state": n["state"]}
+                             for n in nodes if n.get("bloc") == "pacific_alliance"],
         "vantage_disagreements": [{"t": by_id[u]["t"], "here": v["here"], "there": v["there"]}
                                   for u, v in vantage.items()
                                   if u in by_id and not v["agrees"]],

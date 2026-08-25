@@ -40,6 +40,21 @@ POPULATIONS = {
     "other_jurisdictions": "National trust artefacts outside the EU/EEA (curated)",
     "mercosur_pointers": "National pointers declared by the MERCOSUR regional list of lists",
     "mercosur_copies": "Copies of the MERCOSUR regional list of lists, published across three states",
+    "pacific_alliance": "Trust lists of the Alianza del Pacifico bloc, published as zip files on a ministry page",
+}
+
+# A second Latin-American bloc, found 25.08.2026 while checking prior art. Chile, Colombia,
+# Mexico and Peru publish TS 119 612 lists as ZIP-wrapped XML on a Peruvian ministry page.
+# There is no machine-followable hub: the federation is four zip files on a web page. Each
+# list carries exactly one OtherTSLPointer, and it declares that the list of lists for
+# territory "AP" is at an ec.europa.eu address - which redirects to the EU LOTL. So this bloc
+# emits four edges into the European hub, unreciprocated, and every list is years past its
+# own declared next update.
+PACIFIC_ALLIANCE = {
+    "ap_pe": "https://cdn.www.gob.pe/uploads/document/file/541707/TSL-PERU.xml.zip",
+    "ap_co": "https://cdn.www.gob.pe/uploads/document/file/541708/TSL-COLOMBIA.xml.zip",
+    "ap_cl": "https://cdn.www.gob.pe/uploads/document/file/541709/TSL-CHILE.xml.zip",
+    "ap_mx": "https://cdn.www.gob.pe/uploads/document/file/541710/TSL-MEXICO.xml.zip",
 }
 
 # The Americas publish a regional list of lists in the same ETSI format. It is measured as its
@@ -179,6 +194,7 @@ def main() -> int:
     targets += [("other_jurisdictions", k, v) for k, v in OTHER_JURISDICTIONS.items()]
     targets += [("mercosur_pointers", k, v) for k, v in MERCOSUR.items()]
     targets += [("mercosur_copies", k, v) for k, v in MERCOSUR_COPIES.items()]
+    targets += [("pacific_alliance", k, v) for k, v in PACIFIC_ALLIANCE.items()]
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
