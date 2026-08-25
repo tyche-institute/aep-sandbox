@@ -15,11 +15,18 @@ Design rules (Tyche Labs):
 Usage:  python3 probe.py [--out DIR]
 """
 from __future__ import annotations
-import argparse, datetime, hashlib, json, pathlib, re, subprocess, sys
+import argparse, datetime, hashlib, json, os, pathlib, re, subprocess, sys
 import concurrent.futures as cf
 import time
 
 LOTL = "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+
+# A second, declared vantage point (interlab/tlhealth/vantage-cf). Anything that fails from
+# here is asked again from there, because one host cannot tell "refuses everyone" from
+# "refuses us". The worker fetches only an allowlist and returns the observation rather than
+# the document, so this is a second observation post and not a way around anybody's decision.
+VANTAGE = os.environ.get("TLHEALTH_VANTAGE",
+                         "https://tyche-tl-vantage.sokolovmeister.workers.dev/probe")
 TIMEOUT = 25
 RETRIES = 1        # one retry before a transport failure is recorded as such
 WORKERS = 3        # deliberately gentle: a probe must not manufacture its own failures
@@ -140,6 +147,17 @@ def classify(obs: dict) -> str:
     return "other"
 
 
+def second_vantage(url: str) -> dict:
+    """Ask the other vantage about one endpoint. Absence of an answer is recorded, not filled in."""
+    import urllib.parse
+    q = VANTAGE + "?url=" + urllib.parse.quote(url, safe="")
+    try:
+        r = subprocess.run(["curl", "-sS", "-m", "70", q], capture_output=True, timeout=90)
+        return json.loads(r.stdout.decode("utf-8", "ignore"))
+    except Exception as e:
+        return {"error": f"vantage unreachable: {e}"}
+
+
 def fetch_lotl_pointers() -> tuple[list[str], str]:
     r = subprocess.run(["curl", "-sS", "-m", "40", LOTL], capture_output=True, timeout=70)
     raw = r.stdout.decode("utf-8", "ignore")
@@ -172,6 +190,22 @@ def main() -> int:
                             "class": classify(obs), **obs})
     results.sort(key=lambda r: (r["population"], r["name"]))
 
+    # Everything that did not answer here is asked once from the other vantage. Only failures
+    # are re-asked: an endpoint that already served us has no reason to be fetched twice, and
+    # the second vantage exists to resolve an ambiguity, not to double the traffic.
+    vantage = []
+    for r in results:
+        if r["class"] == "ok":
+            continue
+        obs = second_vantage(r["url"])
+        vantage.append({"url": r["url"], "name": r["name"], "population": r["population"],
+                        "here": r["class"], "here_http": r.get("http_code"),
+                        "there": obs.get("http_code") or "000",
+                        "there_bytes": obs.get("bytes"), "there_colo": obs.get("colo"),
+                        "there_country": obs.get("country"),
+                        "there_error": obs.get("error"),
+                        "agrees": (r.get("http_code") == obs.get("http_code"))})
+
     summary = {}
     for pop in POPULATIONS:
         rows = [r for r in results if r["population"] == pop]
@@ -188,6 +222,14 @@ def main() -> int:
         "lotl_url": LOTL,
         "lotl_sha256": lotl_hash,
         "populations": POPULATIONS,
+        "vantages": {
+            "primary": "single host, Estonia",
+            "secondary": VANTAGE,
+            "note": ("Failures are re-asked from a second declared vantage. A difference "
+                     "between vantages is a finding about the endpoint, not a licence to "
+                     "report the more convenient of the two answers."),
+        },
+        "vantage_checks": vantage,
         "classifier": "see classify() in probe.py; published before any percentage",
         "retry_policy": f"transport failures retried {RETRIES}x at {WORKERS} workers; attempts recorded per row",
         "caveat": ("Transport-layer reachability under a strict TLS client only. "

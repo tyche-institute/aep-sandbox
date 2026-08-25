@@ -68,6 +68,9 @@ def main() -> int:
         if r["url"].startswith("http"):
             measured[r["url"]] = r
 
+    # --- what a second vantage saw, where this one failed ---------------------
+    vantage = {v["url"]: v for v in probe.get("vantage_checks", [])}
+
     # --- what each list says about its own currency ---------------------------
     freshness = {r["url"]: r for r in fresh["rows"]}
 
@@ -117,6 +120,8 @@ def main() -> int:
             "provider_section": f.get("provider_section"),
             "tsl_type": f.get("tsl_type"),
             "http": m.get("http_code"),
+            "vantage": ({"there": vantage[u]["there"], "colo": vantage[u].get("there_colo"),
+                         "agrees": vantage[u]["agrees"]} if u in vantage else None),
             "in": indeg.get(u, 0),
             "out": outdeg.get(u, 0),
         })
@@ -150,6 +155,12 @@ def main() -> int:
         "pointers_declared_over_plain_http": plain_http,
         "islands": [n["t"] for n in nodes if n["in"] == 0 and n["state"] != "hub"],
         "runs_in_series": run_count("runs"),
+        "vantage_disagreements": [{"t": by_id[u]["t"], "here": v["here"], "there": v["there"]}
+                                  for u, v in vantage.items()
+                                  if u in by_id and not v["agrees"]],
+        "vantage_agreements": [{"t": by_id[u]["t"], "code": v["there"]}
+                               for u, v in vantage.items()
+                               if u in by_id and v["agrees"]],
     }
 
     out = {
