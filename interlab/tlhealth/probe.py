@@ -53,6 +53,7 @@ POPULATIONS = {
     "pacific_alliance": "Trust lists of the Alianza del Pacifico bloc, published as zip files on a ministry page",
     "eu_mra_pointers": "Pointers inside the EU's second list of lists, the one for mutual-recognition agreements",
     "other_national": "National trust lists outside the EU/EEA found by census, measured individually",
+    "government_roots": "National government root certificates published for download, outside the EU/EEA",
 }
 
 # The EU's mutual-recognition list of lists. The main LOTL does not mention it, so a crawl
@@ -66,6 +67,35 @@ EU_MRA = {
 
 OTHER_NATIONAL = {
     "mk_north_macedonia": "https://trusteid.mdt.gov.mk/tl/TL_MK.xml",
+    # Added 25.08.2026 from the worldwide survey. Each was fetched and confirmed by an
+    # independent verifier as a machine-readable national trusted list (ETSI TS 119 612 or a
+    # national XML equivalent), not a homepage. The denominator of this population changes at
+    # this date; recorded, not backfilled.
+    "ch_switzerland": "https://trustedlist.tsl-switzerland.ch/tsl-ch.xml",
+    "uk_ico": "https://tl.ico.org.uk/uktrustedlist/UKTL.xml",
+    "rs_serbia": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+    "me_montenegro": "https://tl.gov.me/ME_TL.xml",
+    "md_moldova": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+    "ua_national": "https://czo.gov.ua/download/tl/TL-UA.xml",
+    "co_colombia": "https://onac.org.co/certificados/tsl/tsl-co.xml",
+    "do_dominican": "https://applin.indotel.gob.do/tsl/tsl.xml",
+    "br_icpbrasil": "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml",
+}
+
+# Population (b): national GOVERNMENT root programmes — a published national root certificate
+# or root-download page, distinct from an eIDAS-style trusted list. Kept separate on purpose:
+# a root download answers a different question ("is the anchor published") than a trust list
+# ("whom does the state vouch for"). Every URL below was fetched and confirmed by a verifier.
+GOVERNMENT_ROOTS = {
+    "ru_trusted_root": "https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt",
+    "jp_gpki_root": "https://www.gpki.go.jp/selfcert/jgca_cert.html",
+    "tw_grca": "https://grca.nat.gov.tw/repository/Certs/GRCA2.cer",
+    "in_cca_root": "https://cca.gov.in/root_certificate.html",
+    "mx_root": "https://psc.economia.gob.mx/certificados/ACR2_SE.cer",
+    "us_fcpca": "http://repo.fpki.gov/fcpca/fcpcag2.crt",
+    "kz_pki": "https://pki.gov.kz/en/cert-en/",
+    "qa_moi_root": "http://ca.moi.gov.qa/certs/moi-root-ca.p7b",
+    "ar_acraiz": "https://acraiz.gov.ar/acraizra.crt",
 }
 
 # A second Latin-American bloc, found 25.08.2026 while checking prior art. Chile, Colombia,
@@ -222,6 +252,7 @@ def main() -> int:
     targets += [("pacific_alliance", k, v) for k, v in PACIFIC_ALLIANCE.items()]
     targets += [("eu_mra_pointers", k, v) for k, v in EU_MRA.items()]
     targets += [("other_national", k, v) for k, v in OTHER_NATIONAL.items()]
+    targets += [("government_roots", k, v) for k, v in GOVERNMENT_ROOTS.items()]
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:

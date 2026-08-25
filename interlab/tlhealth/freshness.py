@@ -108,14 +108,30 @@ def parse(url: str) -> dict:
         )
     ]
 
+    # TS 119 612 dates are expected to carry a zone. Some do not: the Brazilian ICP-Brasil list
+    # declares a naive timestamp, which crashed this reader the first time it was measured
+    # (25.08.2026). A missing zone is a property of the document, so it is recorded rather than
+    # quietly normalised — and UTC is assumed only to keep the arithmetic possible, which is a
+    # narrower claim than the document makes.
+    def _declared(value: str) -> tuple[datetime.datetime, bool]:
+        t = datetime.datetime.fromisoformat(value.replace("Z", "+00:00"))
+        naive = t.tzinfo is None
+        if naive:
+            t = t.replace(tzinfo=datetime.timezone.utc)
+        return t, naive
+
     if issued:
-        t = datetime.datetime.fromisoformat(issued.group(1).replace("Z", "+00:00"))
+        t, naive = _declared(issued.group(1))
         out["issued"] = issued.group(1)
         out["age_days"] = (NOW - t).days
+        if naive:
+            out["declared_without_timezone"] = True
     if nxt:
-        n = datetime.datetime.fromisoformat(nxt.group(1).replace("Z", "+00:00"))
+        n, naive = _declared(nxt.group(1))
         out["next_update"] = nxt.group(1)
         out["overdue_days"] = max(0, (NOW - n).days)
+        if naive:
+            out["declared_without_timezone"] = True
 
     if terminal:
         out["state"] = "terminal_declared"
@@ -155,6 +171,12 @@ def main() -> int:
         "https://tl.gov.me/ME_TL.xml",
         "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
         "https://pki.jgm.gov.ar/TSL/tsl-CL.xml",
+        # Added 25.08.2026 from the worldwide survey: national lists in the Americas that
+        # neither the European nor the MERCOSUR hub declares. Read for currency like the rest,
+        # because whether anyone points at them is a separate question from whether they are current.
+        "https://onac.org.co/certificados/tsl/tsl-co.xml",
+        "https://applin.indotel.gob.do/tsl/tsl.xml",
+        "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml",
     ]
     extra += islands
 

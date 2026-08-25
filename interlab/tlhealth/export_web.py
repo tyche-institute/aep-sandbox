@@ -28,6 +28,21 @@ HUB_MB = "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
 HUB_MRA = "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml"
 HUBS = (HUB_EU, HUB_MB, HUB_MRA)
 
+# Population (b): national government root certificates. A certificate carries no
+# SchemeTerritory, so unlike every list on this page these labels are asserted by us from the
+# publishing authority rather than read out of the artefact. Marked as asserted in the export.
+GOV_ROOT_TERRITORY = {
+    "https://gu-st.ru/content/lending/russian_trusted_root_ca_pem.crt": "RU",
+    "https://www.gpki.go.jp/selfcert/jgca_cert.html": "JP",
+    "https://grca.nat.gov.tw/repository/Certs/GRCA2.cer": "TW",
+    "https://cca.gov.in/root_certificate.html": "IN",
+    "https://psc.economia.gob.mx/certificados/ACR2_SE.cer": "MX",
+    "http://repo.fpki.gov/fcpca/fcpcag2.crt": "US",
+    "https://pki.gov.kz/en/cert-en/": "KZ",
+    "http://ca.moi.gov.qa/certs/moi-root-ca.p7b": "QA",
+    "https://acraiz.gov.ar/acraizra.crt": "AR",
+}
+
 # Class from the probe -> state shown on the page. The page never invents a state.
 STATE = {
     "ok": "ok",
@@ -104,9 +119,11 @@ def main() -> int:
 
     # --- what the probe measured: state --------------------------------------
     measured = {}
+    population = {}
     for r in probe["results"]:
         if r["url"].startswith("http"):
             measured[r["url"]] = r
+            population[r["url"]] = r.get("population")
 
     # --- what a second vantage saw, where this one failed ---------------------
     vantage = {v["url"]: v for v in probe.get("vantage_checks", [])}
@@ -125,7 +142,13 @@ def main() -> int:
         c = crawled.get(u, {})
         m = measured.get(u, {})
         f = freshness.get(u, {})
-        terr = c.get("territory") or f.get("territory") or "??"
+        pop = population.get(u)
+        # A published national root certificate declares no SchemeTerritory - it is a
+        # certificate, not a list - so its territory cannot be read from the artefact the way
+        # every other label here is. These labels are OURS, asserted from the publishing
+        # authority, and the export marks them as asserted so a reader is never misled into
+        # thinking a publisher declared them.
+        terr = c.get("territory") or f.get("territory") or GOV_ROOT_TERRITORY.get(u) or "??"
         state = STATE.get(m.get("class", ""), None)
         if state is None:
             state = "ok" if c.get("fetched") else "fail"
@@ -142,14 +165,17 @@ def main() -> int:
             state = "empty"
 
         mime = c.get("mime")
+        is_root = pop == "government_roots"
         nodes.append({
             "id": u,
             "t": terr,
             "label": terr,
-            "kind": "pdf" if (mime or "").endswith("pdf") else "xml",
+            "kind": "root" if is_root else ("pdf" if (mime or "").endswith("pdf") else "xml"),
+            "population": pop,
             "mime": mime,
             "state": state,
-            "territory_source": c.get("territory_source"),
+            "territory_source": ("asserted_by_us" if (is_root and u in GOV_ROOT_TERRITORY)
+                                 else c.get("territory_source")),
             "scheme": u.split(":", 1)[0],
             "providers": f.get("providers"),
             "services": f.get("services"),
@@ -218,7 +244,13 @@ def main() -> int:
         "hub_to_hub_edges": len([e for e in edges
                                  if {e["s"], e["d"]} == {HUB_EU, HUB_MB}]),
         "pointers_declared_over_plain_http": plain_http,
-        "islands": [n["t"] for n in nodes if n["in"] == 0 and n["state"] != "hub"],
+        # "Nobody points at it" is a statement about the pointer graph, so it can only be made
+        # about artefacts that live in that graph. A national root certificate is not a list and
+        # no list is expected to point at one, so counting it as an island would manufacture a
+        # finding out of a category error.
+        "islands": [n["t"] for n in nodes
+                    if n["in"] == 0 and n["state"] != "hub" and n["kind"] != "root"],
+        "government_roots": sorted(n["t"] for n in nodes if n["kind"] == "root"),
         "eu_has_two_hubs": {
             "main_lotl_pointers": len([e for e in edges if e["s"] == HUB_EU]),
             "mra_lotl_pointers": len([e for e in edges if e["s"] == HUB_MRA]),

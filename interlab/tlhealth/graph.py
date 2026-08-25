@@ -39,6 +39,12 @@ SEEDS.update({
     "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0": "Russia",
     "https://czo.gov.ua/download/tl/TL-UA-EC.xml": "Ukraine (EU-facing list)",
     "https://trusteid.mdt.gov.mk/tl/TL_MK.xml": "North Macedonia",
+    # Added 25.08.2026 from the worldwide survey, each confirmed by an independent verifier as
+    # a machine-readable national list. Seeded so the walk reaches trust infrastructure that no
+    # European or MERCOSUR hub declares - the Americas beyond the two blocs already mapped.
+    "https://onac.org.co/certificados/tsl/tsl-co.xml": "Colombia (national accreditation body)",
+    "https://applin.indotel.gob.do/tsl/tsl.xml": "Dominican Republic",
+    "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml": "Brazil (ICP-Brasil root authority)",
 })
 
 # Where a list cannot be fetched and nothing points at it, the territory cannot be taken from
@@ -55,6 +61,9 @@ SEED_TERRITORY = {
     "https://pki.jgm.gov.ar/TSL/TSL-MB.xml": "MB",
     "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0": "RU",
     "https://trusteid.mdt.gov.mk/tl/TL_MK.xml": "MK",
+    "https://onac.org.co/certificados/tsl/tsl-co.xml": "CO",
+    "https://applin.indotel.gob.do/tsl/tsl.xml": "DO",
+    "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml": "BR",
 }
 
 
