@@ -219,9 +219,15 @@ def main() -> int:
     # Everything that did not answer here is asked once from the other vantage. Only failures
     # are re-asked: an endpoint that already served us has no reason to be fetched twice, and
     # the second vantage exists to resolve an ambiguity, not to double the traffic.
+    # Only failures are re-asked, and a refusal is NOT a failure. A server that answers 403
+    # has given an answer; asking the same URL again from a different network is structurally
+    # "refused, so try another address", whatever our intent. We asked Russia's endpoint once,
+    # on 25.08.2026, to establish whether the refusal was specific to this host - it was not,
+    # both vantages were refused - and that question is now answered and not re-opened daily.
+    # The recorded observation stands; see runs/2026-08-25T06-07-41Z.json.
     vantage = []
     for r in results:
-        if r["class"] == "ok":
+        if r["class"] in ("ok", "access_refused"):
             continue
         obs = second_vantage(r["url"])
         vantage.append({"url": r["url"], "name": r["name"], "population": r["population"],
