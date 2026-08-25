@@ -75,7 +75,7 @@
   "no_answer": 2,
   "valid_worldwide": false,
   "gated": true,
-  "public_note": "One member state's endpoint fails TLS validation from every vantage measured; disclosed to its operator, detail withheld pending a reasonable interval."
+  "public_note": "One member state's endpoint failed TLS validation from every one of the countries measured; its operator will be notified before it is named, and the detail is withheld until then."
  },
  "methodology": "A bare TLS probe with no SNI reports CDN default certificates as defects; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation exactly one endpoint fails from every vantage and every method; all others validate when fetched the way software fetches them, with SNI.",
  "hosts": {
