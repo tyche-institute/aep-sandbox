@@ -63,6 +63,12 @@ def parse(url: str) -> dict:
     out["providers"] = len(re.findall(r"<(?:\w+:)?TSPName>", raw))
     out["services"] = len(re.findall(r"<(?:\w+:)?ServiceTypeIdentifier>", raw))
     out["terminal_next_update"] = terminal
+    # "Names no providers" and "carries no provider section at all" are different statements
+    # about a list, and only the second is true of Moldova's. Recorded separately so the
+    # published wording can be the accurate one.
+    out["provider_section"] = bool(re.search(r"<(?:\w+:)?TrustServiceProviderList", raw))
+    out["tsl_type"] = (m.group(1) if (m := re.search(r"<(?:\w+:)?TSLType>([^<]+)</", raw)) else None)
+    out["pointers_out"] = len(re.findall(r"<(?:\w+:)?TSLLocation>", raw))
 
     if issued:
         t = datetime.datetime.fromisoformat(issued.group(1).replace("Z", "+00:00"))
@@ -90,10 +96,38 @@ def main() -> int:
     xml_pointers = sorted({u for u in re.findall(r"<TSLLocation>(https?://[^<]+)</TSLLocation>", raw)
                            if u.lower().split("?")[0].endswith(".xml")})
 
+    # The four published copies of the MERCOSUR regional list. Read here because the question
+    # they raise is one of declared currency, not reachability: all four answer, and on
+    # 25.08.2026 three of them were a sequence that had lapsed 110 days earlier. A signature
+    # does not carry freshness, so nothing but this field distinguishes them.
+    extra = [
+        "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+        "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+        "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+        "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+    ]
+    # Lists no hub points at. They are read for the same fields as everything else, because
+    # "nobody points at it" is a statement about the graph and says nothing about whether the
+    # artefact is current — and the difference between those two is the whole point.
+    islands = [
+        "https://czo.gov.ua/download/tl/TL-UA.xml",
+        "https://tl.ico.org.uk/uktrustedlist/UKTL.xml",
+        "https://trustedlist.tsl-switzerland.ch/tsl-ch.xml",
+        "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+        "https://tl.gov.me/ME_TL.xml",
+        "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+        "https://pki.jgm.gov.ar/TSL/tsl-CL.xml",
+    ]
+    extra += islands
+
     rows = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        for row in ex.map(parse, xml_pointers):
+        for row in ex.map(parse, xml_pointers + extra):
             rows.append(row)
+    for row in rows:
+        row["group"] = ("islands" if row["url"] in islands
+                        else "mercosur_copies" if row["url"] in extra
+                        else "eu_lotl_pointers")
     rows.sort(key=lambda x: (x.get("territory") or "zz", x["url"]))
 
     states: dict[str, int] = {}

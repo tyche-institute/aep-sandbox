@@ -31,6 +31,33 @@ POPULATIONS = {
     "eu_lotl_pointers": "TSLLocation pointers inside the live EU List of Trusted Lists",
     "global_root_programmes": "Publicly published root-programme inventories",
     "other_jurisdictions": "National trust artefacts outside the EU/EEA (curated)",
+    "mercosur_pointers": "National pointers declared by the MERCOSUR regional list of lists",
+    "mercosur_copies": "Copies of the MERCOSUR regional list of lists, published across three states",
+}
+
+# The Americas publish a regional list of lists in the same ETSI format. It is measured as its
+# own population and never merged with the European one: the two differ in scale by an order of
+# magnitude, and a combined percentage would hide which of them a reading came from.
+# The national pointers are exactly the four the regional list declares, transcribed from it
+# rather than reconstructed. An earlier version of this file carried a Uruguayan URL we had
+# guessed; it returned 404, and that 404 was ours, not Uruguay's. The declared Uruguayan
+# pointer answers — over plain HTTP, which is a separate and real observation.
+MERCOSUR = {
+    "mb_ar": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+    "mb_br": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+    "mb_py": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+    "mb_uy": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+}
+
+# Four copies of the regional list of lists are published across three states. They are
+# measured as their own population because the question they answer is not "does it answer"
+# but "do the copies agree" — on 25.08.2026 three of them were byte-identical at a sequence
+# that lapsed 110 days earlier, and one was current.
+MERCOSUR_COPIES = {
+    "mb_copy_br": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+    "mb_copy_ar_upper": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+    "mb_copy_ar_lower": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+    "mb_copy_uy": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
 }
 
 GLOBAL_ROOTS = {
@@ -45,6 +72,9 @@ OTHER_JURISDICTIONS = {
     "us_fpki_working": "https://www.idmanagement.gov/fpki/",
     "icao_pkd": "https://www.icao.int/Security/FAL/PKD/Pages/default.aspx",
     "aamva_dts": "https://www.aamva.org/technology/systems/identity-management-systems/digital-trust-service",
+    # Added 25.08.2026, so the denominator of this population changes at that date. Recorded
+    # rather than backfilled: the run files before it measured four endpoints, not five.
+    "ru_gosuslugi_tsl": "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0",
 }
 
 
@@ -99,6 +129,12 @@ def classify(obs: dict) -> str:
         return "transport_failed"
     if obs["http_code"].startswith("2"):
         return "ok"
+    # Added 25.08.2026. A server that answers 401/403/451 has understood the request and
+    # declined it; one that answers 404 or 500 is failing to serve what it published. Both
+    # were "http_error" until this date, and calling a refusal a breakage overstates what a
+    # single vantage point can support: we cannot tell "refused everyone" from "refused us".
+    if obs["http_code"] in ("401", "403", "451"):
+        return "access_refused"
     if obs["http_code"].startswith(("4", "5")):
         return "http_error"
     return "other"
@@ -123,6 +159,8 @@ def main() -> int:
     targets = [("eu_lotl_pointers", u, u) for u in pointers]
     targets += [("global_root_programmes", k, v) for k, v in GLOBAL_ROOTS.items()]
     targets += [("other_jurisdictions", k, v) for k, v in OTHER_JURISDICTIONS.items()]
+    targets += [("mercosur_pointers", k, v) for k, v in MERCOSUR.items()]
+    targets += [("mercosur_copies", k, v) for k, v in MERCOSUR_COPIES.items()]
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:

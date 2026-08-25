@@ -1,15 +1,14 @@
 {
  "caveat": "Transport-layer reachability under a strict TLS client only. Not signature validation, not supervision, not a conformity assessment, and not a vulnerability assessment.",
  "classifier": "see classify() in probe.py; published before any percentage",
- "finished_utc": "2026-08-25T05:49:53.677083+00:00",
+ "finished_utc": "2026-08-25T05:44:10.405942+00:00",
  "instrument": "tlhealth",
  "lotl_sha256": "09b50b1766f3c460826de90cc6620c6accd754fb6fd6a82dcba4516132cf3fb0",
  "lotl_url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
  "populations": {
   "eu_lotl_pointers": "TSLLocation pointers inside the live EU List of Trusted Lists",
   "global_root_programmes": "Publicly published root-programme inventories",
-  "mercosur_copies": "Copies of the MERCOSUR regional list of lists, published across three states",
-  "mercosur_pointers": "National pointers declared by the MERCOSUR regional list of lists",
+  "mercosur_pointers": "The MERCOSUR regional list of lists and the national pointers it carries",
   "other_jurisdictions": "National trust artefacts outside the EU/EEA (curated)"
  },
  "results": [
@@ -673,62 +672,6 @@
   },
   {
    "attempts": 1,
-   "bytes": "48318",
-   "class": "ok",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
-   "http_code": "200",
-   "name": "mb_copy_ar_lower",
-   "population": "mercosur_copies",
-   "redirects": "0",
-   "ssl_verify_result": "0",
-   "url": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml"
-  },
-  {
-   "attempts": 1,
-   "bytes": "48318",
-   "class": "ok",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
-   "http_code": "200",
-   "name": "mb_copy_ar_upper",
-   "population": "mercosur_copies",
-   "redirects": "0",
-   "ssl_verify_result": "0",
-   "url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml"
-  },
-  {
-   "attempts": 1,
-   "bytes": "44008",
-   "class": "ok",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
-   "http_code": "200",
-   "name": "mb_copy_br",
-   "population": "mercosur_copies",
-   "redirects": "0",
-   "ssl_verify_result": "0",
-   "url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
-  },
-  {
-   "attempts": 1,
-   "bytes": "48318",
-   "class": "ok",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
-   "http_code": "200",
-   "name": "mb_copy_uy",
-   "population": "mercosur_copies",
-   "redirects": "1",
-   "ssl_verify_result": "0",
-   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
-  },
-  {
-   "attempts": 1,
    "bytes": "104823",
    "class": "ok",
    "curl_error": "",
@@ -757,6 +700,34 @@
   },
   {
    "attempts": 1,
+   "bytes": "48318",
+   "class": "ok",
+   "curl_error": "",
+   "curl_exit": 0,
+   "final_url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "http_code": "200",
+   "name": "mb_lol_ar_copy",
+   "population": "mercosur_pointers",
+   "redirects": "0",
+   "ssl_verify_result": "0",
+   "url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml"
+  },
+  {
+   "attempts": 1,
+   "bytes": "44008",
+   "class": "ok",
+   "curl_error": "",
+   "curl_exit": 0,
+   "final_url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "http_code": "200",
+   "name": "mb_lol_br_copy",
+   "population": "mercosur_pointers",
+   "redirects": "0",
+   "ssl_verify_result": "0",
+   "url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "attempts": 1,
    "bytes": "0",
    "class": "tls_validation_failed",
    "curl_error": "how to fix it, please visit the web page mentioned above.",
@@ -771,17 +742,17 @@
   },
   {
    "attempts": 1,
-   "bytes": "29843",
-   "class": "ok",
+   "bytes": "34305",
+   "class": "http_error",
    "curl_error": "",
    "curl_exit": 0,
-   "final_url": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
-   "http_code": "200",
+   "final_url": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/documentos/publicaciones/TSL_UY.xml",
+   "http_code": "404",
    "name": "mb_uy",
    "population": "mercosur_pointers",
-   "redirects": "1",
+   "redirects": "0",
    "ssl_verify_result": "0",
-   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+   "url": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/documentos/publicaciones/TSL_UY.xml"
   },
   {
    "attempts": 1,
@@ -810,20 +781,6 @@
    "redirects": "1",
    "ssl_verify_result": "0",
    "url": "https://www.icao.int/Security/FAL/PKD/Pages/default.aspx"
-  },
-  {
-   "attempts": 1,
-   "bytes": "2907",
-   "class": "access_refused",
-   "curl_error": "",
-   "curl_exit": 0,
-   "final_url": "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0",
-   "http_code": "403",
-   "name": "ru_gosuslugi_tsl",
-   "population": "other_jurisdictions",
-   "redirects": "0",
-   "ssl_verify_result": "0",
-   "url": "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0"
   },
   {
    "attempts": 1,
@@ -856,7 +813,7 @@
  ],
  "retry_policy": "transport failures retried 1x at 3 workers; attempts recorded per row",
  "schema": 1,
- "started_utc": "2026-08-25T05:49:34.713174+00:00",
+ "started_utc": "2026-08-25T05:43:48.316908+00:00",
  "summary": {
   "eu_lotl_pointers": {
    "by_class": {
@@ -871,26 +828,20 @@
    },
    "total": 4
   },
-  "mercosur_copies": {
-   "by_class": {
-    "ok": 4
-   },
-   "total": 4
-  },
   "mercosur_pointers": {
    "by_class": {
-    "ok": 3,
+    "http_error": 1,
+    "ok": 4,
     "tls_validation_failed": 1
    },
-   "total": 4
+   "total": 6
   },
   "other_jurisdictions": {
    "by_class": {
-    "access_refused": 1,
     "ok": 3,
     "tls_validation_failed": 1
    },
-   "total": 5
+   "total": 4
   }
  }
 }

@@ -1,0 +1,1024 @@
+{
+ "observed": "2026-08-25T05:18:25.426395+00:00",
+ "nodes": [
+  {
+   "id": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "t": "EU",
+   "label": "EU",
+   "state": "hub",
+   "note": "list of lists \u00b7 43 pointers",
+   "providers": 0,
+   "services": 0,
+   "age": 5,
+   "next": "2027-02-19T18:25:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.signatur.rtr.at/vertrauensliste.xml",
+   "t": "AT",
+   "label": "AT",
+   "state": "ok",
+   "note": "",
+   "providers": 11,
+   "services": 160,
+   "age": 70,
+   "next": "2026-12-15T15:44:12Z",
+   "terminal": false
+  },
+  {
+   "id": "https://tsl.belgium.be/tsl-be-v6.xml",
+   "t": "BE",
+   "label": "BE",
+   "state": "ok",
+   "note": "",
+   "providers": 17,
+   "services": 208,
+   "age": 70,
+   "next": "2026-12-15T16:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://crc.bg/files/_en/TSL_BG.xml",
+   "t": "BG",
+   "label": "BG",
+   "state": "ok",
+   "note": "",
+   "providers": 15,
+   "services": 218,
+   "age": 84,
+   "next": "2026-12-01T12:07:50Z",
+   "terminal": false
+  },
+  {
+   "id": "https://trustedlist.tsl-switzerland.ch/tsl-ch.xml",
+   "t": "CH",
+   "label": "CH",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml",
+   "t": "CY",
+   "label": "CY",
+   "state": "ok",
+   "note": "",
+   "providers": 1,
+   "services": 10,
+   "age": 146,
+   "next": "2026-09-30T07:56:45Z",
+   "terminal": false
+  },
+  {
+   "id": "https://tsl.gov.cz/publ/TSL_CZ.xtsl",
+   "t": "CZ",
+   "label": "CZ",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://tl.bundesnetzagentur.de/TL-DE.XML",
+   "t": "DE",
+   "label": "DE",
+   "state": "ok",
+   "note": "",
+   "providers": 331,
+   "services": 2491,
+   "age": 48,
+   "next": "2027-01-07T13:30:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.digst.dk/TSLDK_v6xml",
+   "t": "DK",
+   "label": "DK",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://sr.riik.ee/tsl/estonian-tsl.xml",
+   "t": "EE",
+   "label": "EE",
+   "state": "ok",
+   "note": "",
+   "providers": 3,
+   "services": 150,
+   "age": 96,
+   "next": "2026-11-20T12:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.eett.gr/tsl/tl-el.xml",
+   "t": "EL",
+   "label": "EL",
+   "state": "ok",
+   "note": "",
+   "providers": 5,
+   "services": 197,
+   "age": 19,
+   "next": "2027-02-05T17:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://tsl.digital.gob.es/TSL.xml",
+   "t": "ES",
+   "label": "ES",
+   "state": "ok",
+   "note": "",
+   "providers": 79,
+   "services": 833,
+   "age": 18,
+   "next": "2027-02-02T05:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://dp.trustedlist.fi/fi-tl-v6.xml",
+   "t": "FI",
+   "label": "FI",
+   "state": "ok",
+   "note": "",
+   "providers": 1,
+   "services": 35,
+   "age": 3,
+   "next": "2027-02-21T07:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml",
+   "t": "FR",
+   "label": "FR",
+   "state": "ok",
+   "note": "",
+   "providers": 39,
+   "services": 734,
+   "age": 19,
+   "next": "2027-02-05T08:31:24Z",
+   "terminal": false
+  },
+  {
+   "id": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml",
+   "t": "HR",
+   "label": "HR",
+   "state": "ok",
+   "note": "",
+   "providers": 4,
+   "services": 90,
+   "age": 35,
+   "next": "2027-01-20T08:55:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
+   "t": "HU",
+   "label": "HU",
+   "state": "ok",
+   "note": "",
+   "providers": 12,
+   "services": 700,
+   "age": 40,
+   "next": "2027-01-15T09:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml",
+   "t": "IS",
+   "label": "IS",
+   "state": "ok",
+   "note": "",
+   "providers": 2,
+   "services": 11,
+   "age": 5,
+   "next": "2027-02-19T12:01:32Z",
+   "terminal": false
+  },
+  {
+   "id": "https://eidas.agid.gov.it/TL/TSL-IT.xml",
+   "t": "IT",
+   "label": "IT",
+   "state": "ok",
+   "note": "",
+   "providers": 279,
+   "services": 1196,
+   "age": 28,
+   "next": "2027-01-27T10:33:49Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml",
+   "t": "LI",
+   "label": "LI",
+   "state": "ok",
+   "note": "",
+   "providers": 15,
+   "services": 33,
+   "age": 70,
+   "next": "2026-12-15T16:05:23Z",
+   "terminal": false
+  },
+  {
+   "id": "https://elektroninisparasas.lt/LT-TSL.xml",
+   "t": "LT",
+   "label": "LT",
+   "state": "ok",
+   "note": "",
+   "providers": 63,
+   "services": 239,
+   "age": 67,
+   "next": "2026-12-18T07:27:16Z",
+   "terminal": false
+  },
+  {
+   "id": "https://trusted-list.lu/tsl.xml",
+   "t": "LU",
+   "label": "LU",
+   "state": "ok",
+   "note": "",
+   "providers": 5,
+   "services": 75,
+   "age": 96,
+   "next": "2026-11-20T06:02:52Z",
+   "terminal": false
+  },
+  {
+   "id": "https://trustlist.gov.lv/tsl/latvian-tsl.xml",
+   "t": "LV",
+   "label": "LV",
+   "state": "ok",
+   "note": "",
+   "providers": 1,
+   "services": 98,
+   "age": 118,
+   "next": "2026-10-28T20:00:48Z",
+   "terminal": false
+  },
+  {
+   "id": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+   "t": "MD",
+   "label": "MD",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://tl.gov.me/ME_TL.xml",
+   "t": "ME",
+   "label": "ME",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://tsl.mca.org.mt/MT_TSL.xml",
+   "t": "MT",
+   "label": "MT",
+   "state": "ok",
+   "note": "",
+   "providers": 3,
+   "services": 19,
+   "age": 119,
+   "next": "2026-10-27T08:47:30Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml",
+   "t": "NL",
+   "label": "NL",
+   "state": "ok",
+   "note": "",
+   "providers": 41,
+   "services": 235,
+   "age": 59,
+   "next": "2026-12-26T10:30:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://nkom.no/files/TL/NO_TL.xml",
+   "t": "NO",
+   "label": "NO",
+   "state": "ok",
+   "note": "",
+   "providers": 16,
+   "services": 103,
+   "age": 118,
+   "next": "2026-10-28T21:00:23Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.nccert.pl/tsl/PL_TSL.xml",
+   "t": "PL",
+   "label": "PL",
+   "state": "ok",
+   "note": "",
+   "providers": 69,
+   "services": 274,
+   "age": 82,
+   "next": "2026-09-03T10:35:23Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.gns.gov.pt/media/TSLPT.xml",
+   "t": "PT",
+   "label": "PT",
+   "state": "ok",
+   "note": "",
+   "providers": 20,
+   "services": 212,
+   "age": 7,
+   "next": "2027-02-17T15:36:07Z",
+   "terminal": false
+  },
+  {
+   "id": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+   "t": "RO",
+   "label": "RO",
+   "state": "ok",
+   "note": "",
+   "providers": 9,
+   "services": 308,
+   "age": 4,
+   "next": "2027-02-20T16:10:32Z",
+   "terminal": false
+  },
+  {
+   "id": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "t": "RS",
+   "label": "RS",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "t": "RS",
+   "label": "RS",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://trustedlist.pts.se/tlv6/SE-TL.xml",
+   "t": "SE",
+   "label": "SE",
+   "state": "ok",
+   "note": "",
+   "providers": 5,
+   "services": 24,
+   "age": 5,
+   "next": "2027-02-19T14:56:19Z",
+   "terminal": false
+  },
+  {
+   "id": "https://www.tl.gov.si/SI_TL.xml",
+   "t": "SI",
+   "label": "SI",
+   "state": "ok",
+   "note": "",
+   "providers": 14,
+   "services": 230,
+   "age": 48,
+   "next": "2027-01-07T11:21:12Z",
+   "terminal": false
+  },
+  {
+   "id": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml",
+   "t": "SK",
+   "label": "SK",
+   "state": "ok",
+   "note": "",
+   "providers": 62,
+   "services": 309,
+   "age": 7,
+   "next": "2026-12-30T11:00:00Z",
+   "terminal": false
+  },
+  {
+   "id": "https://czo.gov.ua/download/tl/TL-UA.xml",
+   "t": "UA",
+   "label": "UA",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml",
+   "t": "UK",
+   "label": "UK",
+   "state": "ok",
+   "note": "",
+   "providers": 16,
+   "services": 46,
+   "age": 2061,
+   "next": null,
+   "terminal": true
+  },
+  {
+   "id": "https://tl.ico.org.uk/uktrustedlist/UKTL.xml",
+   "t": "UK",
+   "label": "UK",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://crc.bg/files/_en/TSL_BG.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://eidas.gov.ie/Irelandtslsignedv6.xml",
+   "t": "?",
+   "label": "?",
+   "state": "fail",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://nkom.no/files/TL/NO_TL.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://sr.riik.ee/tsl/estonian-tsl.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://trusted-list.lu/tsl.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://tsl.digital.gob.es/TSL.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://tsl.gov.cz/publ/TSL_CZ.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://www.digst.dk/TSLDK_v6pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://www.gns.gov.pt/media/TSLPT.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://www.nmhh.hu/tl/pub/HU_TL.pdf",
+   "t": "?",
+   "label": "?",
+   "state": "ok",
+   "note": "",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "t": "MB",
+   "label": "MB",
+   "state": "ok",
+   "note": "MERCOSUR list of lists \u00b7 seq 8 \u00b7 current",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "t": "MB",
+   "label": "MB",
+   "state": "stale",
+   "note": "MERCOSUR mirror \u00b7 seq 7 \u00b7 expired 110 d",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "t": "AR",
+   "label": "AR",
+   "state": "ok",
+   "note": "Argentina \u00b7 seq 8",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+   "t": "BR",
+   "label": "BR",
+   "state": "ok",
+   "note": "Brazil \u00b7 seq 8",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+   "t": "PY",
+   "label": "PY",
+   "state": "tls_validation_failed",
+   "note": "Paraguay \u00b7 cannot build chain",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/documentos/publicaciones/TSL_UY.xml",
+   "t": "UY",
+   "label": "UY",
+   "state": "http_error",
+   "note": "Uruguay \u00b7 404 \u00b7 pointer declared over http://",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  },
+  {
+   "id": "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0",
+   "t": "RU",
+   "label": "RU",
+   "state": "blocked",
+   "note": "Russia \u00b7 exists \u00b7 403 to our vantage",
+   "providers": null,
+   "services": null,
+   "age": null,
+   "next": null,
+   "terminal": null
+  }
+ ],
+ "edges": [
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://crc.bg/files/_en/TSL_BG.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://crc.bg/files/_en/TSL_BG.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://dp.trustedlist.fi/fi-tl-v6.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://eidas.gov.ie/Irelandtslsignedv6.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://elektroninisparasas.lt/LT-TSL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://nkom.no/files/TL/NO_TL.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://nkom.no/files/TL/NO_TL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://sr.riik.ee/tsl/estonian-tsl.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://sr.riik.ee/tsl/estonian-tsl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tl.bundesnetzagentur.de/TL-DE.XML"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://trusted-list.lu/tsl.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://trusted-list.lu/tsl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://trustedlist.adr.gov.ro/trustedlist.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://trustedlist.pts.se/tlv6/SE-TL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://trustlist.gov.lv/tsl/latvian-tsl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.belgium.be/tsl-be-v6.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.digital.gob.es/TSL.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.digital.gob.es/TSL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.gov.cz/publ/TSL_CZ.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.gov.cz/publ/TSL_CZ.xtsl"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://tsl.mca.org.mt/MT_TSL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.digst.dk/TSLDK_v6pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.digst.dk/TSLDK_v6xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.eett.gr/tsl/tl-el.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.gns.gov.pt/media/TSLPT.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.gns.gov.pt/media/TSLPT.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.nccert.pl/tsl/PL_TSL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.nmhh.hu/tl/pub/HU_TL.pdf"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.nmhh.hu/tl/pub/HU_TL.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.signatur.rtr.at/vertrauensliste.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "d": "https://www.tl.gov.si/SI_TL.xml"
+  },
+  {
+   "s": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "d": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "s": "https://tl.gov.me/ME_TL.xml",
+   "d": "https://mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "s": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://crc.bg/files/_en/TSL_BG.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://dp.trustedlist.fi/fi-tl-v6.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://eidas.agid.gov.it/TL/TSL-IT.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://elektroninisparasas.lt/LT-TSL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://nkom.no/files/TL/NO_TL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://sr.riik.ee/tsl/estonian-tsl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://tl.bundesnetzagentur.de/TL-DE.XML",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://trusted-list.lu/tsl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://trustedlist.pts.se/tlv6/SE-TL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://trustlist.gov.lv/tsl/latvian-tsl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://tsl.belgium.be/tsl-be-v6.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://tsl.digital.gob.es/TSL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://tsl.gov.cz/publ/TSL_CZ.xtsl",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://tsl.mca.org.mt/MT_TSL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.digst.dk/TSLDK_v6xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.eett.gr/tsl/tl-el.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.gns.gov.pt/media/TSLPT.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.nccert.pl/tsl/PL_TSL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.signatur.rtr.at/vertrauensliste.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://www.tl.gov.si/SI_TL.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "d": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "s": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "d": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "s": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "d": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "s": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "d": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "s": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "d": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "s": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "d": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/documentos/publicaciones/TSL_UY.xml"
+  }
+ ],
+ "runs": 18
+}
