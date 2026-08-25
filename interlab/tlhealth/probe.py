@@ -96,6 +96,17 @@ GOVERNMENT_ROOTS = {
     "kz_pki": "https://pki.gov.kz/en/cert-en/",
     "qa_moi_root": "http://ca.moi.gov.qa/certs/moi-root-ca.p7b",
     "ar_acraiz": "https://acraiz.gov.ar/acraizra.crt",
+    # Asia additions, 25.08.2026 evening run. Thailand and LGPKI answer; Vietnam and Bangladesh
+    # fail TLS to a strict client from both of our vantages (incomplete chains - Vietnam sends
+    # the wrong intermediate, Bangladesh sends none), which is exactly the class of observation
+    # this instrument records rather than a reason to look away: a national root distribution
+    # point a strict client cannot reach is the Irish finding wearing another flag. A worldwide
+    # RIPE Atlas check (measurements 204483202/204483203) found both defects identical from
+    # every one of ~29 probes - not a vantage artefact.
+    "th_nrca": "https://nrca.go.th/home/certificates",
+    "jp_lgpki": "https://www.lgpki.go.jp/CAInfo/install.htm",
+    "vn_rootca": "https://rootca.gov.vn/",
+    "bd_cca": "https://cca.gov.bd/pages/static-pages/6922e0d9933eb65569e28db1",
 }
 
 # A second Latin-American bloc, found 25.08.2026 while checking prior art. Chile, Colombia,

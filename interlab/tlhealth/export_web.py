@@ -41,6 +41,10 @@ GOV_ROOT_TERRITORY = {
     "https://pki.gov.kz/en/cert-en/": "KZ",
     "http://ca.moi.gov.qa/certs/moi-root-ca.p7b": "QA",
     "https://acraiz.gov.ar/acraizra.crt": "AR",
+    "https://nrca.go.th/home/certificates": "TH",
+    "https://www.lgpki.go.jp/CAInfo/install.htm": "JP",
+    "https://rootca.gov.vn/": "VN",
+    "https://cca.gov.bd/pages/static-pages/6922e0d9933eb65569e28db1": "BD",
 }
 
 # Class from the probe -> state shown on the page. The page never invents a state.
