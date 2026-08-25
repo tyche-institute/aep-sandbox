@@ -65,6 +65,89 @@ def unwrap_zip(raw: str) -> str:
     return raw
 
 
+def parse_ms_ctl(url: str) -> dict:
+    """Read currency out of a Microsoft-format Certificate Trust List (DER PKCS#7).
+
+    South Korea's national list speaks about its own currency just as an ETSI list does — it
+    carries ThisUpdate, NextUpdate and a monotonic SequenceNumber — but in ASN.1 rather than
+    XML, so the XML reader renders it permanently green. Added 25.08.2026 after an adversarial
+    review showed exactly that: a 28-day-cycle list (the shortest in the corpus, next update
+    2026-09-10) was the one node structurally incapable of ever showing stale.
+    The sequence number is recorded as itself and never in a date field: it is a counter,
+    not a time.
+    """
+    out = {"url": url, "format": "ms-ctl"}
+    r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url], capture_output=True, timeout=TIMEOUT + 20)
+    if r.returncode != 0 or not r.stdout:
+        out["fetch_error"] = "fetch failed"
+        out["state"] = "unreachable"
+        return out
+    out["fetch_error"] = ""
+    asn1 = subprocess.run(["openssl", "asn1parse", "-inform", "DER"],
+                          input=r.stdout, capture_output=True, timeout=30).stdout.decode("utf-8", "ignore")
+    # In the CTL body the two UTCTIMEs are ThisUpdate then NextUpdate, in order; the INTEGER
+    # immediately before ThisUpdate is the SequenceNumber. Read positionally from the parse.
+    times = re.findall(r"UTCTIME\s*:(\d{12}Z)", asn1)
+    seq = None
+    lines = asn1.splitlines()
+    for i, ln in enumerate(lines):
+        if "UTCTIME" in ln:
+            for back in range(i - 1, max(i - 6, -1), -1):
+                m = re.search(r"INTEGER\s*:([0-9A-F]+)", lines[back])
+                if m:
+                    seq = int(m.group(1), 16)
+                    break
+            break
+    out["sequence"] = seq
+    if len(times) >= 2:
+        def utc(t):  # YYMMDDHHMMSSZ, RFC 5280 rule: YY < 50 → 20YY
+            yy = int(t[0:2]); year = 2000 + yy if yy < 50 else 1900 + yy
+            return datetime.datetime(year, int(t[2:4]), int(t[4:6]), int(t[6:8]),
+                                     int(t[8:10]), int(t[10:12]), tzinfo=datetime.timezone.utc)
+        this_u, next_u = utc(times[0]), utc(times[1])
+        out["issued"] = this_u.isoformat()
+        out["age_days"] = (NOW - this_u).days
+        out["next_update"] = next_u.isoformat()
+        out["overdue_days"] = max(0, (NOW - next_u).days)
+        out["state"] = "past_declared_next_update" if out["overdue_days"] > 0 else "current"
+    else:
+        out["state"] = "freshness_unreadable"
+    return out
+
+
+def parse_kisa_register(url: str) -> dict:
+    """Read the Korean JSON register for what it actually holds, from the server's own count.
+
+    The pinned URL carries ?size=50 while the server reports its own total; trusting our query
+    parameter would silently truncate at the 51st accredited CA. The dev/test taint is counted
+    here (DN regex, case-insensitive, word-boundary) because no status field in the register
+    separates test hierarchies from production ones — that fact is recorded, not repaired.
+    """
+    out = {"url": url, "format": "json-register"}
+    r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url], capture_output=True, timeout=TIMEOUT + 20)
+    if r.returncode != 0 or not r.stdout:
+        out["fetch_error"] = "fetch failed"
+        out["state"] = "unreachable"
+        return out
+    out["fetch_error"] = ""
+    try:
+        d = json.loads(r.stdout)
+        rows = d.get("data") or []
+        out["register_total_reported"] = d.get("total")
+        out["register_rows_fetched"] = len(rows)
+        out["register_pages"] = d.get("totalPages")
+        taint = re.compile(r"\b(dev|test)\b", re.I)
+        out["register_devtest"] = sum(1 for x in rows
+                                      if taint.search(x.get("issuerDn", "") or "")
+                                      or taint.search(x.get("subjectDn", "") or ""))
+        out["state"] = ("current" if d.get("total") == len(rows)
+                        else "register_truncated_by_our_query")
+    except Exception as e:
+        out["fetch_error"] = str(e)[:120]
+        out["state"] = "freshness_unreadable"
+    return out
+
+
 def parse(url: str) -> dict:
     raw, err = fetch(url)
     out = {"url": url, "fetch_error": err}
@@ -193,8 +276,15 @@ def main() -> int:
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
         for row in ex.map(parse, xml_pointers + extra):
             rows.append(row)
+
+    # South Korea's non-ETSI machine-readable list: a Microsoft-format CTL plus a JSON
+    # register. Read by dedicated readers because the XML reader cannot see their currency,
+    # and a list that cannot show stale is a false green (adversarial review, 25.08.2026).
+    rows.append(parse_ms_ctl("https://www.rootca.or.kr/api/trust/kisa-rootca-4-rsa"))
+    rows.append(parse_kisa_register("https://www.rootca.or.kr/api/trust-list/cert/paged?page=0&size=50"))
     for row in rows:
-        row["group"] = ("pacific_alliance" if row["url"] in pacific
+        row["group"] = ("national_ctl" if "rootca.or.kr" in row["url"]
+                        else "pacific_alliance" if row["url"] in pacific
                         else "islands" if row["url"] in islands
                         else "mercosur_copies" if row["url"] in extra
                         else "eu_lotl_pointers")

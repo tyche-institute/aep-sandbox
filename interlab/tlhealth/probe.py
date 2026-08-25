@@ -54,6 +54,7 @@ POPULATIONS = {
     "eu_mra_pointers": "Pointers inside the EU's second list of lists, the one for mutual-recognition agreements",
     "other_national": "National trust lists outside the EU/EEA found by census, measured individually",
     "government_roots": "National government root certificates published for download, outside the EU/EEA",
+    "national_ctl": "Machine-readable national trust lists in non-ETSI formats (Microsoft CTL, JSON registers)",
 }
 
 # The EU's mutual-recognition list of lists. The main LOTL does not mention it, so a crawl
@@ -97,16 +98,31 @@ GOVERNMENT_ROOTS = {
     "qa_moi_root": "http://ca.moi.gov.qa/certs/moi-root-ca.p7b",
     "ar_acraiz": "https://acraiz.gov.ar/acraizra.crt",
     # Asia additions, 25.08.2026 evening run. Thailand and LGPKI answer; Vietnam and Bangladesh
-    # fail TLS to a strict client from both of our vantages (incomplete chains - Vietnam sends
-    # the wrong intermediate, Bangladesh sends none), which is exactly the class of observation
-    # this instrument records rather than a reason to look away: a national root distribution
-    # point a strict client cannot reach is the Irish finding wearing another flag. A worldwide
-    # RIPE Atlas check (measurements 204483202/204483203) found both defects identical from
-    # every one of ~29 probes - not a vantage artefact.
+    # were reported by the survey's verifier as failing TLS to a strict client (incomplete
+    # chains), which is exactly the class of observation this instrument records rather than a
+    # reason to look away - a national root distribution point a strict client cannot reach is
+    # the Irish finding wearing another flag.
     "th_nrca": "https://nrca.go.th/home/certificates",
     "jp_lgpki": "https://www.lgpki.go.jp/CAInfo/install.htm",
     "vn_rootca": "https://rootca.gov.vn/",
     "bd_cca": "https://cca.gov.bd/pages/static-pages/6922e0d9933eb65569e28db1",
+}
+
+# Population: machine-readable national trust lists that are NOT ETSI TS 119 612. South Korea
+# publishes a sequence-numbered PKCS#7 Certificate Trust List (Microsoft CTL format, three
+# self-signed roots: GPKIRootCA1, KISA RootCA 4, GPKIRootCA) and a JSON register of 42 CA
+# certificates beside it. They are a list in function and a different animal in form: the
+# freshness reader would find no ListIssueDateTime in a PKCS#7 blob and the crawler no
+# TSLLocation, so folding them into other_national would dress them up as ETSI lists. Measured
+# here for transport, like everything else; their currency semantics are their own.
+# Data-quality note, verified 25.08.2026: the JSON register mixes test and development
+# hierarchies in with production ones (KISA Test RootCA 7/8, KISA RootCA Dev 1/2, and
+# CrossCertIoTTestCA1 among them), the status field certSttsCd does NOT distinguish them, and
+# name-matching is fragile - "Device CA" is production, "IoTTestCA1" hides its Test. A consumer
+# cannot reliably exclude the test hierarchies without a maintained deny-list.
+NATIONAL_CTL = {
+    "kr_kisa_ctl": "https://www.rootca.or.kr/api/trust/kisa-rootca-4-rsa",
+    "kr_kisa_register": "https://www.rootca.or.kr/api/trust-list/cert/paged?page=0&size=50",
 }
 
 # A second Latin-American bloc, found 25.08.2026 while checking prior art. Chile, Colombia,
@@ -264,6 +280,7 @@ def main() -> int:
     targets += [("eu_mra_pointers", k, v) for k, v in EU_MRA.items()]
     targets += [("other_national", k, v) for k, v in OTHER_NATIONAL.items()]
     targets += [("government_roots", k, v) for k, v in GOVERNMENT_ROOTS.items()]
+    targets += [("national_ctl", k, v) for k, v in NATIONAL_CTL.items()]
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:

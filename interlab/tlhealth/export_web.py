@@ -47,7 +47,21 @@ GOV_ROOT_TERRITORY = {
     "https://cca.gov.bd/pages/static-pages/6922e0d9933eb65569e28db1": "BD",
 }
 
+# Population national_ctl: South Korea's machine-readable list, in Microsoft CTL and JSON form
+# rather than ETSI XML. Same labelling honesty as the roots: neither artefact declares a
+# SchemeTerritory, so KR is asserted by us and marked as asserted.
+NATIONAL_CTL_TERRITORY = {
+    "https://www.rootca.or.kr/api/trust/kisa-rootca-4-rsa": "KR",
+    "https://www.rootca.or.kr/api/trust-list/cert/paged?page=0&size=50": "KR",
+}
+
 # Class from the probe -> state shown on the page. The page never invents a state.
+# The state semantics are versioned like the probe's classifier, because a change here is a
+# change to what the page's colours mean. v1: transport classes + hub/terminal/stale/empty,
+# XML lists only. v2 (2026-08-25): non-ETSI machine-readable lists (kind "ctl") get their
+# currency from dedicated CTL/JSON readers in freshness.py, so "ok" means current for them
+# exactly as it does for XML lists — never merely "fetched".
+STATE_SEMANTICS_VERSION = 2
 STATE = {
     "ok": "ok",
     "tls_validation_failed": "tls_validation_failed",
@@ -152,7 +166,8 @@ def main() -> int:
         # every other label here is. These labels are OURS, asserted from the publishing
         # authority, and the export marks them as asserted so a reader is never misled into
         # thinking a publisher declared them.
-        terr = c.get("territory") or f.get("territory") or GOV_ROOT_TERRITORY.get(u) or "??"
+        terr = (c.get("territory") or f.get("territory") or GOV_ROOT_TERRITORY.get(u)
+                or NATIONAL_CTL_TERRITORY.get(u) or "??")
         state = STATE.get(m.get("class", ""), None)
         if state is None:
             state = "ok" if c.get("fetched") else "fail"
@@ -170,16 +185,18 @@ def main() -> int:
 
         mime = c.get("mime")
         is_root = pop == "government_roots"
+        is_ctl = pop == "national_ctl"
+        asserted = (is_root and u in GOV_ROOT_TERRITORY) or (is_ctl and u in NATIONAL_CTL_TERRITORY)
         nodes.append({
             "id": u,
             "t": terr,
             "label": terr,
-            "kind": "root" if is_root else ("pdf" if (mime or "").endswith("pdf") else "xml"),
+            "kind": ("root" if is_root else "ctl" if is_ctl
+                     else ("pdf" if (mime or "").endswith("pdf") else "xml")),
             "population": pop,
             "mime": mime,
             "state": state,
-            "territory_source": ("asserted_by_us" if (is_root and u in GOV_ROOT_TERRITORY)
-                                 else c.get("territory_source")),
+            "territory_source": ("asserted_by_us" if asserted else c.get("territory_source")),
             "scheme": u.split(":", 1)[0],
             "providers": f.get("providers"),
             "services": f.get("services"),
@@ -188,6 +205,13 @@ def main() -> int:
             "terminal": f.get("terminal_next_update"),
             "overdue": f.get("overdue_days"),
             "provider_section": f.get("provider_section"),
+            # Non-ETSI list fields (kind "ctl"): the CTL's monotonic counter — a counter, not
+            # a date, and rendered as one — and the register's server-reported denominator
+            # with its dev/test taint, so nobody later counts "Korea trusts 42 CAs".
+            "sequence": f.get("sequence"),
+            "list_format": f.get("format"),
+            "register_total": f.get("register_total_reported"),
+            "register_devtest": f.get("register_devtest"),
             "tsl_type": f.get("tsl_type"),
             "http": m.get("http_code"),
             "vantage": ({"there": vantage[u]["there"], "colo": vantage[u].get("there_colo"),
@@ -252,9 +276,16 @@ def main() -> int:
         # about artefacts that live in that graph. A national root certificate is not a list and
         # no list is expected to point at one, so counting it as an island would manufacture a
         # finding out of a category error.
+        # national_ctl is excluded for the same reason as the roots: these artefacts live
+        # outside the pointer graph (a PKCS#7 blob declares no TSLLocation), so "nobody points
+        # at it" would be a category error, not a finding.
         "islands": [n["t"] for n in nodes
-                    if n["in"] == 0 and n["state"] != "hub" and n["kind"] != "root"],
+                    if n["in"] == 0 and n["state"] != "hub" and n["kind"] not in ("root", "ctl")],
+        # Both facts count ARTEFACTS, not territories: JP appears twice under roots (GPKI and
+        # LGPKI) and KR twice under ctl (the CTL and the register). Deduping one but not the
+        # other would put two different denominators side by side on one page.
         "government_roots": sorted(n["t"] for n in nodes if n["kind"] == "root"),
+        "national_ctl": sorted(n["t"] for n in nodes if n["kind"] == "ctl"),
         "eu_has_two_hubs": {
             "main_lotl_pointers": len([e for e in edges if e["s"] == HUB_EU]),
             "mra_lotl_pointers": len([e for e in edges if e["s"] == HUB_MRA]),
