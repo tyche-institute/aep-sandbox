@@ -38,8 +38,27 @@ for url, names in labels.items():
         moved[n].add(url)
 repointed = {n: us for n, us in moved.items() if len(us) > 1}
 
-print(f"runs: {len(runs)}   from {json.loads(runs[0].read_text())['started_utc'][:16]}"
-      f"  to {json.loads(runs[-1].read_text())['started_utc'][:16]}")
+first = json.loads(runs[0].read_text())
+last = json.loads(runs[-1].read_text())
+print(f"runs: {len(runs)}   from {first['started_utc'][:16]}  to {last['started_utc'][:16]}")
+
+# A run count is not a duration. 25 observations sound like weeks and were one night, and a
+# reader who is not told the window will assume the flattering reading.
+import datetime as _dt
+_a = _dt.datetime.fromisoformat(first["started_utc"].replace("Z", "+00:00"))
+_b = _dt.datetime.fromisoformat(last["started_utc"].replace("Z", "+00:00"))
+_h = (_b - _a).total_seconds() / 3600
+print(f"window: {_h:.1f} hours   ({len(runs)} observations)")
+if _h < 72:
+    print("NOTE: under three days. A persistent failure here is persistent WITHIN THIS WINDOW;")
+    print("      distinguishing a defect from a long outage needs a longer series.")
+
+# Classifier versions present. Aggregating across a change silently would compare counts that
+# do not mean the same thing.
+_vers = {json.loads(p.read_text()).get("classifier_version", 1) for p in runs}
+if len(_vers) > 1:
+    print(f"WARNING: {len(_vers)} classifier versions in this series: {sorted(_vers)}.")
+    print("         Counts are not comparable across the break without re-classification.")
 print()
 
 always_ok, never_ok, flapping = [], [], []

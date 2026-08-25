@@ -21,6 +21,16 @@ import time
 
 LOTL = "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
 
+# The primary vantage ran with curl's default User-Agent until 25.08.2026, while the second
+# vantage identified itself. An operator reading their logs should be able to find out who we
+# are and tell us to stop, so both vantages now say the same thing.
+UA = "TycheLabs-TrustedListObservatory/1.0 (+https://tyche.institute/lab/trust-list-graph/)"
+
+# The classifier is published before percentages are computed, so a change to it is a change
+# to what the numbers mean. Version it, and refuse to let a reader aggregate across a break
+# without noticing: v1 put 401/403/451 in http_error, v2 separates them as access_refused.
+CLASSIFIER_VERSION = 2
+
 # A second, declared vantage point (interlab/tlhealth/vantage-cf). Anything that fails from
 # here is asked again from there, because one host cannot tell "refuses everyone" from
 # "refuses us". The worker fetches only an allowlist and returns the observation rather than
@@ -105,7 +115,7 @@ def curl_once(url: str) -> dict:
     fmt = "%{http_code} %{ssl_verify_result} %{size_download} %{num_redirects} %{url_effective}"
     try:
         r = subprocess.run(
-            ["curl", "-sSL", "-o", "/dev/null", "-m", str(TIMEOUT), "-w", fmt, url],
+            ["curl", "-sSL", "-o", "/dev/null", "-m", str(TIMEOUT), "-A", UA, "-w", fmt, url],
             capture_output=True, text=True, timeout=TIMEOUT + 15)
         parts = (r.stdout or "").split(" ", 4)
         while len(parts) < 5:
@@ -237,6 +247,8 @@ def main() -> int:
         "finished_utc": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "lotl_url": LOTL,
         "lotl_sha256": lotl_hash,
+        "classifier_version": CLASSIFIER_VERSION,
+        "user_agent": UA,
         "populations": POPULATIONS,
         "vantages": {
             "primary": "single host, Estonia",

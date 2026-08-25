@@ -47,6 +47,27 @@ def run_count(dirname: str) -> int:
     return len([f for f in glob.glob(str(HERE / dirname / "*.json")) if "latest" not in f])
 
 
+def series_window(dirname: str = "runs") -> dict:
+    """How long the series actually spans. A run count is not a duration.
+
+    Twenty-seven observations sound like weeks and are, at the time of writing, one night. A
+    reader not told the window will assume the flattering reading, so the page states it.
+    """
+    import datetime
+    files = sorted(f for f in glob.glob(str(HERE / dirname / "*.json")) if "latest" not in f)
+    if not files:
+        return {}
+    a = json.load(open(files[0], encoding="utf-8")).get("started_utc")
+    b = json.load(open(files[-1], encoding="utf-8")).get("started_utc")
+    try:
+        ta = datetime.datetime.fromisoformat(a.replace("Z", "+00:00"))
+        tb = datetime.datetime.fromisoformat(b.replace("Z", "+00:00"))
+        hours = round((tb - ta).total_seconds() / 3600, 1)
+    except Exception:
+        hours = None
+    return {"first": a, "last": b, "hours": hours, "runs": len(files)}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", default=str(HERE / "graph-data.json"))
@@ -175,6 +196,7 @@ def main() -> int:
         "pointers_declared_over_plain_http": plain_http,
         "islands": [n["t"] for n in nodes if n["in"] == 0 and n["state"] != "hub"],
         "runs_in_series": run_count("runs"),
+        "series_window": series_window(),
         "pacific_alliance": [{"t": n["t"], "overdue": n["overdue"], "state": n["state"]}
                              for n in nodes if n.get("bloc") == "pacific_alliance"],
         "vantage_disagreements": [{"t": by_id[u]["t"], "here": v["here"], "there": v["there"]}
