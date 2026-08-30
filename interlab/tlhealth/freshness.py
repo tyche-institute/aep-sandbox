@@ -23,7 +23,7 @@ What is unmeasured, and what this exists to expose, is whether anything downstre
 those signals.
 """
 from __future__ import annotations
-import datetime, json, pathlib, re, subprocess, sys, time
+import collections, datetime, json, pathlib, re, subprocess, sys, time
 import concurrent.futures as cf
 
 LOTL = "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
@@ -169,7 +169,25 @@ def parse(url: str) -> dict:
     out["territory"] = territory.group(1) if territory else None
     out["sequence"] = seq.group(1) if seq else None
     out["providers"] = len(re.findall(r"<(?:\w+:)?TSPName>", raw))
-    out["services"] = len(re.findall(r"<(?:\w+:)?ServiceTypeIdentifier>", raw))
+    # Count CURRENT services only. ServiceTypeIdentifier also appears inside every
+    # ServiceHistoryInstance, so a flat count silently adds every superseded state a country
+    # has ever recorded to its present-day total. Iceland made this visible: a flat count said
+    # 11 services where the list carries 8, the other 3 being history - including two
+    # "undersupervision" states that ended years ago and would otherwise be read as current.
+    current = []
+    statuses = []
+    for block in re.findall(r"<(?:\w+:)?TSPService>(.*?)</(?:\w+:)?TSPService>", raw, re.S):
+        body = re.split(r"<(?:\w+:)?ServiceHistory>", block)[0]
+        t = re.search(r"<(?:\w+:)?ServiceTypeIdentifier>([^<]+)</", body)
+        st = re.search(r"<(?:\w+:)?ServiceStatus>([^<]+)</", body)
+        if t:
+            current.append(t.group(1).rsplit("/", 1)[-1])
+        if st:
+            statuses.append(st.group(1).rsplit("/", 1)[-1])
+    out["services"] = len(current)
+    out["services_flat_with_history"] = len(re.findall(r"<(?:\w+:)?ServiceTypeIdentifier>", raw))
+    out["service_types"] = dict(sorted(collections.Counter(current).items()))
+    out["service_statuses"] = dict(sorted(collections.Counter(statuses).items()))
     out["terminal_next_update"] = terminal
     # "Names no providers" and "carries no provider section at all" are different statements
     # about a list, and only the second is true of Moldova's. Recorded separately so the
