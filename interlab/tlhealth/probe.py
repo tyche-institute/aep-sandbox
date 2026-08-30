@@ -223,6 +223,61 @@ def curl(url: str) -> dict:
     return obs
 
 
+CHAINS = pathlib.Path(__file__).resolve().parent / "chains"
+
+
+def served_chain(url: str) -> dict:
+    """Record the certificate chain the server actually presented.
+
+    Why this exists. On 25.08.2026 Ireland's endpoint began sending the intermediate it
+    had been omitting, and the series caught the change — but only as a class going from
+    tls_validation_failed to ok. We had kept the verdict and thrown away the evidence, so
+    the single most valuable event in this project's life could not be reconstructed. A
+    classification is an opinion about bytes; without the bytes it cannot be re-examined
+    when the opinion turns out to be wrong, and ours has been wrong more than once.
+
+    Storage is content-addressed and write-on-change: the chain is fingerprinted every
+    run, and the PEM is written only when that fingerprint differs from the last one
+    recorded for the endpoint. A stable endpoint therefore costs one hash per run, and a
+    changed one costs one small file, dated, kept forever.
+    """
+    host = re.sub(r"^https?://", "", url).split("/")[0]
+    if ":" not in host:
+        port = "443"
+    else:
+        host, port = host.rsplit(":", 1)
+    if not url.lower().startswith("https"):
+        return {"chain": "not_tls"}
+    try:
+        r = subprocess.run(["openssl", "s_client", "-connect", f"{host}:{port}",
+                            "-servername", host, "-showcerts"],
+                           input=b"", capture_output=True, timeout=35)
+        text = r.stdout.decode("utf-8", "ignore")
+    except Exception as e:
+        return {"chain": "unreadable", "error": str(e)[:80]}
+
+    pems = re.findall(r"-----BEGIN CERTIFICATE-----.*?-----END CERTIFICATE-----", text, re.S)
+    if not pems:
+        return {"chain": "none_served"}
+    blob = "\n".join(pems)
+    fp = hashlib.sha256(blob.encode()).hexdigest()
+    subjects = re.findall(r"^\s*\d+ s:(.+)$", text, re.M)
+    verify = re.search(r"Verify return code: (\d+)", text)
+
+    CHAINS.mkdir(exist_ok=True)
+    safe = re.sub(r"[^A-Za-z0-9._-]", "_", host)[:60]
+    latest = CHAINS / f"{safe}.latest"
+    previous = latest.read_text().strip() if latest.exists() else None
+    changed = previous != fp
+    if changed:
+        stamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
+        (CHAINS / f"{safe}__{stamp}__{fp[:12]}.pem").write_text(blob + "\n", encoding="utf-8")
+        latest.write_text(fp, encoding="utf-8")
+    return {"chain": fp, "chain_certs": len(pems), "chain_changed": changed,
+            "chain_previous": previous, "chain_subjects": [x.strip()[:120] for x in subjects],
+            "openssl_verify": verify.group(1) if verify else None}
+
+
 def classify(obs: dict) -> str:
     """The published classifier. Declared before any percentage is computed."""
     if obs["http_code"] == "TIMEOUT":
@@ -289,7 +344,7 @@ def main() -> int:
             pop, name, url = futs[f]
             obs = f.result()
             results.append({"population": pop, "name": name, "url": url,
-                            "class": classify(obs), **obs})
+                            "class": classify(obs), **obs, **served_chain(url)})
     results.sort(key=lambda r: (r["population"], r["name"]))
 
     # Everything that did not answer here is asked once from the other vantage. Only failures
