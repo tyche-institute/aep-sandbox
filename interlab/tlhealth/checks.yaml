@@ -1,0 +1,111 @@
+# checks.yaml — one card per published check, and the authority it rests on.
+#
+# The norm rule: no check's only authority is our opinion. Each one either cites a
+# versioned normative clause and inherits its RFC 2119 level, or it declares that it has
+# no normative anchor. Until this file existed the rule was an intention — nothing stopped
+# a check being added with no anchor at all — and the difference between an intention and
+# a control is that a control refuses.
+#
+# does_not_establish is not decoration. Every published count has been misread at least
+# once in this project's short life, and the sentence that prevents the misreading has to
+# travel with the number, not sit in a footnote.
+
+checks:
+  - id: transport_reachable
+    observable: "Does the published endpoint answer a strict TLS client?"
+    document: null
+    clause: null
+    rfc2119: null
+    no_normative_anchor: true
+    why_no_anchor: >
+      ETSI TS 119 612 governs the content and format of a trusted list, not the transport
+      by which it is served. No clause we have found obliges a publisher to present a
+      complete certificate chain at the address it declares. This check therefore reports
+      an observation and never a non-conformance.
+    reproduce: "curl -sS -o /dev/null -w '%{http_code} %{ssl_verify_result}\\n' <url>"
+    does_not_establish: >
+      Non-conformance with any standard; a vulnerability; unavailability to clients that
+      complete chains themselves. It establishes that one client at one vantage could not
+      retrieve the artefact at one moment.
+
+  - id: served_chain
+    observable: "Which certificates does the server actually present, in order?"
+    document: null
+    clause: null
+    rfc2119: null
+    no_normative_anchor: true
+    why_no_anchor: >
+      Recorded as evidence for transport_reachable rather than judged. Kept because a
+      classification is an opinion about bytes and ours has been wrong: Paraguay was filed
+      as Ireland's twin until the chain showed it sends the root in place of the intermediate.
+    reproduce: "openssl s_client -connect <host>:443 -servername <host> -showcerts"
+    does_not_establish: >
+      That a chain which fails here fails everywhere; chain completion is a client policy.
+
+  - id: next_update_passed
+    observable: "Has the list passed the next-update date it declares for itself?"
+    document: "ETSI TS 119 612"
+    clause: "5.3.15 (NextUpdate)"
+    rfc2119: "SHALL (the field is mandatory in a list that is not terminal)"
+    verbatim_anchor: >
+      TS 119 615 PRO-4.2.4-10: if the 'Next update' date of EUTL has passed, the processing
+      shall add to EUTL-Sub-Status the value "WARNING_EUTL_NEXTUPDATE_PASSED";
+      PRO-4.2.4-11/-12 then set the list authenticated and EUTL-Status to
+      "EUTL_VERIFICATION_PASSED".
+    spec_is_permissive: true
+    reproduce: "read ListIssueDateTime and NextUpdate from the artefact and compare to now"
+    does_not_establish: >
+      That a stale list is a wrong list, or that anyone has failed a duty. The standard
+      explicitly directs a validator to pass a national list that is past its next update.
+      This check measures the condition the standard tolerates, not a breach.
+
+  - id: terminal_declared
+    observable: "Is NextUpdate empty, the standard's way of saying the list will not be updated again?"
+    document: "ETSI TS 119 612"
+    clause: "5.3.15"
+    rfc2119: "MAY"
+    reproduce: "test for an empty NextUpdate element"
+    does_not_establish: >
+      A defect of any kind. The United Kingdom's archived entry is correctly terminal;
+      drawing it as a failure would be the instrument misreading compliance.
+
+  - id: current_services
+    observable: "How many services does the list carry now, by type and live status?"
+    document: "ETSI TS 119 612"
+    clause: "5.5 (TSPService), 5.5.4 (ServiceStatus), 5.6 (ServiceHistory)"
+    rfc2119: "SHALL (structure)"
+    reproduce: "count TSPService entries, splitting off ServiceHistory before reading type and status"
+    does_not_establish: >
+      The number of services a supervisor would report. Three distinct counts exist and
+      they differ by more than a factor of two: entries including history, entries
+      excluding history, and distinct services as the regulator counts them. The Icelandic
+      supervisor states three qualified services where the file carries eight entries,
+      because successive certificates for one service each take an entry. Any cross-country
+      comparison must say which of the three it is using.
+
+  - id: pointer_declared_over_plain_http
+    observable: "Is the pointer published over http:// rather than https://?"
+    document: "ETSI TS 119 612"
+    clause: "6.1 (TSLLocation)"
+    rfc2119: "SHALL (a location is required)"
+    spec_is_permissive: true
+    why_permissive: >
+      The clause requires a location; it does not constrain the scheme, and does not
+      forbid http. A permissive clause is not a conformance test, so this check reports
+      the condition and never a breach. The list carries its own XAdES signature, so
+      integrity does not depend on the channel in any case.
+    reproduce: "read the scheme of each declared TSLLocation"
+    does_not_establish: >
+      A security failure. It establishes that a client with an HTTPS-only policy cannot
+      retrieve that artefact at the address the publisher declares.
+
+  - id: territory_attribution
+    observable: "Which territory does this artefact belong to, and who says so?"
+    document: "ETSI TS 119 612"
+    clause: "5.3.10 (SchemeTerritory), 5.6.1 (OtherTSLPointer)"
+    rfc2119: "SHALL"
+    reproduce: "read SchemeTerritory from the artefact, else from the pointer that names it"
+    does_not_establish: >
+      Anything, when we asserted the label ourselves. Where no publisher declares a
+      territory the record says asserted_by_us, and that value must never be presented as
+      a publisher's statement.
