@@ -1,0 +1,8 @@
+# latest.json is a derived pointer: always a copy of the newest file in the same
+# directory. Tracking it means every pair of concurrent runs conflicts on it, which
+# happened the first day the scheduled rail and a manual run overlapped. Nothing reads
+# it from git — probe, freshness, export and the watchdog all glob the run directory
+# and exclude it by name — so it is written locally and not versioned.
+runs/latest.json
+runs-freshness/latest.json
+runs-graph/latest.json
