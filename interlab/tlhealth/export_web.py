@@ -200,6 +200,12 @@ def main() -> int:
             "scheme": u.split(":", 1)[0],
             "providers": f.get("providers"),
             "services": f.get("services"),
+            # Types and live statuses, so a withdrawn or supervised service is legible on the
+            # node instead of hidden inside a total. Iceland is the worked example: 8 services,
+            # one of them withdrawn since 2018, which a bare count cannot show.
+            "service_types": f.get("service_types"),
+            "service_statuses": f.get("service_statuses"),
+            "services_flat_with_history": f.get("services_flat_with_history"),
             "age": f.get("age_days"),
             "next": f.get("next_update"),
             "terminal": f.get("terminal_next_update"),
