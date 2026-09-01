@@ -1,0 +1,1306 @@
+{
+ "caveat": "Edges as published, followed as a client would. Presence of an edge is not a claim about legal recognition between the parties.",
+ "edges": [
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://crc.bg/files/_en/TSL_BG.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://crc.bg/files/_en/TSL_BG.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://dp.trustedlist.fi/fi-tl-v6.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://eidas.gov.ie/Irelandtslsignedv6.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://nkom.no/files/TL/NO_TL.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://nkom.no/files/TL/NO_TL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://rrt.lt/static/files/LT-TSL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://sr.riik.ee/tsl/estonian-tsl.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://sr.riik.ee/tsl/estonian-tsl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tl.bundesnetzagentur.de/TL-DE.XML"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://trusted-list.lu/tsl.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://trusted-list.lu/tsl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://trustedlist.adr.gov.ro/trustedlist.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://trustedlist.pts.se/tlv6/SE-TL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://trustlist.gov.lv/tsl/latvian-tsl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.belgium.be/tsl-be-v6.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.digital.gob.es/TSL.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.digital.gob.es/TSL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.gov.cz/publ/TSL_CZ.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.gov.cz/publ/TSL_CZ.xtsl"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://tsl.mca.org.mt/MT_TSL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.digst.dk/TSLDK_v6pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.digst.dk/TSLDK_v6xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.eett.gr/tsl/tl-el.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.gns.gov.pt/media/TSLPT.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.gns.gov.pt/media/TSLPT.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.nccert.pl/tsl/PL_TSL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.nmhh.hu/tl/pub/HU_TL.pdf"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.nmhh.hu/tl/pub/HU_TL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.signatur.rtr.at/vertrauensliste.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://www.tl.gov.si/SI_TL.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://czo.gov.ua/download/tl/TL-UA-EC.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml",
+   "from_territory": "EU",
+   "to": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml"
+  },
+  {
+   "from": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "from": "https://tl.gov.me/ME_TL.xml",
+   "from_territory": "ME",
+   "to": "https://mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "from": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+   "from_territory": "MD",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://czo.gov.ua/download/tl/TL-UA-EC.xml",
+   "from_territory": "UA",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml",
+   "from_territory": "SK",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://crc.bg/files/_en/TSL_BG.xml",
+   "from_territory": "BG",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml",
+   "from_territory": "CY",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://dp.trustedlist.fi/fi-tl-v6.xml",
+   "from_territory": "FI",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml",
+   "from_territory": "UK",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://eidas.agid.gov.it/TL/TSL-IT.xml",
+   "from_territory": "IT",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://eidas.gov.ie/Irelandtslsignedv6.xml",
+   "from_territory": "IE",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml",
+   "from_territory": "HR",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml",
+   "from_territory": "FR",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://nkom.no/files/TL/NO_TL.xml",
+   "from_territory": "NO",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://rrt.lt/static/files/LT-TSL.xml",
+   "from_territory": "LT",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://sr.riik.ee/tsl/estonian-tsl.xml",
+   "from_territory": "EE",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://tl.bundesnetzagentur.de/TL-DE.XML",
+   "from_territory": "DE",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://trusted-list.lu/tsl.xml",
+   "from_territory": "LU",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+   "from_territory": "RO",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://trustedlist.pts.se/tlv6/SE-TL.xml",
+   "from_territory": "SE",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://trustlist.gov.lv/tsl/latvian-tsl.xml",
+   "from_territory": "LV",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://tsl.belgium.be/tsl-be-v6.xml",
+   "from_territory": "BE",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://tsl.digital.gob.es/TSL.xml",
+   "from_territory": "ES",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml",
+   "from_territory": "IS",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://tsl.gov.cz/publ/TSL_CZ.xtsl",
+   "from_territory": "CZ",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://tsl.mca.org.mt/MT_TSL.xml",
+   "from_territory": "MT",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.digst.dk/TSLDK_v6xml",
+   "from_territory": "DK",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.eett.gr/tsl/tl-el.xml",
+   "from_territory": "EL",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.gns.gov.pt/media/TSLPT.xml",
+   "from_territory": "PT",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml",
+   "from_territory": "LI",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.nccert.pl/tsl/PL_TSL.xml",
+   "from_territory": "PL",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
+   "from_territory": "HU",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml",
+   "from_territory": "NL",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.signatur.rtr.at/vertrauensliste.xml",
+   "from_territory": "AT",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.tl.gov.si/SI_TL.xml",
+   "from_territory": "SI",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "from_territory": "AR",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "from_territory": "AR",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "from_territory": "AR",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+   "from_territory": "BR",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+   "from_territory": "BR",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
+  },
+  {
+   "from": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml",
+   "from_territory": "CL",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  }
+ ],
+ "instrument": "tlgraph",
+ "max_depth": 3,
+ "nodes": [
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "AR",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "AT",
+   "territory_source": "self",
+   "url": "https://www.signatur.rtr.at/vertrauensliste.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "BE",
+   "territory_source": "self",
+   "url": "https://tsl.belgium.be/tsl-be-v6.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "BG",
+   "territory_source": "declared_by_pointer",
+   "url": "https://crc.bg/files/_en/TSL_BG.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "BG",
+   "territory_source": "self",
+   "url": "https://crc.bg/files/_en/TSL_BG.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Brazil (ICP-Brasil root authority)",
+   "territory": "BR",
+   "territory_source": "self",
+   "url": "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "BR",
+   "territory_source": "self",
+   "url": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Switzerland",
+   "territory": "CH",
+   "territory_source": "self",
+   "url": "https://trustedlist.tsl-switzerland.ch/tsl-ch.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "CL",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Colombia (national accreditation body)",
+   "territory": "CO",
+   "territory_source": "self",
+   "url": "https://onac.org.co/certificados/tsl/tsl-co.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "CY",
+   "territory_source": "self",
+   "url": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "CZ",
+   "territory_source": "declared_by_pointer",
+   "url": "https://tsl.gov.cz/publ/TSL_CZ.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "CZ",
+   "territory_source": "self",
+   "url": "https://tsl.gov.cz/publ/TSL_CZ.xtsl"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "DE",
+   "territory_source": "self",
+   "url": "https://tl.bundesnetzagentur.de/TL-DE.XML"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "DK",
+   "territory_source": "declared_by_pointer",
+   "url": "https://www.digst.dk/TSLDK_v6pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "DK",
+   "territory_source": "self",
+   "url": "https://www.digst.dk/TSLDK_v6xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Dominican Republic",
+   "territory": "DO",
+   "territory_source": "self",
+   "url": "https://applin.indotel.gob.do/tsl/tsl.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "EE",
+   "territory_source": "declared_by_pointer",
+   "url": "https://sr.riik.ee/tsl/estonian-tsl.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "EE",
+   "territory_source": "self",
+   "url": "https://sr.riik.ee/tsl/estonian-tsl.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "EL",
+   "territory_source": "self",
+   "url": "https://www.eett.gr/tsl/tl-el.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "ES",
+   "territory_source": "declared_by_pointer",
+   "url": "https://tsl.digital.gob.es/TSL.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "ES",
+   "territory_source": "self",
+   "url": "https://tsl.digital.gob.es/TSL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "EU list of lists",
+   "territory": "EU",
+   "territory_source": "self",
+   "url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "EU MRA list of lists",
+   "territory": "EU",
+   "territory_source": "self",
+   "url": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "FI",
+   "territory_source": "self",
+   "url": "https://dp.trustedlist.fi/fi-tl-v6.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "FR",
+   "territory_source": "declared_by_pointer",
+   "url": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "FR",
+   "territory_source": "self",
+   "url": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "HR",
+   "territory_source": "self",
+   "url": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "HU",
+   "territory_source": "declared_by_pointer",
+   "url": "https://www.nmhh.hu/tl/pub/HU_TL.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "HU",
+   "territory_source": "self",
+   "url": "https://www.nmhh.hu/tl/pub/HU_TL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "IE",
+   "territory_source": "self",
+   "url": "https://eidas.gov.ie/Irelandtslsignedv6.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "IS",
+   "territory_source": "declared_by_pointer",
+   "url": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "IS",
+   "territory_source": "self",
+   "url": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "IT",
+   "territory_source": "self",
+   "url": "https://eidas.agid.gov.it/TL/TSL-IT.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "LI",
+   "territory_source": "self",
+   "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "LT",
+   "territory_source": "self",
+   "url": "https://rrt.lt/static/files/LT-TSL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "LU",
+   "territory_source": "declared_by_pointer",
+   "url": "https://trusted-list.lu/tsl.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "LU",
+   "territory_source": "self",
+   "url": "https://trusted-list.lu/tsl.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "LV",
+   "territory_source": "self",
+   "url": "https://trustlist.gov.lv/tsl/latvian-tsl.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "MERCOSUR (Argentine copy)",
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "MERCOSUR (Brazilian copy)",
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "Moldova",
+   "territory": "MD",
+   "territory_source": "self",
+   "url": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "Montenegro",
+   "territory": "ME",
+   "territory_source": "self",
+   "url": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": false,
+   "is_tsl": false,
+   "mime": null,
+   "seed_label": "North Macedonia",
+   "territory": "MK",
+   "territory_source": "asserted_by_us",
+   "url": "https://trusteid.mdt.gov.mk/tl/TL_MK.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "MT",
+   "territory_source": "self",
+   "url": "https://tsl.mca.org.mt/MT_TSL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "NL",
+   "territory_source": "self",
+   "url": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "NO",
+   "territory_source": "declared_by_pointer",
+   "url": "https://nkom.no/files/TL/NO_TL.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "NO",
+   "territory_source": "self",
+   "url": "https://nkom.no/files/TL/NO_TL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "PL",
+   "territory_source": "self",
+   "url": "https://www.nccert.pl/tsl/PL_TSL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/pdf",
+   "seed_label": null,
+   "territory": "PT",
+   "territory_source": "declared_by_pointer",
+   "url": "https://www.gns.gov.pt/media/TSLPT.pdf"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "PT",
+   "territory_source": "self",
+   "url": "https://www.gns.gov.pt/media/TSLPT.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": false,
+   "is_tsl": false,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "PY",
+   "territory_source": "declared_by_pointer",
+   "url": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "RO",
+   "territory_source": "self",
+   "url": "https://trustedlist.adr.gov.ro/trustedlist.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "RS",
+   "territory_source": "self",
+   "url": "https://mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Serbia",
+   "territory": "RS",
+   "territory_source": "self",
+   "url": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": null,
+   "seed_label": "Russia",
+   "territory": "RU",
+   "territory_source": "asserted_by_us",
+   "url": "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "SE",
+   "territory_source": "self",
+   "url": "https://trustedlist.pts.se/tlv6/SE-TL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "SI",
+   "territory_source": "self",
+   "url": "https://www.tl.gov.si/SI_TL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "SK",
+   "territory_source": "self",
+   "url": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "Ukraine (EU-facing list)",
+   "territory": "UA",
+   "territory_source": "self",
+   "url": "https://czo.gov.ua/download/tl/TL-UA-EC.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Ukraine",
+   "territory": "UA",
+   "territory_source": "self",
+   "url": "https://czo.gov.ua/download/tl/TL-UA.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "UK",
+   "territory_source": "self",
+   "url": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "United Kingdom",
+   "territory": "UK",
+   "territory_source": "self",
+   "url": "https://tl.ico.org.uk/uktrustedlist/UKTL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "UY",
+   "territory_source": "self",
+   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "UY",
+   "territory_source": "self",
+   "url": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  }
+ ],
+ "observed_utc": "2026-09-01T02:42:31.042125+00:00",
+ "schema": 1,
+ "summary": {
+  "edges": 114,
+  "edges_not_from_the_eu_hub": 36,
+  "fetched": 65,
+  "nodes": 67,
+  "territories": [
+   "AR",
+   "AT",
+   "BE",
+   "BG",
+   "BR",
+   "CH",
+   "CL",
+   "CO",
+   "CY",
+   "CZ",
+   "DE",
+   "DK",
+   "DO",
+   "EE",
+   "EL",
+   "ES",
+   "EU",
+   "FI",
+   "FR",
+   "HR",
+   "HU",
+   "IE",
+   "IS",
+   "IT",
+   "LI",
+   "LT",
+   "LU",
+   "LV",
+   "MB",
+   "MD",
+   "ME",
+   "MK",
+   "MT",
+   "NL",
+   "NO",
+   "PL",
+   "PT",
+   "PY",
+   "RO",
+   "RS",
+   "RU",
+   "SE",
+   "SI",
+   "SK",
+   "UA",
+   "UK",
+   "UY"
+  ]
+ }
+}
