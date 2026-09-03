@@ -1,0 +1,1939 @@
+{
+ "caveat": "Declared currency only. A stale list is not necessarily a wrong list, and a terminal list is correctly terminal. This measures what the artefacts say about themselves, not whether anyone downstream honours it.",
+ "instrument": "tlfreshness",
+ "observed_utc": "2026-09-03T02:41:16.671298+00:00",
+ "rows": [
+  {
+   "age_days": 79,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-06-15T14:44:12Z",
+   "next_update": "2026-12-15T15:44:12Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 11,
+   "sequence": "75",
+   "service_statuses": {
+    "deprecatedatnationallevel": 8,
+    "granted": 48,
+    "recognisedatnationallevel": 29,
+    "withdrawn": 15
+   },
+   "service_types": {
+    "PKC": 33,
+    "Q": 9,
+    "QC": 47,
+    "QTST": 7,
+    "TSA": 4
+   },
+   "services": 100,
+   "services_flat_with_history": 160,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "AT",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.signatur.rtr.at/vertrauensliste.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 12,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-21T14:00:00Z",
+   "next_update": "2027-02-21T15:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 17,
+   "sequence": "82",
+   "service_statuses": {
+    "granted": 77,
+    "recognisedatnationallevel": 1,
+    "withdrawn": 57
+   },
+   "service_types": {
+    "Archiv": 1,
+    "Q": 30,
+    "QC": 84,
+    "QTST": 20
+   },
+   "services": 135,
+   "services_flat_with_history": 208,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "BE",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://tsl.belgium.be/tsl-be-v6.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 93,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-06-01T11:07:50Z",
+   "next_update": "2026-12-01T12:07:50Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 15,
+   "sequence": "64",
+   "service_statuses": {
+    "deprecatedatnationallevel": 18,
+    "granted": 46,
+    "recognisedatnationallevel": 11,
+    "withdrawn": 40
+   },
+   "service_types": {
+    "ACA": 2,
+    "IdV": 4,
+    "OCSP": 8,
+    "PKC": 1,
+    "Q": 18,
+    "QC": 57,
+    "QTST": 11,
+    "RA": 2,
+    "TSA": 7,
+    "nothavingPKIid": 5
+   },
+   "services": 115,
+   "services_flat_with_history": 218,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "BG",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://crc.bg/files/_en/TSL_BG.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 56,
+   "declares_pointers": [],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-07-09T00:00:00Z",
+   "next_update": "2027-01-05T00:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 0,
+   "provider_section": true,
+   "providers": 8,
+   "sequence": "18",
+   "service_statuses": {
+    "granted": 8
+   },
+   "service_types": {
+    "Q": 8
+   },
+   "services": 8,
+   "services_flat_with_history": 8,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "BR",
+   "tsl_type": "http://www.iti.gov.br/LPSC/v1",
+   "url": "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 20,
+   "declares_pointers": [],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-08-13T03:45:00Z",
+   "next_update": "2027-02-12T04:45:00Z",
+   "overdue_days": 0,
+   "pointers_out": 0,
+   "provider_section": true,
+   "providers": 5,
+   "sequence": "12",
+   "service_statuses": {
+    "granted": 37,
+    "withdrawn": 5
+   },
+   "service_types": {
+    "Q": 6,
+    "QC": 14,
+    "QTST": 22
+   },
+   "services": 42,
+   "services_flat_with_history": 45,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "CH",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/CHlist",
+   "url": "https://trustedlist.tsl-switzerland.ch/tsl-ch.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 2477,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
+     "territory": "AP"
+    }
+   ],
+   "fetch_error": "",
+   "group": "pacific_alliance",
+   "issued": "2019-11-22T01:00:00Z",
+   "next_update": "2020-05-22T00:00:00Z",
+   "overdue_days": 2295,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 2,
+   "sequence": "1",
+   "service_statuses": {
+    "granted": 7
+   },
+   "service_types": {
+    "QC": 7
+   },
+   "services": 7,
+   "services_flat_with_history": 7,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "CL",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://cdn.www.gob.pe/uploads/document/file/541709/TSL-CHILE.xml.zip",
+   "zip_wrapped": true
+  },
+  {
+   "age_days": 274,
+   "declares_pointers": [
+    {
+     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+     "territory": "AR"
+    }
+   ],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2025-12-02T18:00:00Z",
+   "next_update": "2026-06-01T18:59:59Z",
+   "overdue_days": 93,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 13,
+   "sequence": "10",
+   "service_statuses": {
+    "granted": 48,
+    "withdrawn": 15
+   },
+   "service_types": {
+    "QC": 53,
+    "QTST": 10
+   },
+   "services": 63,
+   "services_flat_with_history": 63,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "CL",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/CLlist",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 2457,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
+     "territory": "AP"
+    }
+   ],
+   "fetch_error": "",
+   "group": "pacific_alliance",
+   "issued": "2019-12-12T01:00:00Z",
+   "next_update": "2020-06-12T00:00:00Z",
+   "overdue_days": 2274,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 4,
+   "sequence": "1",
+   "service_statuses": {
+    "granted": 5
+   },
+   "service_types": {
+    "QC": 5
+   },
+   "services": 5,
+   "services_flat_with_history": 5,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "CO",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://cdn.www.gob.pe/uploads/document/file/541708/TSL-COLOMBIA.xml.zip",
+   "zip_wrapped": true
+  },
+  {
+   "age_days": 2834,
+   "declares_pointers": [],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2018-11-29T21:00:16.210Z",
+   "next_update": "2019-05-29T16:00:16.210Z",
+   "overdue_days": 2653,
+   "pointers_out": 0,
+   "provider_section": true,
+   "providers": 5,
+   "sequence": "00",
+   "service_statuses": {
+    "undersupervision": 5
+   },
+   "service_types": {
+    "QC": 5
+   },
+   "services": 5,
+   "services_flat_with_history": 5,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "CO",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/eSigDir-1999-93-EC-TrustedList/TSLType/generic",
+   "url": "https://onac.org.co/certificados/tsl/tsl-co.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 155,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-03-31T07:56:45Z",
+   "next_update": "2026-09-30T07:56:45Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 1,
+   "sequence": "53",
+   "service_statuses": {
+    "granted": 6,
+    "withdrawn": 2
+   },
+   "service_types": {
+    "QC": 8
+   },
+   "services": 8,
+   "services_flat_with_history": 10,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "CY",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 57,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-07-07T12:30:00Z",
+   "next_update": "2027-01-07T13:30:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 331,
+   "sequence": "159",
+   "service_statuses": {
+    "deprecatedatnationallevel": 16,
+    "granted": 176,
+    "recognisedatnationallevel": 8,
+    "withdrawn": 777
+   },
+   "service_types": {
+    "NationalRootCA-QC": 13,
+    "OCSP": 5,
+    "Q": 224,
+    "QC": 450,
+    "QTST": 279,
+    "TLIssuer": 2,
+    "TSA": 4
+   },
+   "services": 977,
+   "services_flat_with_history": 2491,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "DE",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://tl.bundesnetzagentur.de/TL-DE.XML",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 208,
+   "declared_without_timezone": true,
+   "declares_pointers": [],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-02-06T11:42:49",
+   "next_update": "2026-08-07T11:42:49",
+   "overdue_days": 26,
+   "pointers_out": 0,
+   "provider_section": true,
+   "providers": 8,
+   "sequence": "79276",
+   "service_statuses": {
+    "Granted": 23,
+    "Withdrawn": 1
+   },
+   "service_types": {
+    "Q": 2,
+    "QC": 18,
+    "QTST": 4
+   },
+   "services": 24,
+   "services_flat_with_history": 27,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "DO",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/DOlist",
+   "url": "https://applin.indotel.gob.do/tsl/tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 105,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-05-20T11:00:00Z",
+   "next_update": "2026-11-20T12:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 3,
+   "sequence": "73",
+   "service_statuses": {
+    "deprecatedatnationallevel": 2,
+    "granted": 21,
+    "withdrawn": 43
+   },
+   "service_types": {
+    "OCSP": 2,
+    "Q": 1,
+    "QC": 29,
+    "QTST": 34
+   },
+   "services": 66,
+   "services_flat_with_history": 150,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "EE",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://sr.riik.ee/tsl/estonian-tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 8,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-25T06:00:00Z",
+   "next_update": "2027-02-25T07:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 5,
+   "sequence": "87",
+   "service_statuses": {
+    "deprecatedatnationallevel": 1,
+    "granted": 112,
+    "recognisedatnationallevel": 1,
+    "withdrawn": 19
+   },
+   "service_types": {
+    "PKC": 2,
+    "QC": 116,
+    "QTST": 15
+   },
+   "services": 133,
+   "services_flat_with_history": 197,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "EL",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.eett.gr/tsl/tl-el.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 27,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-06T04:00:00Z",
+   "next_update": "2027-02-02T05:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 79,
+   "sequence": "188",
+   "service_statuses": {
+    "granted": 235,
+    "withdrawn": 201
+   },
+   "service_types": {
+    "Q": 71,
+    "QC": 245,
+    "QTST": 120
+   },
+   "services": 436,
+   "services_flat_with_history": 833,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "ES",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://tsl.digital.gob.es/TSL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 8,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    },
+    {
+     "location": "https://www.signatur.rtr.at/vertrauensliste.xml",
+     "territory": "AT"
+    },
+    {
+     "location": "https://tsl.belgium.be/tsl-be-v6.xml",
+     "territory": "BE"
+    },
+    {
+     "location": "https://crc.bg/files/_en/TSL_BG.pdf",
+     "territory": "BG"
+    },
+    {
+     "location": "https://crc.bg/files/_en/TSL_BG.xml",
+     "territory": "BG"
+    },
+    {
+     "location": "https://dec.dmrid.gov.cy/dmrid/dec/ws_dec.nsf/all/5064247FF4FC3DCCC2258506002EEA17/$file/TSL-CY-sign.xml",
+     "territory": "CY"
+    },
+    {
+     "location": "https://tsl.gov.cz/publ/TSL_CZ.pdf",
+     "territory": "CZ"
+    },
+    {
+     "location": "https://tsl.gov.cz/publ/TSL_CZ.xtsl",
+     "territory": "CZ"
+    },
+    {
+     "location": "https://tl.bundesnetzagentur.de/TL-DE.XML",
+     "territory": "DE"
+    },
+    {
+     "location": "https://www.digst.dk/TSLDK_v6pdf",
+     "territory": "DK"
+    },
+    {
+     "location": "https://www.digst.dk/TSLDK_v6xml",
+     "territory": "DK"
+    },
+    {
+     "location": "https://sr.riik.ee/tsl/estonian-tsl.pdf",
+     "territory": "EE"
+    },
+    {
+     "location": "https://sr.riik.ee/tsl/estonian-tsl.xml",
+     "territory": "EE"
+    },
+    {
+     "location": "https://www.eett.gr/tsl/tl-el.xml",
+     "territory": "EL"
+    },
+    {
+     "location": "https://tsl.digital.gob.es/TSL.pdf",
+     "territory": "ES"
+    },
+    {
+     "location": "https://tsl.digital.gob.es/TSL.xml",
+     "territory": "ES"
+    },
+    {
+     "location": "https://dp.trustedlist.fi/fi-tl-v6.xml",
+     "territory": "FI"
+    },
+    {
+     "location": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.pdf",
+     "territory": "FR"
+    },
+    {
+     "location": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml",
+     "territory": "FR"
+    },
+    {
+     "location": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml",
+     "territory": "HR"
+    },
+    {
+     "location": "https://www.nmhh.hu/tl/pub/HU_TL.pdf",
+     "territory": "HU"
+    },
+    {
+     "location": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
+     "territory": "HU"
+    },
+    {
+     "location": "https://eidas.gov.ie/Irelandtslsignedv6.xml",
+     "territory": "IE"
+    },
+    {
+     "location": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.pdf",
+     "territory": "IS"
+    },
+    {
+     "location": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml",
+     "territory": "IS"
+    },
+    {
+     "location": "https://eidas.agid.gov.it/TL/TSL-IT.xml",
+     "territory": "IT"
+    },
+    {
+     "location": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml",
+     "territory": "LI"
+    },
+    {
+     "location": "https://rrt.lt/static/files/LT-TSL.xml",
+     "territory": "LT"
+    },
+    {
+     "location": "https://trusted-list.lu/tsl.pdf",
+     "territory": "LU"
+    },
+    {
+     "location": "https://trusted-list.lu/tsl.xml",
+     "territory": "LU"
+    },
+    {
+     "location": "https://trustlist.gov.lv/tsl/latvian-tsl.xml",
+     "territory": "LV"
+    },
+    {
+     "location": "https://tsl.mca.org.mt/MT_TSL.xml",
+     "territory": "MT"
+    },
+    {
+     "location": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml",
+     "territory": "NL"
+    },
+    {
+     "location": "https://nkom.no/files/TL/NO_TL.pdf",
+     "territory": "NO"
+    },
+    {
+     "location": "https://nkom.no/files/TL/NO_TL.xml",
+     "territory": "NO"
+    },
+    {
+     "location": "https://www.nccert.pl/tsl/PL_TSL.xml",
+     "territory": "PL"
+    },
+    {
+     "location": "https://www.gns.gov.pt/media/TSLPT.pdf",
+     "territory": "PT"
+    },
+    {
+     "location": "https://www.gns.gov.pt/media/TSLPT.xml",
+     "territory": "PT"
+    },
+    {
+     "location": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+     "territory": "RO"
+    },
+    {
+     "location": "https://trustedlist.pts.se/tlv6/SE-TL.xml",
+     "territory": "SE"
+    },
+    {
+     "location": "https://www.tl.gov.si/SI_TL.xml",
+     "territory": "SI"
+    },
+    {
+     "location": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml",
+     "territory": "SK"
+    },
+    {
+     "location": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml",
+     "territory": "UK"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-25T14:30:58Z",
+   "next_update": "2027-02-17T12:30:58Z",
+   "overdue_days": 0,
+   "pointers_out": 43,
+   "provider_section": false,
+   "providers": 0,
+   "sequence": "392",
+   "service_statuses": {},
+   "service_types": {},
+   "services": 0,
+   "services_flat_with_history": 0,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "EU",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUlistofthelists",
+   "url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 12,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-21T06:00:00Z",
+   "next_update": "2027-02-21T07:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 1,
+   "sequence": "55",
+   "service_statuses": {
+    "granted": 13,
+    "withdrawn": 7
+   },
+   "service_types": {
+    "Q": 1,
+    "QC": 19
+   },
+   "services": 20,
+   "services_flat_with_history": 35,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "FI",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://dp.trustedlist.fi/fi-tl-v6.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 28,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-05T07:31:24Z",
+   "next_update": "2027-02-05T08:31:24Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 39,
+   "sequence": "180",
+   "service_statuses": {
+    "granted": 154,
+    "withdrawn": 203
+   },
+   "service_types": {
+    "Q": 52,
+    "QC": 145,
+    "QTST": 160
+   },
+   "services": 357,
+   "services_flat_with_history": 734,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "FR",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://messervices.cyber.gouv.fr/visas/tl-fr_v6.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 5,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-28T10:00:00Z",
+   "next_update": "2027-02-28T11:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 4,
+   "sequence": "69",
+   "service_statuses": {
+    "deprecatedatnationallevel": 5,
+    "granted": 22,
+    "recognisedatnationallevel": 2,
+    "withdrawn": 17
+   },
+   "service_types": {
+    "PKC": 6,
+    "Q": 4,
+    "QC": 11,
+    "QTST": 24,
+    "TSA": 1
+   },
+   "services": 46,
+   "services_flat_with_history": 92,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "HR",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://gov.hr/UserDocsImages/Usluge%20povjerenja/Pouzdani_popis_RH.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 49,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-07-15T09:00:00Z",
+   "next_update": "2027-01-15T09:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 12,
+   "sequence": "99",
+   "service_statuses": {
+    "deprecatedatnationallevel": 58,
+    "granted": 152,
+    "recognisedatnationallevel": 56,
+    "withdrawn": 73
+   },
+   "service_types": {
+    "Archiv": 7,
+    "CRL": 2,
+    "OCSP": 1,
+    "PKC": 72,
+    "Q": 9,
+    "QC": 63,
+    "QTST": 153,
+    "TSA": 16,
+    "TSS-AdESQCandQES": 16
+   },
+   "services": 339,
+   "services_flat_with_history": 700,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "HU",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.nmhh.hu/tl/pub/HU_TL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 20,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-13T11:49:01Z",
+   "next_update": "2027-02-13T12:49:01Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 5,
+   "sequence": "41",
+   "service_statuses": {
+    "granted": 15,
+    "withdrawn": 3
+   },
+   "service_types": {
+    "Q": 7,
+    "QC": 7,
+    "QTST": 4
+   },
+   "services": 18,
+   "services_flat_with_history": 24,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "IE",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://eidas.gov.ie/Irelandtslsignedv6.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 14,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-19T11:01:32Z",
+   "next_update": "2027-02-19T12:01:32Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 2,
+   "sequence": "40",
+   "service_statuses": {
+    "granted": 7,
+    "withdrawn": 1
+   },
+   "service_types": {
+    "QC": 4,
+    "QTST": 4
+   },
+   "services": 8,
+   "services_flat_with_history": 11,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "IS",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://tsl.fjarskiptastofa.is/library/skrar/tsl/tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 37,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-07-27T09:33:49Z",
+   "next_update": "2027-01-27T10:33:49Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 279,
+   "sequence": "223",
+   "service_statuses": {
+    "deprecatedatnationallevel": 18,
+    "granted": 263,
+    "recognisedatnationallevel": 212,
+    "withdrawn": 67
+   },
+   "service_types": {
+    "AdESGeneration": 3,
+    "IdV": 174,
+    "Q": 93,
+    "QC": 203,
+    "QTST": 34,
+    "TSA": 3,
+    "TSS-QC": 50
+   },
+   "services": 560,
+   "services_flat_with_history": 1196,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "IT",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://eidas.agid.gov.it/TL/TSL-IT.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 79,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-06-15T15:05:23Z",
+   "next_update": "2026-12-15T16:05:23Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 15,
+   "sequence": "49",
+   "service_statuses": {
+    "deprecatedatnationallevel": 2,
+    "recognisedatnationallevel": 2,
+    "withdrawn": 6
+   },
+   "service_types": {
+    "PKC": 4,
+    "QC": 6
+   },
+   "services": 10,
+   "services_flat_with_history": 33,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "LI",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.llv.li/serviceportal2/amtsstellen/amt-fuer-kommunikation/trustedlist-li.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 6,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-27T13:52:57Z",
+   "next_update": "2027-02-27T14:52:57Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 63,
+   "sequence": "91",
+   "service_statuses": {
+    "deprecatedatnationallevel": 2,
+    "granted": 47,
+    "withdrawn": 37
+   },
+   "service_types": {
+    "Q": 10,
+    "QC": 59,
+    "QTST": 15,
+    "TSS-AdESQCandQES": 2
+   },
+   "services": 86,
+   "services_flat_with_history": 239,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "LT",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://rrt.lt/static/files/LT-TSL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 105,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-05-20T05:02:52Z",
+   "next_update": "2026-11-20T06:02:52Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 5,
+   "sequence": "66",
+   "service_statuses": {
+    "deprecatedatnationallevel": 2,
+    "granted": 16,
+    "withdrawn": 16
+   },
+   "service_types": {
+    "Q": 9,
+    "QC": 11,
+    "QTST": 12,
+    "TSS-QC": 2
+   },
+   "services": 34,
+   "services_flat_with_history": 75,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "LU",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://trusted-list.lu/tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 127,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-04-28T19:00:48Z",
+   "next_update": "2026-10-28T20:00:48Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 1,
+   "sequence": "51",
+   "service_statuses": {
+    "deprecatedatnationallevel": 4,
+    "granted": 15,
+    "recognisedatnationallevel": 6,
+    "withdrawn": 15
+   },
+   "service_types": {
+    "NationalRootCA-QC": 1,
+    "PKC": 3,
+    "QC": 20,
+    "QTST": 10,
+    "TSS-QC": 6
+   },
+   "services": 40,
+   "services_flat_with_history": 98,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "LV",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://trustlist.gov.lv/tsl/latvian-tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 299,
+   "declares_pointers": [
+    {
+     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+     "territory": "AR"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+     "territory": "BR"
+    },
+    {
+     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+     "territory": "PY"
+    },
+    {
+     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+     "territory": "UY"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+     "territory": "MB"
+    }
+   ],
+   "fetch_error": "",
+   "group": "mercosur_copies",
+   "issued": "2025-11-07T03:00:00Z",
+   "next_update": "2026-05-07T02:59:59Z",
+   "overdue_days": 118,
+   "pointers_out": 5,
+   "provider_section": false,
+   "providers": 0,
+   "sequence": "7",
+   "service_statuses": {},
+   "service_types": {},
+   "services": 0,
+   "services_flat_with_history": 0,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "MB",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/MBlistofthelists",
+   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 299,
+   "declares_pointers": [
+    {
+     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+     "territory": "AR"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+     "territory": "BR"
+    },
+    {
+     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+     "territory": "PY"
+    },
+    {
+     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+     "territory": "UY"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+     "territory": "MB"
+    }
+   ],
+   "fetch_error": "",
+   "group": "mercosur_copies",
+   "issued": "2025-11-07T03:00:00Z",
+   "next_update": "2026-05-07T02:59:59Z",
+   "overdue_days": 118,
+   "pointers_out": 5,
+   "provider_section": false,
+   "providers": 0,
+   "sequence": "7",
+   "service_statuses": {},
+   "service_types": {},
+   "services": 0,
+   "services_flat_with_history": 0,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "MB",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/MBlistofthelists",
+   "url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 299,
+   "declares_pointers": [
+    {
+     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+     "territory": "AR"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+     "territory": "BR"
+    },
+    {
+     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+     "territory": "PY"
+    },
+    {
+     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+     "territory": "UY"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+     "territory": "MB"
+    }
+   ],
+   "fetch_error": "",
+   "group": "mercosur_copies",
+   "issued": "2025-11-07T03:00:00Z",
+   "next_update": "2026-05-07T02:59:59Z",
+   "overdue_days": 118,
+   "pointers_out": 5,
+   "provider_section": false,
+   "providers": 0,
+   "sequence": "7",
+   "service_statuses": {},
+   "service_types": {},
+   "services": 0,
+   "services_flat_with_history": 0,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "MB",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/MBlistofthelists",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 118,
+   "declares_pointers": [
+    {
+     "location": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+     "territory": "AR"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+     "territory": "BR"
+    },
+    {
+     "location": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+     "territory": "PY"
+    },
+    {
+     "location": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+     "territory": "UY"
+    },
+    {
+     "location": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+     "territory": "MB"
+    }
+   ],
+   "fetch_error": "",
+   "group": "mercosur_copies",
+   "issued": "2026-05-07T03:00:00Z",
+   "next_update": "2026-11-07T02:59:59Z",
+   "overdue_days": 0,
+   "pointers_out": 5,
+   "provider_section": false,
+   "providers": 0,
+   "sequence": "8",
+   "service_statuses": {},
+   "service_types": {},
+   "services": 0,
+   "services_flat_with_history": 0,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "MB",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/MBlistofthelists",
+   "url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 127,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-04-28T22:00:00Z",
+   "next_update": "2026-11-28T22:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": false,
+   "providers": 0,
+   "sequence": "3",
+   "service_statuses": {},
+   "service_types": {},
+   "services": 0,
+   "services_flat_with_history": 0,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "MD",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/MDlist",
+   "url": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 72,
+   "declares_pointers": [
+    {
+     "location": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+     "territory": "RS"
+    }
+   ],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-06-23T01:00:00Z",
+   "next_update": "2026-12-23T00:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 8,
+   "sequence": "26",
+   "service_statuses": {
+    "granted": 34,
+    "recognisedatnationallevel": 7,
+    "withdrawn": 3
+   },
+   "service_types": {
+    "EDS": 5,
+    "IdV": 1,
+    "PKC": 3,
+    "Q": 9,
+    "QC": 10,
+    "QTST": 16
+   },
+   "services": 44,
+   "services_flat_with_history": 46,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "ME",
+   "tsl_type": "http://tl.gov.me/mju/TSLType/MENationalTL",
+   "url": "https://tl.gov.me/ME_TL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 128,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-04-27T07:47:30Z",
+   "next_update": "2026-10-27T08:47:30Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 3,
+   "sequence": "55",
+   "service_statuses": {
+    "granted": 4,
+    "withdrawn": 6
+   },
+   "service_types": {
+    "Q": 3,
+    "QC": 7
+   },
+   "services": 10,
+   "services_flat_with_history": 19,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "MT",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://tsl.mca.org.mt/MT_TSL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 2457,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
+     "territory": "AP"
+    }
+   ],
+   "fetch_error": "",
+   "group": "pacific_alliance",
+   "issued": "2019-12-12T01:00:00Z",
+   "next_update": "2020-06-12T00:00:00Z",
+   "overdue_days": 2274,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 1,
+   "sequence": "1",
+   "service_statuses": {
+    "granted": 1
+   },
+   "service_types": {
+    "QC": 1
+   },
+   "services": 1,
+   "services_flat_with_history": 1,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "MX",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://cdn.www.gob.pe/uploads/document/file/541710/TSL-MEXICO.xml.zip",
+   "zip_wrapped": true
+  },
+  {
+   "age_days": 68,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-06-26T09:30:00Z",
+   "next_update": "2026-12-26T10:30:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 41,
+   "sequence": "79",
+   "service_statuses": {
+    "granted": 42,
+    "withdrawn": 55
+   },
+   "service_types": {
+    "Q": 7,
+    "QC": 75,
+    "QTST": 15
+   },
+   "services": 97,
+   "services_flat_with_history": 235,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "NL",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.rdi.nl/site/binaries/content/assets/site-content/bestanden/current-tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 127,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-04-28T20:00:23Z",
+   "next_update": "2026-10-28T21:00:23Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 16,
+   "sequence": "88",
+   "service_statuses": {
+    "granted": 35,
+    "withdrawn": 18
+   },
+   "service_types": {
+    "QC": 43,
+    "QTST": 10
+   },
+   "services": 53,
+   "services_flat_with_history": 103,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "NO",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://nkom.no/files/TL/NO_TL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 2457,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/information_society/policy/esignature/trusted-list/tl-mp.xml",
+     "territory": "AP"
+    }
+   ],
+   "fetch_error": "",
+   "group": "pacific_alliance",
+   "issued": "2019-12-12T01:00:00Z",
+   "next_update": "2020-06-12T00:00:00Z",
+   "overdue_days": 2274,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 3,
+   "sequence": "1",
+   "service_statuses": {
+    "granted": 9
+   },
+   "service_types": {
+    "QC": 9
+   },
+   "services": 9,
+   "services_flat_with_history": 9,
+   "state": "past_declared_next_update",
+   "terminal_next_update": false,
+   "territory": "PE",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://cdn.www.gob.pe/uploads/document/file/541707/TSL-PERU.xml.zip",
+   "zip_wrapped": true
+  },
+  {
+   "age_days": 6,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-27T08:10:17Z",
+   "next_update": "2026-11-27T09:10:17Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 69,
+   "sequence": "161",
+   "service_statuses": {
+    "deprecatedatnationallevel": 18,
+    "granted": 63,
+    "recognisedatnationallevel": 10,
+    "withdrawn": 46
+   },
+   "service_types": {
+    "ACA": 3,
+    "NationalRootCA-QC": 3,
+    "OCSP": 6,
+    "Q": 29,
+    "QC": 41,
+    "QTST": 39,
+    "TSS-QC": 10,
+    "unspecified": 6
+   },
+   "services": 137,
+   "services_flat_with_history": 274,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "PL",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.nccert.pl/tsl/PL_TSL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 16,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-17T14:36:07Z",
+   "next_update": "2027-02-17T15:36:07Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 20,
+   "sequence": "119",
+   "service_statuses": {
+    "deprecatedatnationallevel": 5,
+    "granted": 49,
+    "recognisedatnationallevel": 7,
+    "withdrawn": 46
+   },
+   "service_types": {
+    "PKC": 8,
+    "Q": 4,
+    "QC": 50,
+    "QTST": 41,
+    "RA": 2,
+    "TSA": 2
+   },
+   "services": 107,
+   "services_flat_with_history": 212,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "PT",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.gns.gov.pt/media/TSLPT.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 13,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-20T15:10:32Z",
+   "next_update": "2027-02-20T16:10:32Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 9,
+   "sequence": "84",
+   "service_statuses": {
+    "deprecatedatnationallevel": 7,
+    "granted": 106,
+    "recognisedatnationallevel": 37,
+    "withdrawn": 29
+   },
+   "service_types": {
+    "OCSP": 3,
+    "PKC": 23,
+    "Q": 22,
+    "QC": 82,
+    "QTST": 31,
+    "TSA": 14,
+    "TSS-QC": 4
+   },
+   "services": 179,
+   "services_flat_with_history": 308,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "RO",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://trustedlist.adr.gov.ro/trustedlist.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 106,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    },
+    {
+     "location": "https://tl.gov.me/ME_TL.xml",
+     "territory": "ME"
+    }
+   ],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-05-20T01:00:00Z",
+   "next_update": "2026-11-19T01:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 2,
+   "provider_section": true,
+   "providers": 10,
+   "sequence": "36",
+   "service_statuses": {
+    "granted": 78,
+    "withdrawn": 25
+   },
+   "service_types": {
+    "Q": 16,
+    "QC": 39,
+    "QTST": 48
+   },
+   "services": 103,
+   "services_flat_with_history": 134,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "RS",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/RSlist",
+   "url": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 14,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-19T13:56:19Z",
+   "next_update": "2027-02-19T14:56:19Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 5,
+   "sequence": "62",
+   "service_statuses": {
+    "granted": 14,
+    "withdrawn": 4
+   },
+   "service_types": {
+    "Q": 8,
+    "QC": 8,
+    "QTST": 2
+   },
+   "services": 18,
+   "services_flat_with_history": 24,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "SE",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://trustedlist.pts.se/tlv6/SE-TL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 57,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-07-07T10:21:12Z",
+   "next_update": "2027-01-07T11:21:12Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 14,
+   "sequence": "86",
+   "service_statuses": {
+    "deprecatedatnationallevel": 13,
+    "granted": 46,
+    "recognisedatnationallevel": 4,
+    "withdrawn": 48
+   },
+   "service_types": {
+    "PKC": 3,
+    "Q": 17,
+    "QC": 51,
+    "QTST": 26,
+    "TSS-QC": 14
+   },
+   "services": 111,
+   "services_flat_with_history": 230,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "SI",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://www.tl.gov.si/SI_TL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 16,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2026-08-17T12:00:00Z",
+   "next_update": "2026-12-30T11:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 62,
+   "sequence": "145",
+   "service_statuses": {
+    "deprecatedatnationallevel": 6,
+    "granted": 149,
+    "withdrawn": 43
+   },
+   "service_types": {
+    "NationalRootCA-QC": 2,
+    "Q": 23,
+    "QC": 84,
+    "QTST": 85,
+    "SignaturePolicyAuthority": 4
+   },
+   "services": 198,
+   "services_flat_with_history": 309,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "SK",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "http://tl.nbu.gov.sk/kca/tsl/tsl.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 9,
+   "declares_pointers": [],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-08-24T08:58:00Z",
+   "next_update": "2026-11-24T08:58:00Z",
+   "overdue_days": 0,
+   "pointers_out": 0,
+   "provider_section": true,
+   "providers": 21,
+   "sequence": "74",
+   "service_statuses": {
+    "granted": 103,
+    "recognisedatnationallevel": 12,
+    "withdrawn": 42
+   },
+   "service_types": {
+    "NationalRootCA-QC": 12,
+    "QC": 72,
+    "QTST": 73
+   },
+   "services": 157,
+   "services_flat_with_history": 199,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "UA",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/UAlist",
+   "url": "https://czo.gov.ua/download/tl/TL-UA.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 2071,
+   "declares_pointers": [
+    {
+     "location": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+     "territory": "EU"
+    }
+   ],
+   "fetch_error": "",
+   "group": "eu_lotl_pointers",
+   "issued": "2020-12-31T22:59:59Z",
+   "pointers_out": 1,
+   "provider_section": true,
+   "providers": 16,
+   "sequence": "25",
+   "service_statuses": {
+    "deprecatedatnationallevel": 8,
+    "recognisedatnationallevel": 9,
+    "withdrawn": 2
+   },
+   "service_types": {
+    "PKC": 7,
+    "QC": 2,
+    "nothavingPKIid": 8,
+    "unspecified": 2
+   },
+   "services": 19,
+   "services_flat_with_history": 46,
+   "state": "terminal_declared",
+   "terminal_next_update": true,
+   "territory": "UK",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/EUgeneric",
+   "url": "https://ec.europa.eu/tools/lotl/Final_EU_TSL-UKsigned.xml",
+   "zip_wrapped": false
+  },
+  {
+   "age_days": 39,
+   "declares_pointers": [],
+   "fetch_error": "",
+   "group": "islands",
+   "issued": "2026-07-26T00:00:00Z",
+   "next_update": "2027-01-26T00:00:00Z",
+   "overdue_days": 0,
+   "pointers_out": 0,
+   "provider_section": true,
+   "providers": 3,
+   "sequence": "36",
+   "service_statuses": {
+    "withdrawn": 18
+   },
+   "service_types": {
+    "": 2,
+    "QC": 16
+   },
+   "services": 18,
+   "services_flat_with_history": 38,
+   "state": "current",
+   "terminal_next_update": false,
+   "territory": "UK",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/UKlist",
+   "url": "https://tl.ico.org.uk/uktrustedlist/UKTL.xml",
+   "zip_wrapped": false
+  },
+  {
+   "fetch_error": "",
+   "format": "json-register",
+   "group": "national_ctl",
+   "register_devtest": 12,
+   "register_pages": 1,
+   "register_rows_fetched": 42,
+   "register_total_reported": 42,
+   "state": "current",
+   "url": "https://www.rootca.or.kr/api/trust-list/cert/paged?page=0&size=50"
+  },
+  {
+   "age_days": 0,
+   "fetch_error": "",
+   "format": "ms-ctl",
+   "group": "national_ctl",
+   "issued": "2026-09-02T06:11:58+00:00",
+   "next_update": "2026-09-30T06:11:58+00:00",
+   "overdue_days": 0,
+   "sequence": 745,
+   "state": "current",
+   "url": "https://www.rootca.or.kr/api/trust/kisa-rootca-4-rsa"
+  }
+ ],
+ "schema": 1,
+ "source": "https://ec.europa.eu/tools/lotl/eu-lotl.xml",
+ "summary": {
+  "by_state": {
+   "current": 39,
+   "past_declared_next_update": 10,
+   "terminal_declared": 1
+  },
+  "xml_pointers": 50
+ }
+}
