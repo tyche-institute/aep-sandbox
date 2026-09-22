@@ -94,6 +94,27 @@ python3 did_you_break_it.py
 If you find a genuine bypass, that is a finding — see [THREAT-MODEL.md](THREAT-MODEL.md) for
 scope and how to report it.
 
+## The prize
+
+A genuine key-free bypass — a package that `verify.py` at HEAD appraises as **ALLOW** for an
+action the reference mandate does not authorise — earns three things, announced from the
+BSides Tallinn stage on 25 September 2026:
+
+1. **your name on this page**, under this heading;
+2. **the fix merged under your name**;
+3. **one hexadecimal dollar** — $2.56 — in the tradition of Donald Knuth's reward cheques.
+
+Report it as an issue in this repository with the package attached. Nobody yet.
+
+What does not count: a scope-language gap. The mandate carries exactly two limits by design —
+an allow-list of methods and a per-action `max_amount` — and `did_you_break_it.py` judges with
+the same `scope_ok` the verifier uses, so an amount hidden under a field the mandate does not
+read, or a budget spent across many actions, is *in scope* by construction. Those are findings
+for [THREAT-MODEL.md](THREAT-MODEL.md), and welcome; the prize is for the seal.
+
+The first cheque is already written — to the adversarial panel that found the
+expired-credential hole in the wallet verifier on 11 August 2026. Eighty-three minutes.
+
 ## Layout
 
 ```
