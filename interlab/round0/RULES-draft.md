@@ -37,8 +37,8 @@ assigned value.
 
 ## 2. Assigned values (the ground truth)
 
-The assigned value for a vector is the verdict on which **two independent reference
-implementations agree**: the Python reference (`aep-sandbox`, `aep/package.py` +
+The assigned value for a vector is the verdict on which **the two reference implementations,
+both built by us, agree**: the Python reference (`aep-sandbox`, `aep/package.py` +
 `aep/mandate.py`) and the JavaScript port (`tyche-institute-site` `verify.mjs`). Both were
 run before publication (`run_reference.py`, `run_port.mjs`) and joined by `compare.py`.
 
@@ -118,6 +118,17 @@ Minimum viable round: **3 external participants + 2 in-house references** (EA-4/
 Round-0 corpus = this directory at the committed revision. A DOI is minted per round. Any
 change to a vector, an assigned value, or these rules ends Round-0 and opens Round-1 with a
 fresh commitment; the old commitment and its corpus remain published for reproducibility.
+
+**Erratum, 23 September 2026 — wording only, Round-0 stands.** Section 2 above described our
+two reference implementations as "two independent reference implementations". They are not
+independent of each other: the JavaScript side is a port of the Python reference, and the
+frozen `interlab/spec/VERIFIER-SPEC-v1.md` says so in its own words. The sentence now reads
+"the two reference implementations, both built by us". This corrects a description of who
+wrote the references; it changes no vector, no assigned value and no digest. The Round-0
+commitment is unchanged and still
+`c5a5ad400eec0baea85c9edb77e91b79f1122113412195bca3667637cee6e189`, and `MANIFEST.sha256`
+verifies as before. The same sentence was corrected in `compare.py` and in the `findings.md`
+it generates.
 
 ---
 

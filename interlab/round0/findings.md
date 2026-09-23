@@ -1,6 +1,6 @@
 # Round-0 (Track B) — reference-divergence findings
 
-Every row here is a case where the two independent reference implementations (Python `aep-sandbox` and the JS CTF port) returned **different** verdicts on the **same** vector. Per the interlab design, a divergence between references is a corpus defect published as a finding — it is recorded, never patched away by editing a verifier. Such a vector is **excluded from the assigned values** and cannot be scored until the divergence is resolved upstream.
+Every row here is a case where the two reference implementations, both built by us (Python `aep-sandbox` and the JS CTF port), returned **different** verdicts on the **same** vector. Per the interlab design, a divergence between references is a corpus defect published as a finding — it is recorded, never patched away by editing a verifier. Such a vector is **excluded from the assigned values** and cannot be scored until the divergence is resolved upstream.
 
 
 **Total vectors:** 18  |  **Agreements (assigned):** 17  |  **Disagreements:** 1 (0 in scored classes, 1 in probe class).
