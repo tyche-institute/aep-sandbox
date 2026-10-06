@@ -54,7 +54,7 @@ action. If you achieve that, you have found a real bug — please report it (see
 ## Relationship to the real verifier
 
 This sandbox is a teaching model. The production-grade signed-`.aep` format and verifier live
-in [tyche-institute/eatf](https://github.com/tyche-institute/eatf); the RATS/Veraison
+in [tyche-institute/eatf-verifier](https://github.com/tyche-institute/eatf-verifier); the RATS/Veraison
 composition (binding an AEP outcome into a hardware-rooted attestation) is described in the
 EATF work and the `draft-sokolov-rats-aep-composition` Internet-Draft. The Layer-1/Layer-2
 split here exists to make the difference between *integrity* and *authorisation* impossible to
