@@ -112,8 +112,8 @@ the same `scope_ok` the verifier uses, so an amount hidden under a field the man
 read, or a budget spent across many actions, is *in scope* by construction. Those are findings
 for [THREAT-MODEL.md](THREAT-MODEL.md), and welcome; the prize is for the seal.
 
-The first cheque is already written — to the adversarial panel that found the
-expired-credential hole in the wallet verifier on 11 August 2026. Eighty-three minutes.
+The first cheque is already written — to the adversarial panel that found an
+expired-credential hole in one of our verifiers on 11 August 2026. Eighty-three minutes.
 
 ## Layout
 
