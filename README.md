@@ -7,7 +7,7 @@ agent's word for it.
 
 It exists to be broken. Clone it, point the verifier at a package, tamper, forge, replay,
 overreach, and watch what holds and what gives. It is the hands-on companion to the
-[EATF](https://github.com/tyche-institute/eatf) reference implementation and the
+[EATF](https://github.com/tyche-institute/eatf-verifier) reference implementation and the
 [eatf.eu](https://eatf.eu) agent-trust framework, built by [Tyche Institute](https://tyche.institute).
 
 > **Reference implementation of a primitive, not a product.** The point is pedagogical and
