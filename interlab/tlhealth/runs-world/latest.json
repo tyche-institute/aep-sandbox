@@ -1,6 +1,6 @@
 {
  "measured_utc": "2026-08-25T16:30:00Z",
- "instrument": "RIPE Atlas one-off sslcert (SNI), one probe per country; reconciled against per-pointer fetch",
+ "instrument": "RIPE Atlas one-off sslcert (SNI), probes chosen for maximum country coverage: 178 probes in 177 countries; reconciled against per-pointer fetch",
  "probe_home": "1016856 (Zeus1, Helsinki)",
  "measurements": {
   "sk_maxcov": 204372076,
@@ -16,39 +16,70 @@
    "N.America": 22,
    "Africa": 40,
    "Oceania": 13,
-   "S.America": 12
+   "S.America": 12,
+   "Other": 1
   },
-  "probes_per_endpoint": "one per country"
+  "probes_per_endpoint": 178
  },
  "control": {
   "territory": "IE",
   "host": "eidas.gov.ie",
-  "valid": 165,
-  "probes": 177,
+  "valid": 166,
+  "probes": 178,
   "no_answer": 12,
-  "valid_worldwide": true
+  "valid_worldwide": true,
+  "own_name": 166,
+  "other_name": 0,
+  "countries": 177,
+  "countries_own_name": 165
  },
  "exception": {
   "territory": "SK",
   "host": "tl.nbu.gov.sk",
-  "probes": 177,
+  "probes": 178,
   "valid": 0,
   "no_answer": 1,
   "valid_worldwide": false,
-  "gated": true,
-  "public_note": "One member state's endpoint failed TLS validation from every one of the countries measured; its operator will be notified before it is named, and the detail is withheld until then."
+  "gated": false,
+  "own_name": 0,
+  "other_name": 177,
+  "countries": 177,
+  "countries_own_name": 0,
+  "operator_notified": "2026-08-25",
+  "public_note": "On 25 August 2026 this endpoint presented a certificate for its own name to none of the 178 probes in 177 countries: 177 saw a certificate for another name, which is withheld, and 1 saw none. Its operator was notified on 25 August 2026. On 30 September 2026 the same host presented a certificate for its own name over HTTPS, valid from 3 September 2026; the pointer the EU list of trusted lists declares for it is still http://."
  },
- "methodology": "A bare TLS probe with no SNI reports a CDN's default certificate as a defect; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation exactly one endpoint fails from every country and every method; all others validate when fetched the way software fetches them, with SNI.",
+ "methodology": "A bare TLS probe with no SNI reports a CDN's default certificate as a defect; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation, on 25 August 2026, exactly one endpoint failed from every country and every method; all others validated when fetched the way software fetches them, with SNI.",
  "hosts": {
   "eidas.gov.ie": {
    "territory": "IE",
    "valid_worldwide": true,
-   "countries": 177
+   "countries": 177,
+   "countries_own_name": 165
   },
   "tl.nbu.gov.sk": {
    "territory": "SK",
-   "gated": true,
-   "valid_worldwide": false
+   "gated": false,
+   "valid_worldwide": false,
+   "countries": 177,
+   "countries_own_name": 0
   }
+ },
+ "correction": {
+  "corrected_utc": "2026-10-08T09:01:32Z",
+  "what": "control.valid, control.probes and exception.probes held country counts under probe names (165 of 177; 177). They now hold probe counts as the RIPE Atlas API reports them (166 of 178; 178), and the country counts sit under countries and countries_own_name. reach.continents gains the 177th country (Other: 1). The exception is no longer gated and its note no longer says the operator will be notified: it was notified on 25 August 2026. The methodology is dated and in the past tense.",
+  "valid_means": "probes whose leaf certificate named the host. Atlas sslcert records the certificate a server presents; it does not validate the chain. The key is kept because existing readers use it; own_name holds the same count.",
+  "no_answer_means": "probes that received no certificate (timeouts and TLS alerts).",
+  "countries_from": "probe country_code as registered on 2026-09-30.",
+  "atlas_result_window_utc": [
+   "2026-08-25T14:26:40Z",
+   "2026-08-25T14:32:53Z"
+  ],
+  "measured_utc_is": "the file's label, which orders the runs; the Atlas result timestamps are in atlas_result_window_utc.",
+  "sources": [
+   "https://atlas.ripe.net/api/v2/measurements/204372082/results/",
+   "https://atlas.ripe.net/api/v2/measurements/204372076/results/",
+   "https://atlas.ripe.net/api/v2/probes/ (country_code, read 2026-09-30)",
+   "30 September 2026: curl https://tl.nbu.gov.sk/kca/tsl/tsl.xml (200, verify 0) and openssl s_client -connect tl.nbu.gov.sk:443 -servername tl.nbu.gov.sk (leaf CN tl.nbu.gov.sk, notBefore 2026-09-03T06:16:56Z, verify 0)"
+  ]
  }
 }
