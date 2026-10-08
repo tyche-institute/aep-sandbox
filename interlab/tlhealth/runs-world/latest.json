@@ -69,6 +69,12 @@
   "what": "control.valid, control.probes and exception.probes held country counts under probe names (165 of 177; 177). They now hold probe counts as the RIPE Atlas API reports them (166 of 178; 178), and the country counts sit under countries and countries_own_name. reach.continents gains the 177th country (Other: 1). The exception is no longer gated and its note no longer says the operator will be notified: it was notified on 25 August 2026. The methodology is dated and in the past tense.",
   "valid_means": "probes whose leaf certificate named the host. Atlas sslcert records the certificate a server presents; it does not validate the chain. The key is kept because existing readers use it; own_name holds the same count.",
   "no_answer_means": "probes that received no certificate (timeouts and TLS alerts).",
+  "countries_from": "probe country_code as registered on 2026-09-30.",
+  "atlas_result_window_utc": [
+   "2026-08-25T14:26:40Z",
+   "2026-08-25T14:32:53Z"
+  ],
+  "measured_utc_is": "the file's label, which orders the runs; the Atlas result timestamps are in atlas_result_window_utc.",
   "sources": [
    "https://atlas.ripe.net/api/v2/measurements/204372082/results/",
    "https://atlas.ripe.net/api/v2/measurements/204372076/results/",
