@@ -26,14 +26,20 @@ from __future__ import annotations
 import collections, datetime, json, pathlib, re, subprocess, sys, time
 import concurrent.futures as cf
 
+from graph import discovered
+
 LOTL = "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
 WORKERS, TIMEOUT = 3, 30
 NOW = datetime.datetime.now(datetime.timezone.utc)
+# The probe's identification, so an operator who finds this reader in a log learns the same
+# name and the same address to ask us to stop. It used to send curl's default, as the probe
+# did until 25.08.2026.
+UA = "TycheLabs-TrustedListObservatory/1.0 (+https://tyche.institute/lab/trust-list-graph/)"
 
 
 def fetch(url: str) -> tuple[str, str]:
     for attempt in (1, 2):
-        r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url],
+        r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), "-A", UA, url],
                            capture_output=True, timeout=TIMEOUT + 20)
         if r.returncode == 0 and r.stdout:
             # surrogateescape, not ignore: a zip-wrapped list must survive the round trip to
@@ -77,7 +83,8 @@ def parse_ms_ctl(url: str) -> dict:
     not a time.
     """
     out = {"url": url, "format": "ms-ctl"}
-    r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url], capture_output=True, timeout=TIMEOUT + 20)
+    r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), "-A", UA, url], capture_output=True,
+                       timeout=TIMEOUT + 20)
     if r.returncode != 0 or not r.stdout:
         out["fetch_error"] = "fetch failed"
         out["state"] = "unreachable"
@@ -124,7 +131,8 @@ def parse_kisa_register(url: str) -> dict:
     separates test hierarchies from production ones — that fact is recorded, not repaired.
     """
     out = {"url": url, "format": "json-register"}
-    r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url], capture_output=True, timeout=TIMEOUT + 20)
+    r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), "-A", UA, url], capture_output=True,
+                       timeout=TIMEOUT + 20)
     if r.returncode != 0 or not r.stdout:
         out["fetch_error"] = "fetch failed"
         out["state"] = "unreachable"
@@ -290,9 +298,15 @@ def main() -> int:
     ]
     extra += pacific
 
+    # Lists the previous crawl reached that nothing above reads, as their own group. Without
+    # them the page shows a crawled list with no sequence and no next update, and a reader
+    # cannot tell "current" from "never asked". Not derived when the LOTL did not answer, for
+    # the reason given in probe.py.
+    found, graph_source = discovered(set(xml_pointers + extra)) if xml_pointers else ([], None)
+
     rows = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
-        for row in ex.map(parse, xml_pointers + extra):
+        for row in ex.map(parse, xml_pointers + extra + found):
             rows.append(row)
 
     # South Korea's non-ETSI machine-readable list: a Microsoft-format CTL plus a JSON
@@ -305,12 +319,16 @@ def main() -> int:
                         else "pacific_alliance" if row["url"] in pacific
                         else "islands" if row["url"] in islands
                         else "mercosur_copies" if row["url"] in extra
+                        else "graph_discovered" if row["url"] in found
                         else "eu_lotl_pointers")
     rows.sort(key=lambda x: (x.get("territory") or "zz", x["url"]))
 
     states: dict[str, int] = {}
+    by_group: dict[str, dict[str, int]] = {}
     for row in rows:
         states[row["state"]] = states.get(row["state"], 0) + 1
+        g = by_group.setdefault(row["group"], {})
+        g[row["state"]] = g.get(row["state"], 0) + 1
 
     run = {
         "instrument": "tlfreshness", "schema": 1,
@@ -319,7 +337,10 @@ def main() -> int:
         "caveat": ("Declared currency only. A stale list is not necessarily a wrong list, and a "
                    "terminal list is correctly terminal. This measures what the artefacts say "
                    "about themselves, not whether anyone downstream honours it."),
-        "summary": {"xml_pointers": len(rows), "by_state": states},
+        # by_state counts every row read; by_group keeps each group's states apart, so the
+        # graph_discovered rows can be read without being added to anybody else's count.
+        "summary": {"xml_pointers": len(rows), "by_state": states, "by_group": by_group},
+        "graph_discovered_from": graph_source,
         "rows": rows,
     }
     out = pathlib.Path(__file__).resolve().parent / "runs-freshness"

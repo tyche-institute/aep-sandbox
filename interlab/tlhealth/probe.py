@@ -19,6 +19,8 @@ import argparse, datetime, hashlib, json, os, pathlib, re, subprocess, sys
 import concurrent.futures as cf
 import time
 
+from graph import discovered
+
 LOTL = "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
 
 # The primary vantage ran with curl's default User-Agent until 25.08.2026, while the second
@@ -55,6 +57,7 @@ POPULATIONS = {
     "other_national": "National trust lists outside the EU/EEA found by census, measured individually",
     "government_roots": "National government root certificates published for download, outside the EU/EEA",
     "national_ctl": "Machine-readable national trust lists in non-ETSI formats (Microsoft CTL, JSON registers)",
+    "graph_discovered": "Trust lists the previous pointer crawl reached that no population above names",
 }
 
 # The EU's mutual-recognition list of lists. The main LOTL does not mention it, so a crawl
@@ -336,6 +339,15 @@ def main() -> int:
     targets += [("other_national", k, v) for k, v in OTHER_NATIONAL.items()]
     targets += [("government_roots", k, v) for k, v in GOVERNMENT_ROOTS.items()]
     targets += [("national_ctl", k, v) for k, v in NATIONAL_CTL.items()]
+    # Whatever the previous crawl reached that none of the populations above names. Kept as
+    # its own population and never folded into the one it resembles: Paraguay's tsl_Mb.xml is
+    # a MERCOSUR copy by content, but we did not declare it, the crawl found it, and a
+    # mercosur_copies denominator that grows because a crawler wandered is not the series that
+    # population has been reporting. Derived only when the LOTL answered: without its pointers
+    # the exclusion set is incomplete, and every European list in the graph would be relabelled
+    # graph_discovered for the night.
+    found, graph_source = discovered({u for _, _, u in targets}) if pointers else ([], None)
+    targets += [("graph_discovered", u, u) for u in found]
 
     results = []
     with cf.ThreadPoolExecutor(max_workers=WORKERS) as ex:
@@ -372,6 +384,10 @@ def main() -> int:
     summary = {}
     for pop in POPULATIONS:
         rows = [r for r in results if r["population"] == pop]
+        if not rows and pop == "graph_discovered":
+            # Derived, so it may be empty: the crawl found nothing the curated populations
+            # miss. A zero row would read as a population that failed to run.
+            continue
         counts: dict[str, int] = {}
         for r in rows:
             counts[r["class"]] = counts.get(r["class"], 0) + 1
@@ -387,6 +403,7 @@ def main() -> int:
         "classifier_version": CLASSIFIER_VERSION,
         "user_agent": UA,
         "populations": POPULATIONS,
+        "graph_discovered_from": graph_source,
         "vantages": {
             "primary": "single host, Estonia",
             "secondary": VANTAGE,

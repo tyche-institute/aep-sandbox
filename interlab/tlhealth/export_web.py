@@ -60,8 +60,11 @@ NATIONAL_CTL_TERRITORY = {
 # change to what the page's colours mean. v1: transport classes + hub/terminal/stale/empty,
 # XML lists only. v2 (2026-08-25): non-ETSI machine-readable lists (kind "ctl") get their
 # currency from dedicated CTL/JSON readers in freshness.py, so "ok" means current for them
-# exactly as it does for XML lists — never merely "fetched".
-STATE_SEMANTICS_VERSION = 2
+# exactly as it does for XML lists — never merely "fetched". v3 (2026-10-08): a node the probe
+# did not measure is "not_probed". It used to be "ok" whenever the crawl had fetched it, which
+# drew Paraguay's copy of the MERCOSUR list green from 10.09 with no transport class and no
+# declared currency behind the colour.
+STATE_SEMANTICS_VERSION = 3
 STATE = {
     "ok": "ok",
     "tls_validation_failed": "tls_validation_failed",
@@ -168,9 +171,11 @@ def main() -> int:
         # thinking a publisher declared them.
         terr = (c.get("territory") or f.get("territory") or GOV_ROOT_TERRITORY.get(u)
                 or NATIONAL_CTL_TERRITORY.get(u) or "??")
-        state = STATE.get(m.get("class", ""), None)
-        if state is None:
-            state = "ok" if c.get("fetched") else "fail"
+        # No probe row, no transport state. The crawl's fetch is not the probe's: it is not
+        # classified, not retried by the published policy, and not re-asked from the second
+        # vantage, so it cannot stand in for one. Lists the crawl finds are probed on the next
+        # run, as graph_discovered; until then they say so.
+        state = STATE.get(m.get("class", ""), "not_probed")
         if u in HUBS:
             state = "hub"
         elif f.get("terminal_next_update"):
@@ -180,7 +185,10 @@ def main() -> int:
             state = "terminal"
         elif f.get("state") == "expired" or (f.get("overdue_days") or 0) > 0:
             state = "stale"
-        elif state == "ok" and f.get("providers") == 0 and f.get("state") == "current":
+        elif (state == "ok" and f.get("providers") == 0 and f.get("state") == "current"
+              and not (f.get("tsl_type") or "").endswith("listofthelists")):
+            # A list of lists names no providers by design. The first current one that is not
+            # a hub, Paraguay's MERCOSUR copy, would otherwise be drawn as Moldova is.
             state = "empty"
 
         mime = c.get("mime")
@@ -257,14 +265,19 @@ def main() -> int:
     # --- the counts the page quotes, computed here and only here --------------
     eu_kids = [e["d"] for e in edges if e["s"] == HUB_EU]
     by_id = {n["id"]: n for n in nodes}
-    eu_xml = [k for k in eu_kids if by_id[k]["kind"] == "xml" and k != HUB_EU]
+    # graph_discovered is its own population. A list the crawl found is listed under its own
+    # fact below and never enters the European or MERCOSUR denominators, even when a hub's edge
+    # leads to it.
+    curated = lambda k: by_id[k]["population"] != "graph_discovered"
+    eu_xml = [k for k in eu_kids if by_id[k]["kind"] == "xml" and k != HUB_EU and curated(k)]
     eu_pdf = [k for k in eu_kids if by_id[k]["kind"] == "pdf"]
     # "Answers" is a transport question. A list that is stale, terminal, or names nobody has
     # still answered; folding those into the same number would let a freshness problem be read
     # as an unreachable server, which is the confusion this instrument exists to separate.
-    NOT_ANSWERING = {"fail", "tls_validation_failed", "http_error", "blocked"}
+    # A list nobody probed has not answered either: it was not asked.
+    NOT_ANSWERING = {"fail", "tls_validation_failed", "http_error", "blocked", "not_probed"}
     eu_xml_ok = [k for k in eu_xml if by_id[k]["state"] not in NOT_ANSWERING]
-    mb_kids = [e["d"] for e in edges if e["s"] == HUB_MB]
+    mb_kids = [e["d"] for e in edges if e["s"] == HUB_MB and curated(e["d"])]
     mb_ok = [k for k in mb_kids if by_id[k]["state"] not in NOT_ANSWERING]
     plain_http = [n["id"] for n in nodes if n["scheme"] == "http" and n["kind"] == "xml"]
 
@@ -292,6 +305,8 @@ def main() -> int:
         # other would put two different denominators side by side on one page.
         "government_roots": sorted(n["t"] for n in nodes if n["kind"] == "root"),
         "national_ctl": sorted(n["t"] for n in nodes if n["kind"] == "ctl"),
+        "graph_discovered": [{"t": n["t"], "id": n["id"], "state": n["state"]}
+                             for n in nodes if n["population"] == "graph_discovered"],
         "eu_has_two_hubs": {
             "main_lotl_pointers": len([e for e in edges if e["s"] == HUB_EU]),
             "mra_lotl_pointers": len([e for e in edges if e["s"] == HUB_MRA]),
