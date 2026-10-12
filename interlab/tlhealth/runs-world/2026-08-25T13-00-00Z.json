@@ -47,7 +47,7 @@
   ]
  },
  "reach": {
-  "countries": 74,
+  "countries": 75,
   "continents": {
    "Europe": 303,
    "Asia": 36,
@@ -57,37 +57,67 @@
    "Africa": 10,
    "Other": 4
   },
-  "probes_per_endpoint": 500
+  "probes_per_endpoint": 479,
+  "probes_requested": 500
  },
  "control": {
   "territory": "IE",
   "host": "eidas.gov.ie",
-  "valid": 459,
-  "probes": 478,
+  "valid": 460,
+  "probes": 479,
   "no_answer": 19,
-  "valid_worldwide": true
+  "valid_worldwide": true,
+  "own_name": 460,
+  "other_name": 0,
+  "countries": 75,
+  "countries_own_name": 73
  },
  "exception": {
   "territory": "SK",
   "host": "tl.nbu.gov.sk",
-  "probes": 476,
+  "probes": 479,
   "valid": 0,
   "no_answer": 2,
   "valid_worldwide": false,
-  "gated": true,
-  "public_note": "One member state's endpoint failed TLS validation from every one of the countries measured; its operator will be notified before it is named, and the detail is withheld until then."
+  "gated": false,
+  "own_name": 0,
+  "other_name": 477,
+  "countries": 75,
+  "countries_own_name": 0,
+  "operator_notified": "2026-08-25",
+  "public_note": "On 25 August 2026 this endpoint presented a certificate for its own name to none of the 479 probes in 75 countries: 477 saw a certificate for another name, which is withheld, and 2 saw none. Its operator was notified on 25 August 2026."
  },
- "methodology": "A bare TLS probe with no SNI reports CDN default certificates as defects; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation exactly one endpoint fails from every vantage and every method; all others validate when fetched the way software fetches them, with SNI.",
+ "methodology": "A bare TLS probe with no SNI reports CDN default certificates as defects; even with SNI, cloud routing can hand a default certificate to some vantages. Every figure here reconciles the Atlas run against a fetch of each pointer's actual URL. After reconciliation, on 25 August 2026, exactly one endpoint failed from every vantage and every method; all others validated when fetched the way software fetches them, with SNI.",
  "hosts": {
   "eidas.gov.ie": {
    "territory": "IE",
    "valid_worldwide": true,
-   "countries": 74
+   "countries": 75,
+   "countries_own_name": 73
   },
   "tl.nbu.gov.sk": {
    "territory": "SK",
-   "gated": true,
-   "valid_worldwide": false
+   "gated": false,
+   "valid_worldwide": false,
+   "countries": 75,
+   "countries_own_name": 0
   }
+ },
+ "correction": {
+  "corrected_utc": "2026-10-08T09:30:53Z",
+  "what": "The counts were a snapshot taken while the one-off measurements were still collecting results (459 of 478; 476; 74 countries). They now hold the final counts from the RIPE Atlas API: 460 of 479 for the control, 0 of 479 for the exception (477 another name, 2 none), 75 countries. The exception is no longer gated and its note no longer says the operator will be notified: it was notified on 25 August 2026. The methodology is dated and in the past tense.",
+  "continents_are": "probe counts from the snapshot (478 probes), not country counts and not recomputed for the final 479; the later run (16-30) gives country counts.",
+  "valid_means": "probes whose leaf certificate named the host. Atlas sslcert records the certificate a server presents; it does not validate the chain. The key is kept because existing readers use it; own_name holds the same count.",
+  "countries_from": "probe country_code as registered on 2026-09-30.",
+  "atlas_result_window_utc": [
+   "2026-08-25T13:36:49Z",
+   "2026-08-25T13:38:24Z"
+  ],
+  "measured_utc_is": "the file's label, which orders the runs; the Atlas result timestamps are in atlas_result_window_utc.",
+  "sources": [
+   "https://atlas.ripe.net/api/v2/measurements/204352623/results/",
+   "https://atlas.ripe.net/api/v2/measurements/204352622/results/",
+   "https://atlas.ripe.net/api/v2/probes/ (country_code, read 2026-09-30)"
+  ]
  }
 }
