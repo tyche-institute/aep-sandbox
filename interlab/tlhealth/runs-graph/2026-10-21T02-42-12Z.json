@@ -1,0 +1,516 @@
+{
+ "caveat": "Edges as published, followed as a client would. Presence of an edge is not a claim about legal recognition between the parties.",
+ "edges": [
+  {
+   "from": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "from": "https://tl.gov.me/ME_TL.xml",
+   "from_territory": "ME",
+   "to": "https://mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "from": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml",
+   "from_territory": "MD",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://czo.gov.ua/download/tl/TL-UA-EC.xml",
+   "from_territory": "UA",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "from": "https://mit.gov.rs/TrustedList/TSL-RS.xml",
+   "from_territory": "RS",
+   "to": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "from_territory": "AR",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "from_territory": "AR",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml",
+   "from_territory": "AR",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+   "from_territory": "BR",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml",
+   "from_territory": "BR",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+   "from_territory": "PY",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
+   "from_territory": "PY",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
+  },
+  {
+   "from": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml",
+   "from_territory": "UY",
+   "to": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml",
+   "from_territory": "CL",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml",
+   "from_territory": "MB",
+   "to": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml",
+   "from_territory": "MB",
+   "to": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml",
+   "from_territory": "MB",
+   "to": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "from": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml",
+   "from_territory": "MB",
+   "to": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  }
+ ],
+ "instrument": "tlgraph",
+ "max_depth": 3,
+ "nodes": [
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "AR",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-AR.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Brazil (ICP-Brasil root authority)",
+   "territory": "BR",
+   "territory_source": "self",
+   "url": "http://acraiz.icpbrasil.gov.br/tsl/LPSC.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "BR",
+   "territory_source": "self",
+   "url": "https://validar.iti.gov.br/trustlist/trust-list-BR.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Switzerland",
+   "territory": "CH",
+   "territory_source": "self",
+   "url": "https://trustedlist.tsl-switzerland.ch/tsl-ch.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "CL",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-CL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Colombia (national accreditation body)",
+   "territory": "CO",
+   "territory_source": "self",
+   "url": "https://onac.org.co/certificados/tsl/tsl-co.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Dominican Republic",
+   "territory": "DO",
+   "territory_source": "self",
+   "url": "https://applin.indotel.gob.do/tsl/tsl.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "EU list of lists",
+   "territory": "EU",
+   "territory_source": "declared_by_pointer",
+   "url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "MERCOSUR (Argentine copy)",
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/TSL-MB.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://pki.jgm.gov.ar/TSL/tsl-MB.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "MERCOSUR (Brazilian copy)",
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://validar.iti.gov.br/trustlist/trust-list-MB.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "MB",
+   "territory_source": "self",
+   "url": "https://www.acraiz.gov.py/tsl/tsl_Mb.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Moldova",
+   "territory": "MD",
+   "territory_source": "self",
+   "url": "https://sis.md/sites/default/files/MD-TL/MD-TL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": "Montenegro",
+   "territory": "ME",
+   "territory_source": "self",
+   "url": "https://tl.gov.me/ME_TL.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": false,
+   "is_tsl": false,
+   "mime": null,
+   "seed_label": "North Macedonia",
+   "territory": "MK",
+   "territory_source": "asserted_by_us",
+   "url": "https://trusteid.mdt.gov.mk/tl/TL_MK.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "PY",
+   "territory_source": "self",
+   "url": "https://www.acraiz.gov.py/tsl/tsl_Py.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "RS",
+   "territory_source": "self",
+   "url": "https://mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Serbia",
+   "territory": "RS",
+   "territory_source": "self",
+   "url": "https://www.mit.gov.rs/TrustedList/TSL-RS.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": null,
+   "seed_label": "Russia",
+   "territory": "RU",
+   "territory_source": "asserted_by_us",
+   "url": "https://e-trust.gosuslugi.ru/CA/DownloadTSL?schemaVersion=0"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Ukraine (EU-facing list)",
+   "territory": "UA",
+   "territory_source": "self",
+   "url": "https://czo.gov.ua/download/tl/TL-UA-EC.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "Ukraine",
+   "territory": "UA",
+   "territory_source": "self",
+   "url": "https://czo.gov.ua/download/tl/TL-UA.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": null,
+   "seed_label": "United Kingdom",
+   "territory": "UK",
+   "territory_source": "self",
+   "url": "https://tl.ico.org.uk/uktrustedlist/UKTL.xml"
+  },
+  {
+   "depth": 1,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "UY",
+   "territory_source": "self",
+   "url": "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "depth": 2,
+   "fetched": true,
+   "is_tsl": true,
+   "mime": "application/vnd.etsi.tsl+xml",
+   "seed_label": null,
+   "territory": "UY",
+   "territory_source": "self",
+   "url": "https://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
+  },
+  {
+   "depth": 0,
+   "fetched": true,
+   "is_tsl": false,
+   "mime": null,
+   "seed_label": "EU MRA list of lists",
+   "territory": null,
+   "territory_source": null,
+   "url": "https://ec.europa.eu/tools/lotl/mra/ades-lotl.xml"
+  }
+ ],
+ "observed_utc": "2026-10-21T02:42:12.137354+00:00",
+ "schema": 1,
+ "summary": {
+  "edges": 44,
+  "edges_not_from_the_eu_hub": 40,
+  "fetched": 25,
+  "nodes": 26,
+  "territories": [
+   "AR",
+   "BR",
+   "CH",
+   "CL",
+   "CO",
+   "DO",
+   "EU",
+   "MB",
+   "MD",
+   "ME",
+   "MK",
+   "PY",
+   "RS",
+   "RU",
+   "UA",
+   "UK",
+   "UY"
+  ]
+ }
+}
