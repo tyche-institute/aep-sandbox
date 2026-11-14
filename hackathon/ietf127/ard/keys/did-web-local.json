@@ -1,0 +1,43 @@
+{
+  "about": "Local stand-in for did:web resolution. did:web cannot be resolved offline, so we ship the DID documents here. All keys are test keys. Tyche Institute holds both private test keys.",
+  "documents": {
+    "did:web:example.org": {
+      "id": "did:web:example.org",
+      "verificationMethod": [
+        {
+          "id": "did:web:example.org#test-key-1",
+          "type": "JsonWebKey",
+          "controller": "did:web:example.org",
+          "publicKeyJwk": {
+            "kty": "EC",
+            "crv": "P-256",
+            "x": "UdsuNN1WuJO9Dvdea8tU1jgO2I5rSotasD043LG653o",
+            "y": "RtQS9quooquZwJCd5LoAY-XuUhKJ4gBO6MWN5_Nzmf0"
+          }
+        }
+      ],
+      "assertionMethod": [
+        "did:web:example.org#test-key-1"
+      ]
+    },
+    "did:web:third-party.example.net": {
+      "id": "did:web:third-party.example.net",
+      "verificationMethod": [
+        {
+          "id": "did:web:third-party.example.net#test-key-1",
+          "type": "JsonWebKey",
+          "controller": "did:web:third-party.example.net",
+          "publicKeyJwk": {
+            "kty": "EC",
+            "crv": "P-256",
+            "x": "u7OFJO213QvrtdlHWX6RtmUUTa-vhQOnsu9zF-fmMRs",
+            "y": "GTIDHp3KMHygly90dnChgeI5WUPHsZG131iUhHyQk6E"
+          }
+        }
+      ],
+      "assertionMethod": [
+        "did:web:third-party.example.net#test-key-1"
+      ]
+    }
+  }
+}

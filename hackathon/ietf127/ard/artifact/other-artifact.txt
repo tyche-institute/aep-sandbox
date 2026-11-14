@@ -1,0 +1,5 @@
+Cell 2 test artifact (IETF 127 Hackathon, Tyche Institute).
+It stands in for the configuration of a second test agent.
+agent: urn:air:example.org:agent:other-assistant
+refund_limit_minor: 500000
+currency: EUR

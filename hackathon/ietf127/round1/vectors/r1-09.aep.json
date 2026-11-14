@@ -1,0 +1,56 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:translator-4",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "send_notice",
+    "args": {
+      "recipient_ref": "C-30418",
+      "template": "welcome-intl"
+    },
+    "context": {
+      "channel": "portal",
+      "Ｔａｇ": "priorité",
+      "📎": "attachment-2"
+    }
+  },
+  "outcome": {
+    "status": "queued",
+    "message_ref": "MS-41190"
+  },
+  "measurements": {
+    "action_sha256": "a9d4abc250284f78385b7e5f30c9b9e4123b60cbc18a503c2107de7e2d9a3d18",
+    "outcome_sha256": "d855bb5718110738472f255a33241f9535c29ec75c44d6b59ac9e7663b8e6990"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:intl-desk-22",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "5385ace4488945ee76d2db5d74115cb51db28876588ec021c2437f9af84a516deac0ccc4201ba447e15c9146c0b7c857b94e23a9bf21d6ce54c2bbd23df29c08"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:intl-desk-22",
+      "agent_id": "agent:translator-4",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "send_notice"
+        ]
+      },
+      "iat": 1795893258,
+      "exp": 1796325258
+    },
+    "sig": "c0b2de608334ec120b691887f14aa9a6efa8de750fb61b6c8eb8ac09727862c50f6826506526f5a73678612dae2d4ab74ccfa86b0eb770520c5278befea77509"
+  },
+  "nonce": "n-ab3a87d559f4692865e1",
+  "issued_at": 1795893258,
+  "prev_hash": "5b6d20ba5930a457c3df48e5aed2b28affc24475ee5aad0bfb60c689e4715c45",
+  "aep_sig": "a3bba237249d56002618570db01995234f6d34001f2131a48887c450f316b0e99c9d6081c9a749b7d8713cdd559c06bdee1bd2f92dfc6e0c0a0115ea28a1c604",
+  "receipt_hash": "93ee64f9a8f3e930d239fa25e4a1eddc5dbb736a97534d6eaadadb591a308647"
+}

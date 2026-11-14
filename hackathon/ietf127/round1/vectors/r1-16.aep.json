@@ -1,0 +1,58 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:filing-clerk-3",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "file_document",
+    "args": {
+      "matter_ref": "M-2209",
+      "amount": 150,
+      "currency": "EUR",
+      "court_ref": "CT-9"
+    },
+    "context": {
+      "deadline_ref": "DL-1130",
+      "doc_type": "notice"
+    }
+  },
+  "outcome": {
+    "status": "filed",
+    "filing_ref": "FI-55028"
+  },
+  "measurements": {
+    "action_sha256": "cb06b9d7f4a3337353cafd089f3604dfc68b7c4d489c7bbf2466cd2d98fc1e41",
+    "outcome_sha256": "0a7dbaaf25025bcc985ab86820b550d22a89cf016233764798d73f5ac508f589"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:legal-17",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "6a86c177c6c59e2619a6ad83a37c6dc9141980b95aefdf2122481818129fba103d7432cbcccf31e1b6ea05f23259ad53d62ddf5cf5eb90f6b5a424c0395f3f0a"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:legal-71",
+      "agent_id": "agent:filing-clerk-3",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "file_document"
+        ],
+        "max_amount": 500
+      },
+      "iat": 1794590750,
+      "exp": 1797096350
+    },
+    "sig": "b44ff082253176d67603ef7f30d32b5f9ee1b9acd479a1b0278180ce34dfccc9dc9cd70754c634d24621116b8e6d6f43398018bc42c7d838dcc9bfa572bdd705"
+  },
+  "nonce": "n-1dfe1be082aa660f8378",
+  "issued_at": 1794590750,
+  "prev_hash": "f13f3043418798c2bce13046030dcd332e31f9ca0969ed43a8bcc69cb24db0af",
+  "aep_sig": "3408876d519b5559c7a75840ca22e73368ff5718c6519f757482528fa27baa07cc1c5b7491994fe73cc480bc87a354b1d469c799032977545c593d2f4c2a6006",
+  "receipt_hash": "28ece7e834c3ca69e5098c3e2da1401b9e470a1dc26f7118cf5f94dda8ea4193"
+}

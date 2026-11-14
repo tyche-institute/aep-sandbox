@@ -1,0 +1,58 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:license-renewer-5",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "renew_license",
+    "args": {
+      "license_ref": "LIC-4410",
+      "amount": 960,
+      "currency": "GBP",
+      "seats": 40
+    },
+    "context": {
+      "contract_ref": "CN-2207",
+      "term_months": 12
+    }
+  },
+  "outcome": {
+    "status": "renewed",
+    "renewal_ref": "RN-5531"
+  },
+  "measurements": {
+    "action_sha256": "2ed216d7f2aa06ab2b4a1c1d6273dc255cdd335e864cea61608da0774d764ca1",
+    "outcome_sha256": "8a7d85b5f0dd3a8c170a3b9089eddd4400025c49fdd9589da9f6744e490eaa17"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:it-licensing-07",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "fd8c117535bb878aa03307408e50ca179184bf4f621612e7252978faf13f1280d645f981950fb4471f625b5042d00a4f9f9c1e431cf6396093f53e31ccbbc100"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:it-licensing-07",
+      "agent_id": "agent:license-renewer-5",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "renew_license"
+        ],
+        "max_amount": 1500
+      },
+      "iat": 1794545724,
+      "exp": 1797051324
+    },
+    "sig": "bfca3b79dc3df6a83621dc6dc3747a4dd35b3783ee34bbdc0b1fd38c1e7089073b74e3bdabb80fcc622aa679362bfb7590c0e2f400d5f3ffac5b61e59f30950d"
+  },
+  "nonce": "n-c586b75633b86810d982",
+  "issued_at": 1794545724,
+  "prev_hash": "6c4aa7160b66c5c0393597225888e14eac64f183014357b2d73262f72ffbe461",
+  "aep_sig": "3bb390e0b0594cccf25dc2ab6d154ccc63308ec81887387763a3b9cde7bbeaa881cbcd6044841e8383246fbcfd03357fb90518a54fa3e3b808ce933ce05e7c07",
+  "receipt_hash": "109d28119268d1bb14ec6c23981a796b3ba739c854028119d91361b41d0483ef"
+}

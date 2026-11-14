@@ -1,0 +1,57 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:fx-converter-7",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "convert_currency",
+    "args": {
+      "amount": 100.0,
+      "from": "EUR",
+      "to": "USD"
+    },
+    "context": {
+      "quote_ref": "QT-55011",
+      "desk": "spot"
+    }
+  },
+  "outcome": {
+    "status": "converted",
+    "conversion_ref": "CV-1907"
+  },
+  "measurements": {
+    "action_sha256": "29b683eb7443d5e945bfb63a9f3dabc4d831077ef765b9d2a7894aa74f023b59",
+    "outcome_sha256": "40f9a00305d48867cc6e762d9a8db11889685094d9106d21c1ca511a179a1ead"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:fx-desk-23",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "b40838f0b50693eabb9385fb784b36205e1810b45a22f3a559770b56856c66bd197160052eac7f4cdc542c4ee7284bc30849f9e41475ab8f3ada73b25ec30c0b"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:fx-desk-23",
+      "agent_id": "agent:fx-converter-7",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "convert_currency"
+        ],
+        "max_amount": 250
+      },
+      "iat": 1795333751,
+      "exp": 1795592951
+    },
+    "sig": "8fe90ffdbc68353e0df0efdd877fc012559903ae0ac61f0f78886f20b0b31bbb6d827ddadeaec4650cc8011cd18bb117976ebd1206b72f97a19cf92e37aad30a"
+  },
+  "nonce": "n-7aeac6c538ca3cccc33c",
+  "issued_at": 1795333751,
+  "prev_hash": "04e54b8b8c33df340b7224cb4a368c22f6a95669a056caf2585faa870ba8bb43",
+  "aep_sig": "0f1f7be6796fea637f6a9019b74f91bcf378a9ae7c66ea69a4406180163f3a63a56c72e6ee2ff95d927107d26c4ee2a68bf1fdf5174401405009e910f7d5ee03",
+  "receipt_hash": "5f3d458287e93744d6bc0cec3c067d8311571071c179dbc39973645f1982d30e"
+}

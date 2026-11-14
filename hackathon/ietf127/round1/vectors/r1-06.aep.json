@@ -1,0 +1,57 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:claims-payer-7",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "settle_claim",
+    "args": {
+      "claim_ref": "CL-90021",
+      "amount": 450,
+      "currency": "EUR"
+    },
+    "context": {
+      "adjuster_ref": "AJ-88",
+      "line": "property"
+    }
+  },
+  "outcome": {
+    "status": "settled",
+    "settlement_ref": "ST-3390"
+  },
+  "measurements": {
+    "action_sha256": "ca2642b92b8506e52324da35f82399dd7ca1da3767720823e419f0ce09d9d7e6",
+    "outcome_sha256": "50b335688b2d4dd788be11ddb905fa8d7147514d122d9d7d536b19ffb370015a"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:claims-11",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "0b9a5af438d8738135fd70381fd354d2df50bf8c08774036ffb66bad6380714ccd7b7f5b5d4dd6ea07af62e408dc64e9a8f8632919ff0767c5f7072b3580d904"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:claims-11",
+      "agent_id": "agent:claims-payer-7",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "settle_claim"
+        ],
+        "max_amount": 300
+      },
+      "iat": 1795293068,
+      "exp": 1795638668
+    },
+    "sig": "ba8471acf215530e00131170b11b250f60aa747fb69cdedddbe575cd748e7d56fd5e6fa40ea6bdd326227ece9a24f26293bdfbfd22982114434361eea8e2e100"
+  },
+  "nonce": "n-7300b0884636d45449ef",
+  "issued_at": 1795293068,
+  "prev_hash": "9005d14049e6ec054f05cb8296e8df84cadc1c6943a35febf6142d9f689fc939",
+  "aep_sig": "1d42d2b21decbe5077f38d43669da923d0062b9f59f0553bed3564c3cc66e7d1657cc86aa9cc00bc0ea353be05327419fadec4fe7531e45f77ede33203543207",
+  "receipt_hash": "9167cac0aa0daed174569124778153bca077722e8bfc4d185207b1847dec050e"
+}

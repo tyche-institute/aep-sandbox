@@ -1,0 +1,58 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:supply-orderer-8",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "order_supplies",
+    "args": {
+      "catalog_ref": "CAT-2290",
+      "amount": 2001,
+      "currency": "CHF",
+      "qty": 12
+    },
+    "context": {
+      "cost_center": "CC-310",
+      "requested_by_ref": "R-118"
+    }
+  },
+  "outcome": {
+    "status": "ordered",
+    "order_ref": "OR-70315"
+  },
+  "measurements": {
+    "action_sha256": "0116c9c78d3092ea2e94015dbd64b0b4789199ba2bfc62ed15771da19566f745",
+    "outcome_sha256": "2ba0a8534fc0a0ad0abd72cc12e9fa816f23829ab0b4fd8d536bfb35474ba86d"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:lab-stores-02",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "f44134bab2449116e96d403af060ca080f500759b07936052d393c60ed4be173d3b8b9ad09831fd7a511e3903b90431536271c6cfbb8dd7a94ccb2194a91cf03"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:lab-stores-02",
+      "agent_id": "agent:supply-orderer-8",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "order_supplies"
+        ],
+        "max_amount": 2000
+      },
+      "iat": 1795221177,
+      "exp": 1796949177
+    },
+    "sig": "726d476df06c3e3288c9dfd59766d6e586943d0f3105b04487ef9decf2b0db418e52f577f18a1d4ae2fa6b5fba88e4dd588f1cde92eabd521a1e12a6db59c608"
+  },
+  "nonce": "n-d437df1d22a11c7fadd4",
+  "issued_at": 1795221177,
+  "prev_hash": "18df492936403ed9d4c411519db4798cb8290a2eb547e9dc66f28795a9993ddd",
+  "aep_sig": "36494207daec8a85b23b168db8a3c3a2a03ab0a8a06b68f466a4fd0043f1689a2734306c8c8be120dba4321e4fd5110d2ab2c057b98d9ad64a894190b6685602",
+  "receipt_hash": "84a89478e8168545b2f1518d2777dbc1b98baefbb4ae71b2388452463ba86779"
+}

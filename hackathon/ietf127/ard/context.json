@@ -1,0 +1,15 @@
+{
+  "about": "What the verifier treats as fetched or resolved. Offline test.",
+  "now": "2026-11-14T12:00:00Z",
+  "did_documents": "keys/did-web-local.json",
+  "attestation_keys": {
+    "ard-evidence-test-key": "keys/evidence-test-key.jwk.json"
+  },
+  "local_files": {
+    "https://agents.example.org/refund-assistant/config.txt": "artifact/subject-artifact.txt",
+    "https://agents.example.org/other-assistant/config.txt": "artifact/other-artifact.txt",
+    "https://example.org/test-only/ietf127/attestations/action-record.cose": "evidence/action-record.cose",
+    "https://example.org/test-only/ietf127/attestations/action-record-2.cose": "evidence/action-record-2.cose"
+  },
+  "preimages": {}
+}

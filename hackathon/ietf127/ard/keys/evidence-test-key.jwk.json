@@ -1,0 +1,6 @@
+{
+  "kty": "OKP",
+  "crv": "Ed25519",
+  "x": "6VofxegS20JwK6VqV-pqVt-fvczL_m5yQMNF5LVLHG0",
+  "kid": "ard-evidence-test-key"
+}

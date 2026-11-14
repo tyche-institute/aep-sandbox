@@ -1,0 +1,6 @@
+{
+  "issuers": {
+    "test-issuer:r1-anchor-a": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+    "test-issuer:r1-anchor-b": "41ce94ff013740bff6f035cec4fa3124bb7d5d43af1c9814680370b42f42daa9"
+  }
+}

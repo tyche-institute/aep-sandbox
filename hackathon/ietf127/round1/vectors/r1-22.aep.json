@@ -1,0 +1,58 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:venue-booker-6",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "book_venue",
+    "args": {
+      "venue_ref": "VN-310",
+      "amount": 3100,
+      "currency": "USD",
+      "date_ref": "D-2026-12-04"
+    },
+    "context": {
+      "event_ref": "EV-1204",
+      "headcount": 120
+    }
+  },
+  "outcome": {
+    "status": "held",
+    "hold_ref": "HD-7716"
+  },
+  "measurements": {
+    "action_sha256": "8d8af04f8dffc5da3f7985d2313f96dc506f6e043eafac6cb03d65dee6afbddc",
+    "outcome_sha256": "5e949ee71e62f39688ca6bc2c4098be992e394f4f125e0da53104f8d9ba0fc1d"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:events-09",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "5b0b16f5625decf8d35f69102314f6bd69d2889e43a54d4c24199ab12c6ca1ac0debd09a5f9d4291ae8f088d8e12dcf87976d886ce56d3515266b3b2596f760f"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:events-09",
+      "agent_id": "agent:venue-booker-6",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "book_venue"
+        ],
+        "max_amount": 3500
+      },
+      "iat": 1795213340,
+      "exp": 1797114140
+    },
+    "sig": "3861d40f5c7b448379ff42a03cb2d96a7f86e93db44185bc51b9687a7544ee2168a2cd181f9048559abad64435d9101a1caf7cf677553c24d15d0ac921c5d505"
+  },
+  "nonce": "n-62b66b6488222d4597e6",
+  "issued_at": 1795213340,
+  "prev_hash": "c9782e857cbc4ad35b72e2219615fbe41075dcc7c96d3c779ce59cfae90aa22b",
+  "aep_sig": "be7d979083ca3830acbe95aca062f37f864679b4f5774f94c2072587a413381470c9f0cb202055ba7c03e4ea6f0e6018834ab6ba350fd7b2919af8d01fe21f04",
+  "receipt_hash": "a372da1c962a6a9ed914117464d6b2d552e62140ef5915e5b8075a3f94d57fa3"
+}

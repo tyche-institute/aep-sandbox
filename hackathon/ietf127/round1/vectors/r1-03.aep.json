@@ -1,0 +1,58 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:maintenance-dispatch-2",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "dispatch_repair",
+    "args": {
+      "site_ref": "S-114",
+      "amount": 640,
+      "currency": "EUR",
+      "priority": 2
+    },
+    "context": {
+      "fault_ref": "FL-5520",
+      "asset_ref": "HVAC-3"
+    }
+  },
+  "outcome": {
+    "status": "dispatched",
+    "job_ref": "JB-22871"
+  },
+  "measurements": {
+    "action_sha256": "97a11de319d70fd211027e5fd3c8999fafbf856f530e7d062062bc213323f0b5",
+    "outcome_sha256": "f911326084908c9f6835bf300c390422c66bfa98368dd05dc3660b24aabe5afb"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-c",
+      "issuer_pub": "158e7d649d44839b76f453e0520232221c30245e4373df10738d6fb48f2c1797",
+      "principal_id": "principal:facilities-08",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "a7fa8798aeb65b70a448faeb130ab70b653d8b43fb608f4b5c4bd7832a7e9b5236c2a821f56c5352f7a4be5074409d0a1aa147371421dfc91425655bd27a8609"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:facilities-08",
+      "agent_id": "agent:maintenance-dispatch-2",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "dispatch_repair"
+        ],
+        "max_amount": 1000
+      },
+      "iat": 1794347822,
+      "exp": 1795643822
+    },
+    "sig": "20c09ff676bc4f09d8afd19ad689dfc037470829e62876ac65413b5b9c21144b417c0beeca11d2a3d3efd0aa6fe74be05defc3ee89bc2a7b0678ffa2453b240c"
+  },
+  "nonce": "n-e6e28bed5d5a875939a6",
+  "issued_at": 1794347822,
+  "prev_hash": "24ac8a8807b053d1dd62dc37d3ce035ce3360052bc4ebf3c8d0d06986ad82527",
+  "aep_sig": "d48d758aff356b30c2ca4eb566fccd55423c6a1aefe6f8e0f90d07afc9d0596003aaad257bf73ee28eb6939d3a31dd567e0bcd833f0685fd3960b280fb008104",
+  "receipt_hash": "621f22b86ff989d0edc4f9e7a1964045c368e13876daef453e3d35275e2cb2d2"
+}

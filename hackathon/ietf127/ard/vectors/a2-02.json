@@ -1,0 +1,27 @@
+{
+  "identifier": "urn:air:example.org:agent:refund-assistant",
+  "displayName": "Refund assistant (test entry)",
+  "type": "text/plain",
+  "version": "1.0.0",
+  "url": "https://agents.example.org/refund-assistant/config.txt",
+  "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb",
+  "trustManifest": {
+    "identity": "did:web:example.org",
+    "issuedAt": "2026-11-14T00:00:00Z",
+    "subject": {
+      "identifier": "urn:air:example.org:agent:refund-assistant",
+      "type": "text/plain",
+      "version": "1.0.0",
+      "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb"
+    },
+    "attestations": [
+      {
+        "type": "https://example.org/test-only/ietf127/action-record",
+        "uri": "https://example.org/test-only/ietf127/attestations/action-record.cose",
+        "mediaType": "application/cose; cose-type=\"cose-sign1\"",
+        "digest": "sha256:c6718e18a2a8c32606013ef35e17b569a33ec9d383856d567e7def148bbdfe57"
+      }
+    ],
+    "signature": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDp3ZWI6ZXhhbXBsZS5vcmcjdGVzdC1rZXktMSJ9.ewogImlkZW50aXR5IjogImRpZDp3ZWI6ZXhhbXBsZS5vcmciLAogImlzc3VlZEF0IjogIjIwMjYtMTEtMTRUMDA6MDA6MDBaIiwKICJzdWJqZWN0IjogewogICJpZGVudGlmaWVyIjogInVybjphaXI6ZXhhbXBsZS5vcmc6YWdlbnQ6cmVmdW5kLWFzc2lzdGFudCIsCiAgInR5cGUiOiAidGV4dC9wbGFpbiIsCiAgInZlcnNpb24iOiAiMS4wLjAiLAogICJkaWdlc3QiOiAic2hhMjU2OjJjODdhMmYyNmQ2NGE2NzUwODk0NDFkYzJkYjFlZWNlNmU2OTA0YzdlZGIxOGU2Y2UzMjljZDY5OGM3Y2M2ZmIiCiB9LAogImF0dGVzdGF0aW9ucyI6IFsKICB7CiAgICJ0eXBlIjogImh0dHBzOi8vZXhhbXBsZS5vcmcvdGVzdC1vbmx5L2lldGYxMjcvYWN0aW9uLXJlY29yZCIsCiAgICJ1cmkiOiAiaHR0cHM6Ly9leGFtcGxlLm9yZy90ZXN0LW9ubHkvaWV0ZjEyNy9hdHRlc3RhdGlvbnMvYWN0aW9uLXJlY29yZC5jb3NlIiwKICAgIm1lZGlhVHlwZSI6ICJhcHBsaWNhdGlvbi9jb3NlOyBjb3NlLXR5cGU9XCJjb3NlLXNpZ24xXCIiLAogICAiZGlnZXN0IjogInNoYTI1NjpjNjcxOGUxOGEyYThjMzI2MDYwMTNlZjM1ZTE3YjU2OWEzM2VjOWQzODM4NTZkNTY3ZTdkZWYxNDhiYmRmZTU3IgogIH0KIF0KfQ.SXftsAfr2QCRVl7ugkd9_A3BVlXS6z6-HAwZFwAMyUiG-jImAcRybj27_Z_9GAj4i84Qo0hpjgZtv9Oert_WqQ"
+  }
+}

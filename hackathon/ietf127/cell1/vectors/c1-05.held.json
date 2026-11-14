@@ -1,0 +1,11 @@
+{
+    "occurred_at": 1794679200,
+    "utc_offset_minutes": -480,
+    "amount_minor": 4250,
+    "version": 1,
+    "subject": {"identifier": "urn:air:example.org:agent:refund-assistant","digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb"},
+    "action": "refund.issue",
+    "sequence": 7,
+    "currency": "EUR",
+    "order": "order-1001"
+}

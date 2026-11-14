@@ -1,0 +1,59 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:freight-booker-3",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "book_freight",
+    "args": {
+      "shipment_ref": "SH-80314",
+      "amount": 4200,
+      "currency": "USD",
+      "lane": "OAK-SEA"
+    },
+    "context": {
+      "request": "RQ-5521",
+      "source": "planner"
+    }
+  },
+  "outcome": {
+    "status": "booked",
+    "booking_ref": "BK-11902"
+  },
+  "measurements": {
+    "action_sha256": "16bb2aa5695e5ba2b7233c73ef3046e3a2a43fff8ac3513f3380388d0181cc36",
+    "outcome_sha256": "8457a3bce5edc1fdf7125d8d6be99d8855a701969966b1bd49413f14768fcda5"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:fleet-ops-12",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "582a818f3e0cc212ce2249cc30651bc40910c5fde34e6db4424a164cf93f6999fff7bdf87224d4254ea4b5778891e2fc4b828dfc81ee3cfcea9b8e4646fd320f"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:fleet-ops-12",
+      "agent_id": "agent:freight-booker-3",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "book_freight",
+          "cancel_freight"
+        ],
+        "max_amount": 5000
+      },
+      "iat": 1795189207,
+      "exp": 1796744407
+    },
+    "sig": "101b99576324ea5ab28c412940624e5bb65aab67a5a3d4e6e5015d846d209f5bfb3a4419aa0aa5f604eca1582a3592106612584d6d4cc4c3d96203ce6d641e04"
+  },
+  "nonce": "n-5eaf6c8d65e3fa5bcd7f",
+  "issued_at": 1795189207,
+  "prev_hash": "c0ddc28f6f12f48cb4e77faf4b695295475bb7c00f454ddbce1c0e3c710acf31",
+  "aep_sig": "13372d4917ea9713f98fbf909ed5d6ac2445913a1ebba8243f5690bf7bfd815cf9ab99c115b3ce069cb8cdc3d1e7a0337eed6fd4db96a950422ddb3364a55405",
+  "receipt_hash": "0bbc4dc46a49fb9d1c9a6a10f41edd0509a392681e3eeece8854d53e4a00eab6"
+}
