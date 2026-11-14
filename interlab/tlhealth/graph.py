@@ -67,6 +67,31 @@ SEED_TERRITORY = {
 }
 
 
+GRAPH_RUNS = pathlib.Path(__file__).resolve().parent / "runs-graph"
+
+
+def discovered(already: set[str]) -> tuple[list[str], str | None]:
+    """Trust lists the newest recorded crawl reached that the caller does not already read.
+
+    Why this exists. The crawl follows pointers nobody curated. On 10.09.2026 it reached
+    Paraguay's copy of the MERCOSUR list (tsl_Mb.xml) through Paraguay's own list, and neither
+    the probe nor the freshness reader had it in any population, so the page drew it as
+    answering on the strength of the crawl's fetch alone: no transport class, no sequence, no
+    next update. probe.py and freshness.py call this, so what one night's crawl finds is
+    measured on the next night, as a population of its own.
+
+    Only nodes the crawl fetched and recognised as a TS 119 612 list are returned. Nothing
+    here widens what is fetched beyond what the graph already holds.
+    """
+    files = sorted(p for p in GRAPH_RUNS.glob("*.json") if p.name != "latest.json")
+    if not files:
+        return [], None
+    run = json.loads(files[-1].read_text(encoding="utf-8"))
+    urls = sorted({n["url"] for n in run.get("nodes", [])
+                   if n.get("fetched") and n.get("is_tsl") and n["url"] not in already})
+    return urls, files[-1].name
+
+
 def fetch(url: str) -> str:
     for attempt in (1, 2):
         r = subprocess.run(["curl", "-sSL", "-m", str(TIMEOUT), url],
