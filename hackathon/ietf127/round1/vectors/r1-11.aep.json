@@ -1,0 +1,56 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:patch-runner-6",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "reboot_host",
+    "args": {
+      "host_ref": "H-2207",
+      "window": "W-14"
+    },
+    "context": {
+      "change_ref": "CHG-5108",
+      "env": "staging"
+    }
+  },
+  "outcome": {
+    "status": "done",
+    "run_ref": "RN-90311"
+  },
+  "measurements": {
+    "action_sha256": "7dce5a14ffe5386d275080f7f76754db9f5bb110eb890f0243b63e78ff3910c9",
+    "outcome_sha256": "bc6b8cbe8974d42b0147cfe511af7eb8188ac701a4f7eeaff0d94c306d507d8a"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:it-ops-19",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "6183efb4a061d2506ea22950b4ac41165882248241f023decd2911698e951ec5701d4a7935de390c6c6b6985d657b6e6cc7ddaba084fb8015e68e434b04d9303"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:it-ops-19",
+      "agent_id": "agent:patch-runner-6",
+      "agent_pub": "7b1476a607b1427c9987f04621307ba97842fe5e985dfb76c9bc9728306f4a5a",
+      "scope": {
+        "allowed_methods": [
+          "apply_patch",
+          "schedule_patch"
+        ]
+      },
+      "iat": 1795440807,
+      "exp": 1796477607
+    },
+    "sig": "f4d8311fa2a51e089544bee3c21e5c633a21f163d6956b838eb4bc5902faa876fd2bf02a0099165c461c4896dca6f5813afbfc9f29f7ed5b87ab7b2239b64603"
+  },
+  "nonce": "n-a7bcc9a3bcc3d3e8c30f",
+  "issued_at": 1795440807,
+  "prev_hash": "f3e161ed2ef1a03a8db89e374fe0c93767bd3e46ea361de8ad55a12ebfce7fc7",
+  "aep_sig": "2f2acd0706d186379b317681e6a3e960cb87083615412506a8a8738e3566990ecc6beb9bb629d369503912e433db62d2b5a2f4e045ec26a55cabc0b5dd04ac0f",
+  "receipt_hash": "a10294488e45da0dfa49f7eafcc7786c8bfc29cfff01a5c17479a64f833da806"
+}

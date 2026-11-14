@@ -1,0 +1,50 @@
+{
+  "cell": "c1",
+  "about": "Declarations that cell 1 records rely on. Written by Tyche Institute for the IETF 127 Hackathon. Test use.",
+  "held_value": {
+    "format": "JSON text (RFC 8259), read with the I-JSON rules (RFC 7493) that RFC 8785 relies on",
+    "json_to_cbor": "object -> map with text-string keys; string -> text string; integer -> major type 0 (n >= 0) or 1 (n < 0); array -> array; true, false, null -> simple values 21, 20, 22. The cell 1 payload has objects, strings and integers in the range -(2^53-1) to 2^53-1, and no floating-point numbers."
+  },
+  "cpb": {
+    "draft": "draft-mih-sokolov-scitt-payload-binding-06 (individual Internet-Draft)",
+    "statement_mode": "rfc9995-hash-envelope",
+    "hash_envelope_preimage": "jcs over the complete payload; no exclusion set; payload-hash-alg 258 = -16 (SHA-256); preimage-content-type 259 = application/json",
+    "cpb_refs_label": -65537,
+    "cpb_refs_label_status": "test-only private-use label; not an IANA assignment",
+    "profile_requires_cpb_refs": true,
+    "artifact_types": [
+      {
+        "type": "example-action-record",
+        "stable_reference": "public/cell1/declaration.json (this file)",
+        "contexts": [
+          {
+            "purpose": "content",
+            "algorithm": "jcs",
+            "field_set": "all members",
+            "exclusion_set": [],
+            "domain_separation": "none",
+            "pre_image_encoding": "JCS UTF-8 bytes (RFC 8785)",
+            "hash": "SHA-256",
+            "digest_alg": "SHA-256",
+            "representation": "bare-hex",
+            "representation_grammar": "64 lowercase hexadecimal characters, CBOR text string"
+          }
+        ]
+      }
+    ]
+  },
+  "cde": {
+    "draft": "draft-mih-sokolov-cose-deterministic-encodings-00 (individual Internet-Draft)",
+    "label": 271,
+    "label_status": "the value CDE -00 suggests for TBD_1; not assigned; test-only",
+    "values_used": {"1": "core-deterministic (RFC 8949 Section 4.2.1)"},
+    "note": "JCS is not a value of this parameter, and cell 1 does not invent one."
+  },
+  "signing": {
+    "alg": -8,
+    "alg_name": "EdDSA with an Ed25519 test key, as in the CPB repository fixtures",
+    "sig_structure": "RFC 9052 Section 4.4, external_aad empty",
+    "kid": "c1-test-key (byte string)",
+    "cwt_claims_15": {"1 (iss)": "https://issuer.example", "2 (sub)": "urn:air:example.org:agent:refund-assistant"}
+  }
+}

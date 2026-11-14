@@ -1,0 +1,5 @@
+Cell 1 test artifact (IETF 127 Hackathon, Tyche Institute).
+It stands in for the agent configuration that a later manifest binds to.
+agent: urn:air:example.org:agent:refund-assistant
+refund_limit_minor: 10000
+currency: EUR

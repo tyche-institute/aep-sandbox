@@ -1,0 +1,56 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:records-keeper-9",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "archive_records",
+    "args": {
+      "box_ref": "BX-4410",
+      "count": 36
+    },
+    "context": {
+      "retention_ref": "RT-7Y",
+      "site": "vault-2"
+    }
+  },
+  "outcome": {
+    "status": "archived",
+    "archive_ref": "AR-30081"
+  },
+  "measurements": {
+    "action_sha256": "7e4631b08836b88c012d0b64f009cd4cbb66fb82bac2f28dd80d825f0244fde9",
+    "outcome_sha256": "c7621f0b63500786d855fbb9f361090a1244361f106639f928630d481aec13b1"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:archive-18",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "893da2c2ba52da47b7659a4a0adccdf3364120b016eb10b0fdbc465bcd210b97b5e8ac7cc21aca92a417bc0926f5ee53ec45340e85854734232d2f9fc4c4140f"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:archive-18",
+      "agent_id": "agent:records-keeper-9",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "archive_records"
+        ]
+      },
+      "iat": 1794222255,
+      "exp": 1795777455
+    },
+    "sig": "126b7e78700d1e592c6c185352680e442baa248f49de62b8502130cd2a6b22a1abe6354b4abcfb74b99e172682fbd0952eeaf5a81119bbb911a2eb4a68e5e90d"
+  },
+  "nonce": "n-ecad884c32e8fa82f58a",
+  "nonce": "n-5b86ef2be95ff50dfe3f",
+  "issued_at": 1794222255,
+  "prev_hash": "fc79ea1d81e685d4b209144575e8e7c4a7ff30b5f1f66efbf1cd25c98beb71b3",
+  "aep_sig": "cc912c7a835f027991c1240ac392c428937957642801d936a486f3a3d07432bbb99480b2e41c6d8c46d7ed97777fec198bbcb3440a054295f8adaf898e82b800",
+  "receipt_hash": "086346f834a60f7b167ee7547d013c07c2d66f2ddc33f1ee0b6db8cbf74dfd14"
+}

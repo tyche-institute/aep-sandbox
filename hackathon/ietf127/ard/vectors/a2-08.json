@@ -1,0 +1,27 @@
+{
+  "identifier": "urn:air:example.org:agent:other-assistant",
+  "displayName": "Other assistant (test entry)",
+  "type": "text/plain",
+  "version": "1.0.0",
+  "url": "https://agents.example.org/other-assistant/config.txt",
+  "digest": "sha256:4aa78a199b7d125bd7ae363d09f24afa750bde088c3b482fbd93a6a7c66b2bab",
+  "trustManifest": {
+    "identity": "did:web:example.org",
+    "issuedAt": "2026-11-14T00:00:00Z",
+    "subject": {
+      "identifier": "urn:air:example.org:agent:other-assistant",
+      "type": "text/plain",
+      "version": "1.0.0",
+      "digest": "sha256:4aa78a199b7d125bd7ae363d09f24afa750bde088c3b482fbd93a6a7c66b2bab"
+    },
+    "attestations": [
+      {
+        "type": "https://example.org/test-only/ietf127/action-record",
+        "uri": "https://example.org/test-only/ietf127/attestations/action-record.cose",
+        "mediaType": "application/cose; cose-type=\"cose-sign1\"",
+        "digest": "sha256:c6718e18a2a8c32606013ef35e17b569a33ec9d383856d567e7def148bbdfe57"
+      }
+    ],
+    "signature": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDp3ZWI6ZXhhbXBsZS5vcmcjdGVzdC1rZXktMSJ9..0MMeexlVXQofNS1kP6Ueyf27wN0L0IOpDSCGhwCL9eeSmhmw9xlkqTLtUUzITC8CTJBUzb9CtKSLPtA2iG9wkA"
+  }
+}

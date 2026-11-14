@@ -1,0 +1,27 @@
+{
+  "identifier": "urn:air:example.org:agent:refund-assistant",
+  "displayName": "Refund assistant (test entry)",
+  "type": "text/plain",
+  "version": "1.0.0",
+  "url": "https://agents.example.org/refund-assistant/config.txt",
+  "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb",
+  "trustManifest": {
+    "identity": "did:web:example.org",
+    "issuedAt": "2026-11-14T00:00:00Z",
+    "subject": {
+      "identifier": "urn:air:example.org:agent:refund-assistant",
+      "type": "text/plain",
+      "version": "1.0.0",
+      "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb"
+    },
+    "attestations": [
+      {
+        "type": "https://example.org/test-only/ietf127/action-record",
+        "uri": "https://example.org/test-only/ietf127/attestations/action-record.cose",
+        "mediaType": "application/cose; cose-type=\"cose-sign1\"",
+        "digest": "sha256:c6718e18a2a8c32606013ef35e17b569a33ec9d383856d567e7def148bbdfe50"
+      }
+    ],
+    "signature": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDp3ZWI6ZXhhbXBsZS5vcmcjdGVzdC1rZXktMSJ9..lpC2qoT0zQvV3so_jZOSCV2sPO3okz64fN65QQ6s-iaovP4Oa8NXqvbd15eH8NEDJcUt368cZKbnPdgpwOYiqQ"
+  }
+}

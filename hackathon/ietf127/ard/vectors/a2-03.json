@@ -1,0 +1,42 @@
+{
+  "identifier": "urn:air:example.org:agent:refund-assistant",
+  "displayName": "Refund assistant (test entry)",
+  "type": "text/plain",
+  "version": "1.0.0",
+  "url": "https://agents.example.org/refund-assistant/config.txt",
+  "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb",
+  "trustManifests": [
+    {
+      "identity": "did:web:example.org",
+      "issuedAt": "2026-11-13T09:00:00Z",
+      "subject": {
+        "identifier": "urn:air:example.org:agent:refund-assistant",
+        "type": "text/plain",
+        "version": "1.0.0",
+        "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb"
+      },
+      "attestations": [
+        {
+          "type": "https://example.org/test-only/ietf127/action-record",
+          "uri": "https://example.org/test-only/ietf127/attestations/action-record.cose",
+          "mediaType": "application/cose; cose-type=\"cose-sign1\"",
+          "digest": "sha256:c6718e18a2a8c32606013ef35e17b569a33ec9d383856d567e7def148bbdfe57"
+        }
+      ],
+      "signature": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDp3ZWI6ZXhhbXBsZS5vcmcjdGVzdC1rZXktMSJ9.eyJhdHRlc3RhdGlvbnMiOlt7ImRpZ2VzdCI6InNoYTI1NjpjNjcxOGUxOGEyYThjMzI2MDYwMTNlZjM1ZTE3YjU2OWEzM2VjOWQzODM4NTZkNTY3ZTdkZWYxNDhiYmRmZTU3IiwibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vY29zZTsgY29zZS10eXBlPVwiY29zZS1zaWduMVwiIiwidHlwZSI6Imh0dHBzOi8vZXhhbXBsZS5vcmcvdGVzdC1vbmx5L2lldGYxMjcvYWN0aW9uLXJlY29yZCIsInVyaSI6Imh0dHBzOi8vZXhhbXBsZS5vcmcvdGVzdC1vbmx5L2lldGYxMjcvYXR0ZXN0YXRpb25zL2FjdGlvbi1yZWNvcmQuY29zZSJ9XSwiaWRlbnRpdHkiOiJkaWQ6d2ViOmV4YW1wbGUub3JnIiwiaXNzdWVkQXQiOiIyMDI2LTExLTEzVDA5OjAwOjAwWiIsInN1YmplY3QiOnsiZGlnZXN0Ijoic2hhMjU2OjJjODdhMmYyNmQ2NGE2NzUwODk0NDFkYzJkYjFlZWNlNmU2OTA0YzdlZGIxOGU2Y2UzMjljZDY5OGM3Y2M2ZmIiLCJpZGVudGlmaWVyIjoidXJuOmFpcjpleGFtcGxlLm9yZzphZ2VudDpyZWZ1bmQtYXNzaXN0YW50IiwidHlwZSI6InRleHQvcGxhaW4iLCJ2ZXJzaW9uIjoiMS4wLjAifX0.R9hRUEGI1hvGHccePB6N7nU-JJeP6u-nnEZC7S3mD0vXLJIEYAxtcFUrAi4sh8ydolT4KPj1i4YoS7-G0-F2Cw"
+    },
+    {
+      "identity": "did:web:third-party.example.net",
+      "issuedAt": "2026-11-13T10:00:00Z",
+      "expiresAt": "2027-05-14T00:00:00Z",
+      "subject": {
+        "identifier": "urn:air:example.org:agent:refund-assistant",
+        "type": "text/plain",
+        "version": "1.0.0",
+        "digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb"
+      },
+      "attestations": [],
+      "signature": "eyJhbGciOiJFUzI1NiIsImtpZCI6ImRpZDp3ZWI6dGhpcmQtcGFydHkuZXhhbXBsZS5uZXQjdGVzdC1rZXktMSJ9.eyJhdHRlc3RhdGlvbnMiOltdLCJleHBpcmVzQXQiOiIyMDI3LTA1LTE0VDAwOjAwOjAwWiIsImlkZW50aXR5IjoiZGlkOndlYjp0aGlyZC1wYXJ0eS5leGFtcGxlLm5ldCIsImlzc3VlZEF0IjoiMjAyNi0xMS0xM1QxMDowMDowMFoiLCJzdWJqZWN0Ijp7ImRpZ2VzdCI6InNoYTI1NjoyYzg3YTJmMjZkNjRhNjc1MDg5NDQxZGMyZGIxZWVjZTZlNjkwNGM3ZWRiMThlNmNlMzI5Y2Q2OThjN2NjNmZiIiwiaWRlbnRpZmllciI6InVybjphaXI6ZXhhbXBsZS5vcmc6YWdlbnQ6cmVmdW5kLWFzc2lzdGFudCIsInR5cGUiOiJ0ZXh0L3BsYWluIiwidmVyc2lvbiI6IjEuMC4wIn19.xXTFkPs2EuIL51uFTqq_osNK4S4l9cTn2B6j5oJQ1AV9NeG_gOOyPkzl-c_AZt0A6HHwfkr8-W4s_M2d39Iw-A"
+    }
+  ]
+}

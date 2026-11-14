@@ -1,0 +1,56 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:onboarding-helper-4",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "provision_account",
+    "args": {
+      "employee_ref": "E-55120",
+      "profile": "standard"
+    },
+    "context": {
+      "ticket": "HR-20931",
+      "site": "remote"
+    }
+  },
+  "outcome": {
+    "status": "provisioned",
+    "account_ref": "AC-31207"
+  },
+  "measurements": [
+    "16f168e072b5d27bce5831ef7736341746ebfca4baf231101690029969607acb",
+    "cefb43b426f8925a3ad88b7fcedd163a8a182a830a10162df15270391aec3a6b"
+  ],
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:hr-ops-15",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "e6c2bee7f2710db78b588755d989226712e672dd9ea847a441d05dbe441eb095f8b95d2a967cbaf8cb3739ed39730b315b088dc3ab903d2b85bd48f6f5689009"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:hr-ops-15",
+      "agent_id": "agent:onboarding-helper-4",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "provision_account",
+          "revoke_account"
+        ]
+      },
+      "iat": 1794024727,
+      "exp": 1795839127
+    },
+    "sig": "c132b2656832f39f64c55d8400caace70d7b1a24b8499de69202cceeccd34cd58e2ab057a84a479e31ad72cb4aa48db6f59a69c8f28a5b2ee22f057cbdf67707"
+  },
+  "nonce": "n-98b0ab5b2790ca34da21",
+  "issued_at": 1794024727,
+  "prev_hash": "3e1dfa3d03aef78601330b8bd19c3d939993d609182e5d4836e6bed3c46caefd",
+  "aep_sig": "5d687f360923f720c08781f0f8fe1b2b440ae85d958d8cb92382912df2d010c07bd519afd16d03ed5ff2c0dd1e36e8df84f4c3c0363d3200755cc3f89be5960d",
+  "receipt_hash": "46a858a644b0c8e6f5080004aa3618521cc10b41d2b16f051112e52096d56a1f"
+}

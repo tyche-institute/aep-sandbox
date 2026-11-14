@@ -1,0 +1,57 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:ledger-sync-1",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "post_ledger_entry",
+    "args": {
+      "entry_seq": 9007199254740991,
+      "amount": 5000,
+      "currency": "EUR"
+    },
+    "context": {
+      "offset": -9007199254740991,
+      "source": "sync"
+    }
+  },
+  "outcome": {
+    "status": "posted",
+    "entry_ref": "LE-90071"
+  },
+  "measurements": {
+    "action_sha256": "6dbed951bc63e03c6880e74ea56294da965c2fc90e70f3417d38fb49e68c16fc",
+    "outcome_sha256": "47779f13c60a01e807600bfe367b5ad91bdfd6870d453662a82da1cd43a8bbda"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:ledger-20",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "3bd9819d3146bc6ee6eb67b2a5ee40f74dc50d2e4af1bf272e5ae597ea4feef402e3b44850d54bbae0f3a7a2ae42299dfa6d58c5e34fbad95cec007996784d01"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:ledger-20",
+      "agent_id": "agent:ledger-sync-1",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "post_ledger_entry"
+        ],
+        "max_amount": 9000
+      },
+      "iat": 1794008814,
+      "exp": 1794268014
+    },
+    "sig": "c0079732f48dd45cfbcb73b0b5210ad2b9e5b37ceee73f3dd19fee8553ccc061f9790fb93100c85eebd0e4decee28c4caea6ff10313cfa86932e00a04857120b"
+  },
+  "nonce": "n-3fba42ec5c817b15bed4",
+  "issued_at": 1794008814,
+  "prev_hash": "4e9937f8a6e8e0ed433777846831ebb7d640a00b273bd1f580236a00fe25aa61",
+  "aep_sig": "7108c407ffb7fca4d99a89a52c1887d2fb794894ad76d4de3c9cb3102dd12e3c2d2b00bb4e0417d2a2b8a5c48cea92540a339d012b2e18f51c6d403014692c0c",
+  "receipt_hash": "b1d3df04f56afe457df557d514a6e57488b522ebedaea09f5b09e3047c75fb2b"
+}

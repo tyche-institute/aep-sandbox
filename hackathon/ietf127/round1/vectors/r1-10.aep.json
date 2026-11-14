@@ -1,0 +1,57 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:catering-orderer-4",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "order_catering",
+    "args": {
+      "event_ref": "EV-512",
+      "amount": 1750,
+      "currency": "EUR",
+      "covers": 70
+    },
+    "context": {
+      "menu_ref": "MN-3",
+      "dietary_ref": "DT-9"
+    }
+  },
+  "outcome": {
+    "status": "confirmed",
+    "order_ref": "CT-4419"
+  },
+  "measurements": {
+    "action_sha256": "3eeec6e31af72b6a4b2eb1b09e12c53ba47faf8ec52dc14af7c1164fabc9613f",
+    "outcome_sha256": "8627d17af278c5640fd8d150bbbb7dc7d3cdde9d9c6e9537c8213548d28ea699"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:catering-13",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "46a4eb237a884b7eece4b17f922deb09710a2a511c2c2d2bb6cd307f0ea10d593c703846cf4c4b560c91da736fb996cfb0745a57cefa03a5e8ed64e89cb13f04"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:catering-13",
+      "agent_id": "agent:catering-orderer-4",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "order_catering"
+        ],
+        "max_amount": 1500
+      },
+      "iat": 1794853443
+    },
+    "sig": "db9e3cbb91fd4778866511f273ec63fd53fe712f96aad6ba9f1231a16a8e484979e5af68e719034bbcd814f2cbf5ce976604764571681b3a62c7de5ea1bd9f03"
+  },
+  "nonce": "n-f927f6aa799ef419905d",
+  "issued_at": 1794853443,
+  "prev_hash": "d2d92442fd073738aee1d7361be57608c67569fa9c8ce43a2bb1a5fc696659ed",
+  "aep_sig": "90c0ed4aecac9ccfec9baf35c6a7413881817f8fe137ebbdd28cc38c77e3f57cd19dfe067fc96c0202a84dddf066738bd4212f26861419084de277930c0a5402",
+  "receipt_hash": "8eb54239d333764393161c9acbc6adc7c30d72df80bbbca2e3de04ad37b4c0bc"
+}

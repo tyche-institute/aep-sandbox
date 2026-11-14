@@ -1,0 +1,57 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:ad-buyer-1",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "buy_ad_slot",
+    "args": {
+      "slot_ref": "AD-7781",
+      "amount": 2200,
+      "currency": "USD"
+    },
+    "context": {
+      "campaign_ref": "CP-W47",
+      "region": "west"
+    }
+  },
+  "outcome": {
+    "status": "reserved",
+    "reservation_ref": "RS-6620"
+  },
+  "measurements": {
+    "action_sha256": "248f26dd56efa687e619402738da58c44781d1ad36513057a1d1a8dd9f7070cf",
+    "outcome_sha256": "a2cd9c840b6151e389f552e49d3e13590323bf9ee4ca4112405365776304423d"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:marketing-10",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "7f9148c072169430b7de64a391ab87a7ddb4801e149dd4a8f65d30a593b125fce95f7f600bfcd80b9942606fcf7bab6d2e7586ea5f4d3c791f3a3c1f115f2304"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:marketing-10",
+      "agent_id": "agent:ad-buyer-11",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "buy_ad_slot"
+        ],
+        "max_amount": 2500
+      },
+      "iat": 1794081288,
+      "exp": 1795636488
+    },
+    "sig": "cfa72042cd205b01d44329e2c0059dd5d696c2ec34c5d468755a26228fea8a8830d94e2270d8e66fb4e7e3790f7e7f8c5654cc1af0b418fbfdab9fa6399cbc0f"
+  },
+  "nonce": "n-59e963289efceba68f0e",
+  "issued_at": 1794081288,
+  "prev_hash": "2d74b297753ea3ba9e75abb569a00127a3943784ca83bfcd7f287a1cdf5071f8",
+  "aep_sig": "b190e3b54fd9ca26cbcc3c517907efec5a817578e7130862034fdc3d646e164e558dc7f10d96d04f04fc9d3c54e3036c86788001ec3b50a8f11c6c401d1d220e",
+  "receipt_hash": "b430aecea10254bae1632c447f543d73e6a68ddcb2651ef2fd516d91bf7d2b02"
+}

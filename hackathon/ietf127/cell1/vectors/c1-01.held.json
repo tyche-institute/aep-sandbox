@@ -1,0 +1,12 @@
+{
+ "sequence": 7,
+ "action": "refund.issue",
+ "currency": "EUR",
+ "subject": {"identifier": "urn:air:example.org:agent:refund-assistant","digest": "sha256:2c87a2f26d64a675089441dc2db1eece6e6904c7edb18e6ce329cd698c7cc6fb"},
+ "currency": "EUR",
+ "occurred_at": 1794679200,
+ "utc_offset_minutes": -480,
+ "order": "order-1001",
+ "version": 1,
+ "amount_minor": 4250
+}

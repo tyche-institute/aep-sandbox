@@ -1,0 +1,58 @@
+{
+  "aep_version": "aep-sandbox/1",
+  "agent_id": "agent:trip-planner-3",
+  "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+  "action": {
+    "method": "book_travel",
+    "args": {
+      "itinerary_ref": "IT-6620",
+      "amount": 1280,
+      "currency": "EUR"
+    },
+    "context": {
+      "traveller_ref": "TV-209",
+      "class": "economy"
+    }
+  },
+  "outcome": {
+    "status": "ticketed",
+    "pnr_ref": "PN-4Q7XZ"
+  },
+  "measurements": {
+    "action_sha256": "12a2afea71432a028f684c2631eaa0a4cd792182438e11f43dea69171b8c279a",
+    "outcome_sha256": "ad51a6b6b48f19b755ca80b3751a60d856c59d1d0fb473e089d5dcc4dc917982"
+  },
+  "credential": {
+    "body": {
+      "v": "aep-credential/1",
+      "issuer_id": "test-issuer:r1-anchor-a",
+      "issuer_pub": "7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4",
+      "principal_id": "principal:travel-desk-05",
+      "principal_pub": "2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd"
+    },
+    "sig": "d005666cd96b3d5f12735dc546fa8ad85cfeaaa3e0d769858fff28f79814bcc5a5e0dd95e61c1738db413df1046b0db68a2ca46ac2ec611c6ecc8df2b756a603"
+  },
+  "mandate": {
+    "body": {
+      "v": "aep-mandate/1",
+      "principal_id": "principal:travel-desk-05",
+      "agent_id": "agent:trip-planner-3",
+      "agent_pub": "03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df",
+      "scope": {
+        "allowed_methods": [
+          "book_travel",
+          "cancel_travel"
+        ],
+        "max_amount": 2500
+      },
+      "iat": 1794720178,
+      "exp": 1795411378
+    },
+    "sig": "d20f524c9b4c7214042f04c87cf64500298f0d655f4410d5ab2bac117df97fd0eb3b2a3ca4c9da2281a9f044e7b896ad5344d9b389ce75c2b950f57f03b90d0e"
+  },
+  "nonce": "n-b3cab8f06042a4eecbcb",
+  "issued_at": 1794720178,
+  "prev_hash": "1390b20039dfc94d8a660e61b1d6a6041846736c73994c5366b108ab65b3b564",
+  "aep_sig": "1b8f36357255eb45c4d7ef349c2bfd3ad63068f3e5cfe516fab34bb9fe5b52569509f00d630483d0b3900e2925bc5c7d8205a8f73b01bd39a1fecffe5a64b203",
+  "receipt_hash": "2d79f936d3d780e69893b191bae3dd56325ce2b47bae93d9f1da6d56436fad72"
+}
