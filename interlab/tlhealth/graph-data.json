@@ -520,7 +520,7 @@
    "CH",
    "RS"
   ],
-  "mb_national_answering": 4,
+  "mb_national_answering": 3,
   "mb_national_pointers": 4,
   "national_ctl": [
    "KR",
@@ -528,22 +528,22 @@
   ],
   "pacific_alliance": [
    {
-    "overdue": 2349,
+    "overdue": 2350,
     "state": "stale",
     "t": "PE"
    },
    {
-    "overdue": 2349,
+    "overdue": 2350,
     "state": "stale",
     "t": "CO"
    },
    {
-    "overdue": 2370,
+    "overdue": 2371,
     "state": "stale",
     "t": "CL"
    },
    {
-    "overdue": 2349,
+    "overdue": 2350,
     "state": "stale",
     "t": "MX"
    }
@@ -554,12 +554,12 @@
    "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_mb.xml",
    "http://www.gub.uy/unidad-certificacion-electronica/sites/unidad-certificacion-electronica/files/tsl/tsl_uy.xml"
   ],
-  "runs_in_series": 113,
+  "runs_in_series": 114,
   "series_window": {
    "first": "2026-08-24T21:45:26.919162+00:00",
-   "hours": 2021.9,
-   "last": "2026-11-17T03:40:05.406695+00:00",
-   "runs": 113
+   "hours": 2045.9,
+   "last": "2026-11-18T03:40:05.278291+00:00",
+   "runs": 114
   },
   "vantage_agreements": [],
   "vantage_disagreements": [
@@ -567,6 +567,11 @@
     "here": "tls_validation_failed",
     "t": "BD",
     "there": "000"
+   },
+   {
+    "here": "transport_failed",
+    "t": "PY",
+    "there": "200"
    },
    {
     "here": "http_error",
@@ -635,12 +640,12 @@
    }
   }
  },
- "freshness_observed": "2026-11-17T03:42:28.175353+00:00",
- "graph_observed": "2026-11-17T03:46:47.416098+00:00",
+ "freshness_observed": "2026-11-18T03:42:21.514787+00:00",
+ "graph_observed": "2026-11-18T03:46:42.789504+00:00",
  "instrument": "tlhealth/export_web.py",
  "nodes": [
   {
-   "age": 131,
+   "age": 132,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -746,7 +751,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 59,
+   "age": 60,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -796,7 +801,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 375,
+   "age": 376,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -808,7 +813,7 @@
    "mime": "application/vnd.etsi.tsl+xml",
    "next": "2026-05-07T02:59:59Z",
    "out": 5,
-   "overdue": 194,
+   "overdue": 195,
    "population": "mercosur_copies",
    "provider_section": false,
    "providers": 0,
@@ -898,7 +903,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 4,
+   "age": 5,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1010,7 +1015,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 2532,
+   "age": 2533,
    "bloc": "pacific_alliance",
    "http": "200",
    "hub_role": null,
@@ -1022,7 +1027,7 @@
    "mime": null,
    "next": "2020-06-12T00:00:00Z",
    "out": 0,
-   "overdue": 2349,
+   "overdue": 2350,
    "population": "pacific_alliance",
    "provider_section": true,
    "providers": 3,
@@ -1048,7 +1053,7 @@
    "zip_wrapped": true
   },
   {
-   "age": 2532,
+   "age": 2533,
    "bloc": "pacific_alliance",
    "http": "200",
    "hub_role": null,
@@ -1060,7 +1065,7 @@
    "mime": null,
    "next": "2020-06-12T00:00:00Z",
    "out": 0,
-   "overdue": 2349,
+   "overdue": 2350,
    "population": "pacific_alliance",
    "provider_section": true,
    "providers": 4,
@@ -1086,7 +1091,7 @@
    "zip_wrapped": true
   },
   {
-   "age": 2552,
+   "age": 2553,
    "bloc": "pacific_alliance",
    "http": "200",
    "hub_role": null,
@@ -1098,7 +1103,7 @@
    "mime": null,
    "next": "2020-05-22T00:00:00Z",
    "out": 0,
-   "overdue": 2370,
+   "overdue": 2371,
    "population": "pacific_alliance",
    "provider_section": true,
    "providers": 2,
@@ -1124,7 +1129,7 @@
    "zip_wrapped": true
   },
   {
-   "age": 2532,
+   "age": 2533,
    "bloc": "pacific_alliance",
    "http": "200",
    "hub_role": null,
@@ -1136,7 +1141,7 @@
    "mime": null,
    "next": "2020-06-12T00:00:00Z",
    "out": 0,
-   "overdue": 2349,
+   "overdue": 2350,
    "population": "pacific_alliance",
    "provider_section": true,
    "providers": 1,
@@ -1196,7 +1201,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 0,
+   "age": 1,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1280,7 +1285,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 27,
+   "age": 28,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1322,7 +1327,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 61,
+   "age": 62,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1361,7 +1366,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 87,
+   "age": 88,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1435,7 +1440,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 2146,
+   "age": 2147,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1478,7 +1483,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 7,
+   "age": 8,
    "bloc": null,
    "http": "200",
    "hub_role": "eu_lotl",
@@ -1546,7 +1551,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 11,
+   "age": 12,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1593,7 +1598,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 95,
+   "age": 96,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1639,7 +1644,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 80,
+   "age": 81,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1786,7 +1791,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 7,
+   "age": 8,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1861,7 +1866,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 7,
+   "age": 8,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1935,7 +1940,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 2909,
+   "age": 2910,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -1947,7 +1952,7 @@
    "mime": null,
    "next": "2019-05-29T16:00:16.210Z",
    "out": 0,
-   "overdue": 2728,
+   "overdue": 2729,
    "population": "other_national",
    "provider_section": true,
    "providers": 5,
@@ -2007,7 +2012,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 375,
+   "age": 376,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2019,7 +2024,7 @@
    "mime": null,
    "next": "2026-05-07T02:59:59Z",
    "out": 5,
-   "overdue": 194,
+   "overdue": 195,
    "population": "mercosur_copies",
    "provider_section": false,
    "providers": 0,
@@ -2075,7 +2080,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 349,
+   "age": 350,
    "bloc": null,
    "http": null,
    "hub_role": null,
@@ -2087,7 +2092,7 @@
    "mime": "application/vnd.etsi.tsl+xml",
    "next": "2026-06-01T18:59:59Z",
    "out": 1,
-   "overdue": 168,
+   "overdue": 169,
    "population": null,
    "provider_section": true,
    "providers": 13,
@@ -2115,7 +2120,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 375,
+   "age": 376,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2127,7 +2132,7 @@
    "mime": "application/vnd.etsi.tsl+xml",
    "next": "2026-05-07T02:59:59Z",
    "out": 5,
-   "overdue": 194,
+   "overdue": 195,
    "population": "mercosur_copies",
    "provider_section": false,
    "providers": 0,
@@ -2251,7 +2256,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 62,
+   "age": 63,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2294,7 +2299,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 202,
+   "age": 203,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2362,7 +2367,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 4,
+   "age": 5,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2405,7 +2410,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 39,
+   "age": 40,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2490,9 +2495,9 @@
    "zip_wrapped": null
   },
   {
-   "age": null,
+   "age": 115,
    "bloc": null,
-   "http": "403",
+   "http": "200",
    "hub_role": null,
    "id": "https://tl.ico.org.uk/uktrustedlist/UKTL.xml",
    "in": 0,
@@ -2500,25 +2505,30 @@
    "label": "UK",
    "list_format": null,
    "mime": null,
-   "next": null,
+   "next": "2027-01-26T00:00:00Z",
    "out": 0,
-   "overdue": null,
+   "overdue": 0,
    "population": "other_national",
-   "provider_section": null,
-   "providers": null,
+   "provider_section": true,
+   "providers": 3,
    "register_devtest": null,
    "register_total": null,
    "scheme": "https",
-   "sequence": null,
-   "service_statuses": null,
-   "service_types": null,
-   "services": null,
-   "services_flat_with_history": null,
-   "state": "blocked",
+   "sequence": "36",
+   "service_statuses": {
+    "withdrawn": 18
+   },
+   "service_types": {
+    "": 2,
+    "QC": 16
+   },
+   "services": 18,
+   "services_flat_with_history": 38,
+   "state": "ok",
    "t": "UK",
-   "terminal": null,
-   "territory_source": "asserted_by_us",
-   "tsl_type": null,
+   "terminal": false,
+   "territory_source": "self",
+   "tsl_type": "http://uri.etsi.org/TrstSvc/TrustedList/TSLType/UKlist",
    "vantage": null,
    "world": null,
    "zip_wrapped": false
@@ -2558,7 +2568,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 6,
+   "age": 7,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2601,7 +2611,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 49,
+   "age": 50,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2648,7 +2658,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 40,
+   "age": 41,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2689,7 +2699,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 95,
+   "age": 96,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2768,7 +2778,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 10,
+   "age": 11,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2813,7 +2823,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 27,
+   "age": 28,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2890,7 +2900,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 13,
+   "age": 14,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -2965,7 +2975,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 74,
+   "age": 75,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3073,7 +3083,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 35,
+   "age": 36,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3147,7 +3157,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 194,
+   "age": 195,
    "bloc": null,
    "http": "200",
    "hub_role": "mercosur",
@@ -3159,7 +3169,7 @@
    "mime": "application/vnd.etsi.tsl+xml",
    "next": "2026-11-07T02:59:59Z",
    "out": 4,
-   "overdue": 10,
+   "overdue": 11,
    "population": "mercosur_copies",
    "provider_section": false,
    "providers": 0,
@@ -3217,7 +3227,7 @@
   {
    "age": null,
    "bloc": null,
-   "http": "200",
+   "http": "000",
    "hub_role": null,
    "id": "https://www.acraiz.gov.py/tsl/tsl_Py.xml",
    "in": 5,
@@ -3239,12 +3249,16 @@
    "service_types": null,
    "services": null,
    "services_flat_with_history": null,
-   "state": "ok",
+   "state": "fail",
    "t": "PY",
    "terminal": null,
    "territory_source": "self",
    "tsl_type": null,
-   "vantage": null,
+   "vantage": {
+    "agrees": false,
+    "colo": "WAW",
+    "there": "200"
+   },
    "world": null,
    "zip_wrapped": null
   },
@@ -3317,7 +3331,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 83,
+   "age": 84,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3394,7 +3408,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 20,
+   "age": 21,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3542,7 +3556,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 154,
+   "age": 155,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3583,7 +3597,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 12,
+   "age": 13,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3624,7 +3638,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 24,
+   "age": 25,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3706,7 +3720,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 28,
+   "age": 29,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3755,7 +3769,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 143,
+   "age": 144,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3834,7 +3848,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 3,
+   "age": 4,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3868,7 +3882,7 @@
    "zip_wrapped": null
   },
   {
-   "age": 154,
+   "age": 155,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3913,7 +3927,7 @@
    "zip_wrapped": false
   },
   {
-   "age": 132,
+   "age": 133,
    "bloc": null,
    "http": "200",
    "hub_role": null,
@@ -3958,6 +3972,6 @@
    "zip_wrapped": false
   }
  ],
- "observed": "2026-11-17T03:42:28.142466+00:00",
- "runs": 113
+ "observed": "2026-11-18T03:42:21.457878+00:00",
+ "runs": 114
 }
