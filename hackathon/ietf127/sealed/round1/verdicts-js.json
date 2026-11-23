@@ -1,0 +1,230 @@
+[
+  {
+    "file": "r1-01.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "now": 1794072725,
+    "consumed": [],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":5000,\"currency\":\"EUR\",\"entry_seq\":9007199254740991},\"context\":{\"offset\":-9007199254740991,\"source\":\"sync\"},\"method\":\"post_ledger_entry\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:ledger-sync-1\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:ledger-20\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"3bd9819d3146bc6ee6eb67b2a5ee40f74dc50d2e4af1bf272e5ae597ea4feef402e3b44850d54bbae0f3a7a2ae42299dfa6d58c5e34fbad95cec007996784d01\"},\"issued_at\":1794008814,\"mandate\":{\"body\":{\"agent_id\":\"agent:ledger-sync-1\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1794268014,\"iat\":1794008814,\"principal_id\":\"principal:ledger-20\",\"scope\":{\"allowed_methods\":[\"post_ledger_entry\"],\"max_amount\":9000},\"v\":\"aep-mandate/1\"},\"sig\":\"c0079732f48dd45cfbcb73b0b5210ad2b9e5b37ceee73f3dd19fee8553ccc061f9790fb93100c85eebd0e4decee28c4caea6ff10313cfa86932e00a04857120b\"},\"measurements\":{\"action_sha256\":\"6dbed951bc63e03c6880e74ea56294da965c2fc90e70f3417d38fb49e68c16fc\",\"outcome_sha256\":\"47779f13c60a01e807600bfe367b5ad91bdfd6870d453662a82da1cd43a8bbda\"},\"nonce\":\"n-3fba42ec5c817b15bed4\",\"outcome\":{\"entry_ref\":\"LE-90071\",\"status\":\"posted\"},\"prev_hash\":\"4e9937f8a6e8e0ed433777846831ebb7d640a00b273bd1f580236a00fe25aa61\"}"
+  },
+  {
+    "file": "r1-02.aep.json",
+    "verdict": "DENY",
+    "reason": "expired",
+    "now": 1797085753,
+    "consumed": [
+      "n-9358e7c42df9c1f86858"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":41000,\"batch_ref\":\"PB-2026-46\",\"currency\":\"EUR\"},\"context\":{\"entity_ref\":\"EN-2\",\"period\":\"2026-11\"},\"method\":\"run_payroll_batch\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:payroll-runner-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:payroll-16\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"420b3e897b646b644e05acba45a122741679ce36c00f9ea9c5f783fc62e09febd2e6fd26545304bff4f40579f9ef372804e8afda39f911f8b21e1e6db04b5d0d\"},\"issued_at\":1795012153,\"mandate\":{\"body\":{\"agent_id\":\"agent:payroll-runner-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1796999353,\"iat\":1795012153,\"principal_id\":\"principal:payroll-16\",\"scope\":{\"allowed_methods\":[\"run_payroll_batch\"],\"max_amount\":45000},\"v\":\"aep-mandate/1\"},\"sig\":\"a2badd41f4ca353e997e09e6216eca0c0b2cf9d00942e7c0757441cfefac42fe2643e8b0cfd35f6bd79a950bcf1440ba2a033d118db5ed0e1bb1617ac593ec04\"},\"measurements\":{\"action_sha256\":\"0e3c979e95d2ec573279dde1bb9046e91ea7e8fce6f734e0475998b4d3c16880\",\"outcome_sha256\":\"0191ef64ec627ada989ab3976cd78a073f09125ad39a1b2a7cfcb9bf6ae69708\"},\"nonce\":\"n-9358e7c42df9c1f86858\",\"outcome\":{\"batch_status_ref\":\"BS-7730\",\"status\":\"submitted\"},\"prev_hash\":\"639f99e926a6a0a461222fcb3975ebfa05f82dd8d727b78959bdda1e2c70d266\"}"
+  },
+  {
+    "file": "r1-03.aep.json",
+    "verdict": "DENY",
+    "reason": "measurement_mismatch",
+    "now": 1794986711,
+    "consumed": [
+      "n-5a6a7777751dc318420f",
+      "n-0e12fe15e245e0c5f967"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":640,\"currency\":\"EUR\",\"priority\":2,\"site_ref\":\"S-114\"},\"context\":{\"asset_ref\":\"HVAC-3\",\"fault_ref\":\"FL-5520\"},\"method\":\"dispatch_repair\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:maintenance-dispatch-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-c\",\"issuer_pub\":\"158e7d649d44839b76f453e0520232221c30245e4373df10738d6fb48f2c1797\",\"principal_id\":\"principal:facilities-08\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"a7fa8798aeb65b70a448faeb130ab70b653d8b43fb608f4b5c4bd7832a7e9b5236c2a821f56c5352f7a4be5074409d0a1aa147371421dfc91425655bd27a8609\"},\"issued_at\":1794347822,\"mandate\":{\"body\":{\"agent_id\":\"agent:maintenance-dispatch-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795643822,\"iat\":1794347822,\"principal_id\":\"principal:facilities-08\",\"scope\":{\"allowed_methods\":[\"dispatch_repair\"],\"max_amount\":1000},\"v\":\"aep-mandate/1\"},\"sig\":\"20c09ff676bc4f09d8afd19ad689dfc037470829e62876ac65413b5b9c21144b417c0beeca11d2a3d3efd0aa6fe74be05defc3ee89bc2a7b0678ffa2453b240c\"},\"measurements\":{\"action_sha256\":\"97a11de319d70fd211027e5fd3c8999fafbf856f530e7d062062bc213323f0b5\",\"outcome_sha256\":\"f911326084908c9f6835bf300c390422c66bfa98368dd05dc3660b24aabe5afb\"},\"nonce\":\"n-e6e28bed5d5a875939a6\",\"outcome\":{\"job_ref\":\"JB-22871\",\"status\":\"dispatched\"},\"prev_hash\":\"24ac8a8807b053d1dd62dc37d3ce035ce3360052bc4ebf3c8d0d06986ad82527\"}"
+  },
+  {
+    "file": "r1-04.aep.json",
+    "verdict": "DENY",
+    "reason": "issuer_not_listed",
+    "now": 1796318169,
+    "consumed": [
+      "n-f609598d18efc54eb1b8",
+      "n-b9d5531a9f5c657a83be",
+      "n-8cf52142ae2baf4ddbff"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":7400,\"currency\":\"EUR\",\"grant_ref\":\"G-7781\"},\"context\":{\"programme_ref\":\"PR-12\",\"tranche\":2},\"method\":\"disburse_grant\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:grant-disburser-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-b\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:grants-office-06\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"dac730ba08db63c046e7607e05440deec4ffec52560a811bb42a4c39b2701f14fd85a4f512fc21c06bf7345ddbf4e56ce9ddf539f4feb291f051a352a8503204\"},\"issued_at\":1795606970,\"mandate\":{\"body\":{\"agent_id\":\"agent:grant-disburser-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1797334970,\"iat\":1795606970,\"principal_id\":\"principal:grants-office-06\",\"scope\":{\"allowed_methods\":[\"disburse_grant\"],\"max_amount\":10000},\"v\":\"aep-mandate/1\"},\"sig\":\"235d5fe369cfd98e9928b8163ee6dd1eb18ae16b4fff5eb144ea4b5e756b552fbe62cffe7bd5177d4dd1c054e31d45f07b00837eba399deea1786779a6e74a03\"},\"measurements\":{\"action_sha256\":\"479a39c86510dee9e3b6c8af904beddd5186b4c4b2f763e4159c68d6e286dc58\",\"outcome_sha256\":\"4995a3e462cd609117032d42862f6e54e1dcf9c3c4553d2c6b53a8af456c5cef\"},\"nonce\":\"n-2ccae2a7eeafa939b2c3\",\"outcome\":{\"disbursement_ref\":\"DB-40118\",\"status\":\"disbursed\"},\"prev_hash\":\"fe692d46cf76e9ca1518aca5ee346682b49655cefa00b7fb6f66d948d57b630f\"}"
+  },
+  {
+    "file": "r1-05.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "now": 1795104619,
+    "consumed": [
+      "n-ecad884c32e8fa82f58a"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"box_ref\":\"BX-4410\",\"count\":36},\"context\":{\"retention_ref\":\"RT-7Y\",\"site\":\"vault-2\"},\"method\":\"archive_records\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:records-keeper-9\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:archive-18\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"893da2c2ba52da47b7659a4a0adccdf3364120b016eb10b0fdbc465bcd210b97b5e8ac7cc21aca92a417bc0926f5ee53ec45340e85854734232d2f9fc4c4140f\"},\"issued_at\":1794222255,\"mandate\":{\"body\":{\"agent_id\":\"agent:records-keeper-9\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795777455,\"iat\":1794222255,\"principal_id\":\"principal:archive-18\",\"scope\":{\"allowed_methods\":[\"archive_records\"]},\"v\":\"aep-mandate/1\"},\"sig\":\"126b7e78700d1e592c6c185352680e442baa248f49de62b8502130cd2a6b22a1abe6354b4abcfb74b99e172682fbd0952eeaf5a81119bbb911a2eb4a68e5e90d\"},\"measurements\":{\"action_sha256\":\"7e4631b08836b88c012d0b64f009cd4cbb66fb82bac2f28dd80d825f0244fde9\",\"outcome_sha256\":\"c7621f0b63500786d855fbb9f361090a1244361f106639f928630d481aec13b1\"},\"nonce\":\"n-5b86ef2be95ff50dfe3f\",\"outcome\":{\"archive_ref\":\"AR-30081\",\"status\":\"archived\"},\"prev_hash\":\"fc79ea1d81e685d4b209144575e8e7c4a7ff30b5f1f66efbf1cd25c98beb71b3\"}"
+  },
+  {
+    "file": "r1-06.aep.json",
+    "verdict": "DENY",
+    "reason": "content_mutated",
+    "now": 1795395601,
+    "consumed": [],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":450,\"claim_ref\":\"CL-90021\",\"currency\":\"EUR\"},\"context\":{\"adjuster_ref\":\"AJ-88\",\"line\":\"property\"},\"method\":\"settle_claim\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:claims-payer-7\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:claims-11\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"0b9a5af438d8738135fd70381fd354d2df50bf8c08774036ffb66bad6380714ccd7b7f5b5d4dd6ea07af62e408dc64e9a8f8632919ff0767c5f7072b3580d904\"},\"issued_at\":1795293068,\"mandate\":{\"body\":{\"agent_id\":\"agent:claims-payer-7\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795638668,\"iat\":1795293068,\"principal_id\":\"principal:claims-11\",\"scope\":{\"allowed_methods\":[\"settle_claim\"],\"max_amount\":300},\"v\":\"aep-mandate/1\"},\"sig\":\"ba8471acf215530e00131170b11b250f60aa747fb69cdedddbe575cd748e7d56fd5e6fa40ea6bdd326227ece9a24f26293bdfbfd22982114434361eea8e2e100\"},\"measurements\":{\"action_sha256\":\"ca2642b92b8506e52324da35f82399dd7ca1da3767720823e419f0ce09d9d7e6\",\"outcome_sha256\":\"50b335688b2d4dd788be11ddb905fa8d7147514d122d9d7d536b19ffb370015a\"},\"nonce\":\"n-7300b0884636d45449ef\",\"outcome\":{\"settlement_ref\":\"ST-3390\",\"status\":\"settled\"},\"prev_hash\":\"9005d14049e6ec054f05cb8296e8df84cadc1c6943a35febf6142d9f689fc939\"}"
+  },
+  {
+    "file": "r1-07.aep.json",
+    "verdict": "DENY",
+    "reason": "replayed",
+    "now": 1795310351,
+    "consumed": [
+      "n-42930e7e5cd7971c0ce5",
+      "n-7328444e32513bdcbe6c",
+      "n-caea28f2a15d3f2b0450"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":30000,\"currency\":\"EUR\",\"from_ref\":\"ACC-OP-1\",\"to_ref\":\"ACC-RES-2\"},\"context\":{\"sweep_ref\":\"SW-2026-318\",\"window\":\"EOD\"},\"method\":\"transfer_funds\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:sweep-mover-1\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:treasury-03\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"7c7844d6d2404353a9ecd823dd3b4611e4bb97e3aae7195f2af9996bc780f3ccfc31101881c9e459e27e33f2fcae089a09b6e18732fe29e46cc7fa0bf1374505\"},\"issued_at\":1794247077,\"mandate\":{\"body\":{\"agent_id\":\"agent:sweep-mover-1\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1796493477,\"iat\":1794247077,\"principal_id\":\"principal:treasury-03\",\"scope\":{\"allowed_methods\":[\"transfer_funds\"],\"max_amount\":50000},\"v\":\"aep-mandate/1\"},\"sig\":\"7e2f96c7ffd076f31ac03028592f3ebd08fc01413d74fae7d4f8e6863e991c75b794d104c1a3062ff377a6b70735407af95a536d0427a95d4fb1d740a977e108\"},\"measurements\":{\"action_sha256\":\"56a1ca6e0542cd99bbfe37dbb5596cfcd9eac32d6eb63743d7fc27a241347fd6\",\"outcome_sha256\":\"3c61c95eaae8100a743a5a661a25f6393476f864e63c9fb9e66112634c4be146\"},\"nonce\":\"n-7328444e32513bdcbe6c\",\"outcome\":{\"status\":\"settled\",\"transfer_ref\":\"TR-88410\"},\"prev_hash\":\"b182105c1db2118d8f51e16ef4199c098a5a1f55c7e2d052f89a7c3349b07fca\"}"
+  },
+  {
+    "file": "r1-08.aep.json",
+    "verdict": "DENY",
+    "reason": "principal_sig_invalid",
+    "now": 1795028026,
+    "consumed": [
+      "n-3652401eeeaf0aee7680"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":2200,\"currency\":\"USD\",\"slot_ref\":\"AD-7781\"},\"context\":{\"campaign_ref\":\"CP-W47\",\"region\":\"west\"},\"method\":\"buy_ad_slot\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:ad-buyer-1\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:marketing-10\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"7f9148c072169430b7de64a391ab87a7ddb4801e149dd4a8f65d30a593b125fce95f7f600bfcd80b9942606fcf7bab6d2e7586ea5f4d3c791f3a3c1f115f2304\"},\"issued_at\":1794081288,\"mandate\":{\"body\":{\"agent_id\":\"agent:ad-buyer-11\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795636488,\"iat\":1794081288,\"principal_id\":\"principal:marketing-10\",\"scope\":{\"allowed_methods\":[\"buy_ad_slot\"],\"max_amount\":2500},\"v\":\"aep-mandate/1\"},\"sig\":\"cfa72042cd205b01d44329e2c0059dd5d696c2ec34c5d468755a26228fea8a8830d94e2270d8e66fb4e7e3790f7e7f8c5654cc1af0b418fbfdab9fa6399cbc0f\"},\"measurements\":{\"action_sha256\":\"248f26dd56efa687e619402738da58c44781d1ad36513057a1d1a8dd9f7070cf\",\"outcome_sha256\":\"a2cd9c840b6151e389f552e49d3e13590323bf9ee4ca4112405365776304423d\"},\"nonce\":\"n-59e963289efceba68f0e\",\"outcome\":{\"reservation_ref\":\"RS-6620\",\"status\":\"reserved\"},\"prev_hash\":\"2d74b297753ea3ba9e75abb569a00127a3943784ca83bfcd7f287a1cdf5071f8\"}"
+  },
+  {
+    "file": "r1-09.aep.json",
+    "verdict": "DENY",
+    "reason": "content_mutated",
+    "now": 1796158163,
+    "consumed": [],
+    "canonical_core": "{\"action\":{\"args\":{\"recipient_ref\":\"C-30418\",\"template\":\"welcome-intl\"},\"context\":{\"channel\":\"portal\",\"📎\":\"attachment-2\",\"Ｔａｇ\":\"priorité\"},\"method\":\"send_notice\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:translator-4\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:intl-desk-22\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"5385ace4488945ee76d2db5d74115cb51db28876588ec021c2437f9af84a516deac0ccc4201ba447e15c9146c0b7c857b94e23a9bf21d6ce54c2bbd23df29c08\"},\"issued_at\":1795893258,\"mandate\":{\"body\":{\"agent_id\":\"agent:translator-4\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1796325258,\"iat\":1795893258,\"principal_id\":\"principal:intl-desk-22\",\"scope\":{\"allowed_methods\":[\"send_notice\"]},\"v\":\"aep-mandate/1\"},\"sig\":\"c0b2de608334ec120b691887f14aa9a6efa8de750fb61b6c8eb8ac09727862c50f6826506526f5a73678612dae2d4ab74ccfa86b0eb770520c5278befea77509\"},\"measurements\":{\"action_sha256\":\"a9d4abc250284f78385b7e5f30c9b9e4123b60cbc18a503c2107de7e2d9a3d18\",\"outcome_sha256\":\"d855bb5718110738472f255a33241f9535c29ec75c44d6b59ac9e7663b8e6990\"},\"nonce\":\"n-ab3a87d559f4692865e1\",\"outcome\":{\"message_ref\":\"MS-41190\",\"status\":\"queued\"},\"prev_hash\":\"5b6d20ba5930a457c3df48e5aed2b28affc24475ee5aad0bfb60c689e4715c45\"}"
+  },
+  {
+    "file": "r1-10.aep.json",
+    "verdict": "DENY",
+    "reason": "scope_violation",
+    "now": 1795024075,
+    "consumed": [
+      "n-3ba1fbced744f4b9b42c",
+      "n-6c526889dab0013d67ef",
+      "n-0fa6bf8bbb274b992522"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":1750,\"covers\":70,\"currency\":\"EUR\",\"event_ref\":\"EV-512\"},\"context\":{\"dietary_ref\":\"DT-9\",\"menu_ref\":\"MN-3\"},\"method\":\"order_catering\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:catering-orderer-4\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:catering-13\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"46a4eb237a884b7eece4b17f922deb09710a2a511c2c2d2bb6cd307f0ea10d593c703846cf4c4b560c91da736fb996cfb0745a57cefa03a5e8ed64e89cb13f04\"},\"issued_at\":1794853443,\"mandate\":{\"body\":{\"agent_id\":\"agent:catering-orderer-4\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"iat\":1794853443,\"principal_id\":\"principal:catering-13\",\"scope\":{\"allowed_methods\":[\"order_catering\"],\"max_amount\":1500},\"v\":\"aep-mandate/1\"},\"sig\":\"db9e3cbb91fd4778866511f273ec63fd53fe712f96aad6ba9f1231a16a8e484979e5af68e719034bbcd814f2cbf5ce976604764571681b3a62c7de5ea1bd9f03\"},\"measurements\":{\"action_sha256\":\"3eeec6e31af72b6a4b2eb1b09e12c53ba47faf8ec52dc14af7c1164fabc9613f\",\"outcome_sha256\":\"8627d17af278c5640fd8d150bbbb7dc7d3cdde9d9c6e9537c8213548d28ea699\"},\"nonce\":\"n-f927f6aa799ef419905d\",\"outcome\":{\"order_ref\":\"CT-4419\",\"status\":\"confirmed\"},\"prev_hash\":\"d2d92442fd073738aee1d7361be57608c67569fa9c8ce43a2bb1a5fc696659ed\"}"
+  },
+  {
+    "file": "r1-11.aep.json",
+    "verdict": "DENY",
+    "reason": "agent_binding_mismatch",
+    "now": 1795458903,
+    "consumed": [
+      "n-f0eef9892c46529ce881",
+      "n-01a9800ca5624c3f004c",
+      "n-184c0c3a0b9cb7f34ffd"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"host_ref\":\"H-2207\",\"window\":\"W-14\"},\"context\":{\"change_ref\":\"CHG-5108\",\"env\":\"staging\"},\"method\":\"reboot_host\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:patch-runner-6\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:it-ops-19\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"6183efb4a061d2506ea22950b4ac41165882248241f023decd2911698e951ec5701d4a7935de390c6c6b6985d657b6e6cc7ddaba084fb8015e68e434b04d9303\"},\"issued_at\":1795440807,\"mandate\":{\"body\":{\"agent_id\":\"agent:patch-runner-6\",\"agent_pub\":\"7b1476a607b1427c9987f04621307ba97842fe5e985dfb76c9bc9728306f4a5a\",\"exp\":1796477607,\"iat\":1795440807,\"principal_id\":\"principal:it-ops-19\",\"scope\":{\"allowed_methods\":[\"apply_patch\",\"schedule_patch\"]},\"v\":\"aep-mandate/1\"},\"sig\":\"f4d8311fa2a51e089544bee3c21e5c633a21f163d6956b838eb4bc5902faa876fd2bf02a0099165c461c4896dca6f5813afbfc9f29f7ed5b87ab7b2239b64603\"},\"measurements\":{\"action_sha256\":\"7dce5a14ffe5386d275080f7f76754db9f5bb110eb890f0243b63e78ff3910c9\",\"outcome_sha256\":\"bc6b8cbe8974d42b0147cfe511af7eb8188ac701a4f7eeaff0d94c306d507d8a\"},\"nonce\":\"n-a7bcc9a3bcc3d3e8c30f\",\"outcome\":{\"run_ref\":\"RN-90311\",\"status\":\"done\"},\"prev_hash\":\"f3e161ed2ef1a03a8db89e374fe0c93767bd3e46ea361de8ad55a12ebfce7fc7\"}"
+  },
+  {
+    "file": "r1-12.aep.json",
+    "verdict": "DENY",
+    "reason": "aep_sig_invalid",
+    "now": 1795414978,
+    "consumed": [
+      "n-f5ec67c13f95508b70f7"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":1280,\"currency\":\"EUR\",\"itinerary_ref\":\"IT-6620\"},\"context\":{\"class\":\"economy\",\"traveller_ref\":\"TV-209\"},\"method\":\"book_travel\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:trip-planner-3\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:travel-desk-05\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"d005666cd96b3d5f12735dc546fa8ad85cfeaaa3e0d769858fff28f79814bcc5a5e0dd95e61c1738db413df1046b0db68a2ca46ac2ec611c6ecc8df2b756a603\"},\"issued_at\":1794720178,\"mandate\":{\"body\":{\"agent_id\":\"agent:trip-planner-3\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795411378,\"iat\":1794720178,\"principal_id\":\"principal:travel-desk-05\",\"scope\":{\"allowed_methods\":[\"book_travel\",\"cancel_travel\"],\"max_amount\":2500},\"v\":\"aep-mandate/1\"},\"sig\":\"d20f524c9b4c7214042f04c87cf64500298f0d655f4410d5ab2bac117df97fd0eb3b2a3ca4c9da2281a9f044e7b896ad5344d9b389ce75c2b950f57f03b90d0e\"},\"measurements\":{\"action_sha256\":\"12a2afea71432a028f684c2631eaa0a4cd792182438e11f43dea69171b8c279a\",\"outcome_sha256\":\"ad51a6b6b48f19b755ca80b3751a60d856c59d1d0fb473e089d5dcc4dc917982\"},\"nonce\":\"n-b3cab8f06042a4eecbcb\",\"outcome\":{\"pnr_ref\":\"PN-4Q7XZ\",\"status\":\"ticketed\"},\"prev_hash\":\"1390b20039dfc94d8a660e61b1d6a6041846736c73994c5366b108ab65b3b564\"}"
+  },
+  {
+    "file": "r1-13.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "now": 1794287193,
+    "consumed": [],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":12500,\"currency\":\"EUR\",\"invoice_ref\":\"INV-2026-0931\",\"payee_ref\":\"V-3307\"},\"context\":{\"approval_ref\":\"AR-1180\",\"batch\":\"AP-W46\"},\"method\":\"pay_invoice\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:invoice-runner-9\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:ap-desk-04\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"95c401ac7d519cd91c63006b410e919369666faee11cc89e72d7da282e29876f8a89882b75f695d6d2950e5a6a77a970fe6596f7b273e33193a0bf48a841a30e\"},\"issued_at\":1794251489,\"mandate\":{\"body\":{\"agent_id\":\"agent:invoice-runner-9\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1794424289,\"iat\":1794251489,\"principal_id\":\"principal:ap-desk-04\",\"scope\":{\"allowed_methods\":[\"pay_invoice\"],\"max_amount\":12500},\"v\":\"aep-mandate/1\"},\"sig\":\"a140d4f3c1153677d02fb1330597b69bd10e4febbc334d1dbefc207a097f00f7f0ffbaddcd7d7331ac58ec8b08e2fb5c09fba3822e53b1c25db7fbfaf9b6990f\"},\"measurements\":{\"action_sha256\":\"b83508df42f6c578c4d5cca64bb13388034a9eff532144ddf2c427f129b29314\",\"outcome_sha256\":\"1340d2229acb18c377e837c865638273d1d09f68d69169d8f977af7d8696d413\"},\"nonce\":\"n-b3255fac56424cba4045\",\"outcome\":{\"payment_ref\":\"PM-66104\",\"status\":\"paid\"},\"prev_hash\":\"cc4930ed2ecb9dc79535f3af383c30f26671866c1bdf2bf7afeb3e97881b7486\"}"
+  },
+  {
+    "file": "r1-14.aep.json",
+    "verdict": "DENY",
+    "reason": "expired",
+    "now": 1797051325,
+    "consumed": [
+      "n-272336e7758fae35b3b6"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":960,\"currency\":\"GBP\",\"license_ref\":\"LIC-4410\",\"seats\":40},\"context\":{\"contract_ref\":\"CN-2207\",\"term_months\":12},\"method\":\"renew_license\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:license-renewer-5\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:it-licensing-07\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"fd8c117535bb878aa03307408e50ca179184bf4f621612e7252978faf13f1280d645f981950fb4471f625b5042d00a4f9f9c1e431cf6396093f53e31ccbbc100\"},\"issued_at\":1794545724,\"mandate\":{\"body\":{\"agent_id\":\"agent:license-renewer-5\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1797051324,\"iat\":1794545724,\"principal_id\":\"principal:it-licensing-07\",\"scope\":{\"allowed_methods\":[\"renew_license\"],\"max_amount\":1500},\"v\":\"aep-mandate/1\"},\"sig\":\"bfca3b79dc3df6a83621dc6dc3747a4dd35b3783ee34bbdc0b1fd38c1e7089073b74e3bdabb80fcc622aa679362bfb7590c0e2f400d5f3ffac5b61e59f30950d\"},\"measurements\":{\"action_sha256\":\"2ed216d7f2aa06ab2b4a1c1d6273dc255cdd335e864cea61608da0774d764ca1\",\"outcome_sha256\":\"8a7d85b5f0dd3a8c170a3b9089eddd4400025c49fdd9589da9f6744e490eaa17\"},\"nonce\":\"n-c586b75633b86810d982\",\"outcome\":{\"renewal_ref\":\"RN-5531\",\"status\":\"renewed\"},\"prev_hash\":\"6c4aa7160b66c5c0393597225888e14eac64f183014357b2d73262f72ffbe461\"}"
+  },
+  {
+    "file": "r1-15.aep.json",
+    "verdict": "DENY",
+    "reason": "content_mutated",
+    "now": 1795394387,
+    "consumed": [
+      "n-c5d80035038c4674c9d2",
+      "n-6de19ea92b724a498e84",
+      "n-488f1681f980619ebc92"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":100,\"from\":\"EUR\",\"to\":\"USD\"},\"context\":{\"desk\":\"spot\",\"quote_ref\":\"QT-55011\"},\"method\":\"convert_currency\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:fx-converter-7\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:fx-desk-23\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"b40838f0b50693eabb9385fb784b36205e1810b45a22f3a559770b56856c66bd197160052eac7f4cdc542c4ee7284bc30849f9e41475ab8f3ada73b25ec30c0b\"},\"issued_at\":1795333751,\"mandate\":{\"body\":{\"agent_id\":\"agent:fx-converter-7\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795592951,\"iat\":1795333751,\"principal_id\":\"principal:fx-desk-23\",\"scope\":{\"allowed_methods\":[\"convert_currency\"],\"max_amount\":250},\"v\":\"aep-mandate/1\"},\"sig\":\"8fe90ffdbc68353e0df0efdd877fc012559903ae0ac61f0f78886f20b0b31bbb6d827ddadeaec4650cc8011cd18bb117976ebd1206b72f97a19cf92e37aad30a\"},\"measurements\":{\"action_sha256\":\"29b683eb7443d5e945bfb63a9f3dabc4d831077ef765b9d2a7894aa74f023b59\",\"outcome_sha256\":\"40f9a00305d48867cc6e762d9a8db11889685094d9106d21c1ca511a179a1ead\"},\"nonce\":\"n-7aeac6c538ca3cccc33c\",\"outcome\":{\"conversion_ref\":\"CV-1907\",\"status\":\"converted\"},\"prev_hash\":\"04e54b8b8c33df340b7224cb4a368c22f6a95669a056caf2585faa870ba8bb43\"}"
+  },
+  {
+    "file": "r1-16.aep.json",
+    "verdict": "DENY",
+    "reason": "credential_sig_invalid",
+    "now": 1796521842,
+    "consumed": [
+      "n-b68c58df6caf0c9d0659"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":150,\"court_ref\":\"CT-9\",\"currency\":\"EUR\",\"matter_ref\":\"M-2209\"},\"context\":{\"deadline_ref\":\"DL-1130\",\"doc_type\":\"notice\"},\"method\":\"file_document\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:filing-clerk-3\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:legal-17\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"6a86c177c6c59e2619a6ad83a37c6dc9141980b95aefdf2122481818129fba103d7432cbcccf31e1b6ea05f23259ad53d62ddf5cf5eb90f6b5a424c0395f3f0a\"},\"issued_at\":1794590750,\"mandate\":{\"body\":{\"agent_id\":\"agent:filing-clerk-3\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1797096350,\"iat\":1794590750,\"principal_id\":\"principal:legal-71\",\"scope\":{\"allowed_methods\":[\"file_document\"],\"max_amount\":500},\"v\":\"aep-mandate/1\"},\"sig\":\"b44ff082253176d67603ef7f30d32b5f9ee1b9acd479a1b0278180ce34dfccc9dc9cd70754c634d24621116b8e6d6f43398018bc42c7d838dcc9bfa572bdd705\"},\"measurements\":{\"action_sha256\":\"cb06b9d7f4a3337353cafd089f3604dfc68b7c4d489c7bbf2466cd2d98fc1e41\",\"outcome_sha256\":\"0a7dbaaf25025bcc985ab86820b550d22a89cf016233764798d73f5ac508f589\"},\"nonce\":\"n-1dfe1be082aa660f8378\",\"outcome\":{\"filing_ref\":\"FI-55028\",\"status\":\"filed\"},\"prev_hash\":\"f13f3043418798c2bce13046030dcd332e31f9ca0969ed43a8bcc69cb24db0af\"}"
+  },
+  {
+    "file": "r1-17.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "now": 1795715773,
+    "consumed": [
+      "N-19A82999CEAF0D598C25",
+      "n-19a82999ceaf0d598c20",
+      "n-19a82999ceaf0d598c250"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"recipient_ref\":\"C-77120\",\"template\":\"delay-apology-v2\"},\"context\":{\"case_ref\":\"CS-40917\",\"queue\":\"tier-2\"},\"method\":\"send_notice\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:notice-sender-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:care-team-21\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"4566cab3fab18202557c66b525c3795bc8b3c31a9e9b6a89910075ca585f77cf9d886aa78e36b043ded56919f43918c848100ff862844bd63be560954266670a\"},\"issued_at\":1795672629,\"mandate\":{\"body\":{\"agent_id\":\"agent:notice-sender-2\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1797055029,\"iat\":1795672629,\"principal_id\":\"principal:care-team-21\",\"scope\":{\"allowed_methods\":[\"send_notice\",\"issue_credit\"],\"max_amount\":800},\"v\":\"aep-mandate/1\"},\"sig\":\"63dd897a3c32dfcb3c5e9364850c28f9b6160ea7cb33595ff6b8523b8ba25a934b73393b8f5c84f6bd2e14a4aeaecd6f1f6e8f279ff67ad0bcd32af0d65a830b\"},\"measurements\":{\"action_sha256\":\"e773658fec57186d6b21302884335f9a3da6fa98dc115fd4694e49b875a1d905\",\"outcome_sha256\":\"f909d0c84119e44a2f40b5d13f365ab12296df3fdd73e9f8f72bdd11d098f935\"},\"nonce\":\"n-19a82999ceaf0d598c25\",\"outcome\":{\"message_ref\":\"MS-90022\",\"status\":\"queued\"},\"prev_hash\":\"d5786f73b89a11fff6a424cc5bcb467dc8fffe0d68037cd6f14d2c8333687aca\"}"
+  },
+  {
+    "file": "r1-18.aep.json",
+    "verdict": "DENY",
+    "reason": "malformed_aep",
+    "now": 1794642818,
+    "consumed": [
+      "n-2204f8f8d6a0fbfacc78"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"employee_ref\":\"E-55120\",\"profile\":\"standard\"},\"context\":{\"site\":\"remote\",\"ticket\":\"HR-20931\"},\"method\":\"provision_account\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:onboarding-helper-4\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:hr-ops-15\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"e6c2bee7f2710db78b588755d989226712e672dd9ea847a441d05dbe441eb095f8b95d2a967cbaf8cb3739ed39730b315b088dc3ab903d2b85bd48f6f5689009\"},\"issued_at\":1794024727,\"mandate\":{\"body\":{\"agent_id\":\"agent:onboarding-helper-4\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1795839127,\"iat\":1794024727,\"principal_id\":\"principal:hr-ops-15\",\"scope\":{\"allowed_methods\":[\"provision_account\",\"revoke_account\"]},\"v\":\"aep-mandate/1\"},\"sig\":\"c132b2656832f39f64c55d8400caace70d7b1a24b8499de69202cceeccd34cd58e2ab057a84a479e31ad72cb4aa48db6f59a69c8f28a5b2ee22f057cbdf67707\"},\"measurements\":[\"16f168e072b5d27bce5831ef7736341746ebfca4baf231101690029969607acb\",\"cefb43b426f8925a3ad88b7fcedd163a8a182a830a10162df15270391aec3a6b\"],\"nonce\":\"n-98b0ab5b2790ca34da21\",\"outcome\":{\"account_ref\":\"AC-31207\",\"status\":\"provisioned\"},\"prev_hash\":\"3e1dfa3d03aef78601330b8bd19c3d939993d609182e5d4836e6bed3c46caefd\"}"
+  },
+  {
+    "file": "r1-19.aep.json",
+    "verdict": "DENY",
+    "reason": "malformed_mandate",
+    "now": 1795413749,
+    "consumed": [
+      "n-0e7e0b44a6f2342c6ad1"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":8800,\"currency\":\"EUR\",\"po_ref\":\"PO-33018\"},\"context\":{\"buyer_ref\":\"B-14\",\"requisition_ref\":\"RQ-7702\"},\"method\":\"issue_purchase_order\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:po-issuer-5\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":[{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:procurement-14\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"}],\"sig\":\"b903c40f61eed52c27882ac45b7136f00fa89001b702c26afc30d1ddd9b61e814ddaa48f247336a38f25a5b417a9956c079fcd779d16c58beda087873be8d60b\"},\"issued_at\":1794668048,\"mandate\":{\"body\":{\"agent_id\":\"agent:po-issuer-50\",\"agent_pub\":\"7b1476a607b1427c9987f04621307ba97842fe5e985dfb76c9bc9728306f4a5a\",\"exp\":1795791248,\"iat\":1794668048,\"principal_id\":\"principal:procurement-14\",\"scope\":{\"allowed_methods\":[\"issue_purchase_order\"],\"max_amount\":9000},\"v\":\"aep-mandate/1\"},\"sig\":\"e8ebb05fa78b635b12a96105a9ed1fbfcecd6e0ddecde222ba424d13bf31c2164a72b6e4465692e779727dc3c1a95c7a5dbc662ed8db406a0904c270d350880e\"},\"measurements\":{\"action_sha256\":\"ec09fcdaa719a656591c66ad3864a5d4a6be8a7f05b625209f3e5045de01473d\",\"outcome_sha256\":\"fcc4451f142c464e849e81e27d860525059bfb9f9545fd66ce6a322482ba6565\"},\"nonce\":\"n-9a8ad81d611a007fd01f\",\"outcome\":{\"po_status_ref\":\"PS-1130\",\"status\":\"issued\"},\"prev_hash\":\"35f4a6cf2c92f21f27f491150cc1689c3dc9d87ef18a57983e9d6cc9c0c01864\"}"
+  },
+  {
+    "file": "r1-20.aep.json",
+    "verdict": "DENY",
+    "reason": "scope_violation",
+    "now": 1795790478,
+    "consumed": [
+      "n-e490c1b6345aa0c2ea85",
+      "n-cd18abc682d0971976bd"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":2001,\"catalog_ref\":\"CAT-2290\",\"currency\":\"CHF\",\"qty\":12},\"context\":{\"cost_center\":\"CC-310\",\"requested_by_ref\":\"R-118\"},\"method\":\"order_supplies\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:supply-orderer-8\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:lab-stores-02\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"f44134bab2449116e96d403af060ca080f500759b07936052d393c60ed4be173d3b8b9ad09831fd7a511e3903b90431536271c6cfbb8dd7a94ccb2194a91cf03\"},\"issued_at\":1795221177,\"mandate\":{\"body\":{\"agent_id\":\"agent:supply-orderer-8\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1796949177,\"iat\":1795221177,\"principal_id\":\"principal:lab-stores-02\",\"scope\":{\"allowed_methods\":[\"order_supplies\"],\"max_amount\":2000},\"v\":\"aep-mandate/1\"},\"sig\":\"726d476df06c3e3288c9dfd59766d6e586943d0f3105b04487ef9decf2b0db418e52f577f18a1d4ae2fa6b5fba88e4dd588f1cde92eabd521a1e12a6db59c608\"},\"measurements\":{\"action_sha256\":\"0116c9c78d3092ea2e94015dbd64b0b4789199ba2bfc62ed15771da19566f745\",\"outcome_sha256\":\"2ba0a8534fc0a0ad0abd72cc12e9fa816f23829ab0b4fd8d536bfb35474ba86d\"},\"nonce\":\"n-d437df1d22a11c7fadd4\",\"outcome\":{\"order_ref\":\"OR-70315\",\"status\":\"ordered\"},\"prev_hash\":\"18df492936403ed9d4c411519db4798cb8290a2eb547e9dc66f28795a9993ddd\"}"
+  },
+  {
+    "file": "r1-21.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "now": 1796744407,
+    "consumed": [
+      "n-74c79271545425e66f82",
+      "n-64b36c4351dd7d52f7ce"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":4200,\"currency\":\"USD\",\"lane\":\"OAK-SEA\",\"shipment_ref\":\"SH-80314\"},\"context\":{\"request\":\"RQ-5521\",\"source\":\"planner\"},\"method\":\"book_freight\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:freight-booker-3\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:fleet-ops-12\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"582a818f3e0cc212ce2249cc30651bc40910c5fde34e6db4424a164cf93f6999fff7bdf87224d4254ea4b5778891e2fc4b828dfc81ee3cfcea9b8e4646fd320f\"},\"issued_at\":1795189207,\"mandate\":{\"body\":{\"agent_id\":\"agent:freight-booker-3\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1796744407,\"iat\":1795189207,\"principal_id\":\"principal:fleet-ops-12\",\"scope\":{\"allowed_methods\":[\"book_freight\",\"cancel_freight\"],\"max_amount\":5000},\"v\":\"aep-mandate/1\"},\"sig\":\"101b99576324ea5ab28c412940624e5bb65aab67a5a3d4e6e5015d846d209f5bfb3a4419aa0aa5f604eca1582a3592106612584d6d4cc4c3d96203ce6d641e04\"},\"measurements\":{\"action_sha256\":\"16bb2aa5695e5ba2b7233c73ef3046e3a2a43fff8ac3513f3380388d0181cc36\",\"outcome_sha256\":\"8457a3bce5edc1fdf7125d8d6be99d8855a701969966b1bd49413f14768fcda5\"},\"nonce\":\"n-5eaf6c8d65e3fa5bcd7f\",\"outcome\":{\"booking_ref\":\"BK-11902\",\"status\":\"booked\"},\"prev_hash\":\"c0ddc28f6f12f48cb4e77faf4b695295475bb7c00f454ddbce1c0e3c710acf31\"}"
+  },
+  {
+    "file": "r1-22.aep.json",
+    "verdict": "DENY",
+    "reason": "credential_sig_invalid",
+    "now": 1795598992,
+    "consumed": [
+      "n-a3d7b44c7f8f74acd78e",
+      "n-cad606456183b35f3d14"
+    ],
+    "canonical_core": "{\"action\":{\"args\":{\"amount\":3100,\"currency\":\"USD\",\"date_ref\":\"D-2026-12-04\",\"venue_ref\":\"VN-310\"},\"context\":{\"event_ref\":\"EV-1204\",\"headcount\":120},\"method\":\"book_venue\"},\"aep_version\":\"aep-sandbox/1\",\"agent_id\":\"agent:venue-booker-6\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"credential\":{\"body\":{\"issuer_id\":\"test-issuer:r1-anchor-a\",\"issuer_pub\":\"7eb56a2495379f76aa61e36b13973a909a9d30f0b3634d2cd91c9dd796dc37b4\",\"principal_id\":\"principal:events-09\",\"principal_pub\":\"2501814e2f6daa42070cd42728e022da6e68ee1b019f79260c09490e16fde5fd\",\"v\":\"aep-credential/1\"},\"sig\":\"5b0b16f5625decf8d35f69102314f6bd69d2889e43a54d4c24199ab12c6ca1ac0debd09a5f9d4291ae8f088d8e12dcf87976d886ce56d3515266b3b2596f760f\"},\"issued_at\":1795213340,\"mandate\":{\"body\":{\"agent_id\":\"agent:venue-booker-6\",\"agent_pub\":\"03d9fdcb94d78752da2f123692774150e9fbdfd7ff8b715b63d0e244f9c555df\",\"exp\":1797114140,\"iat\":1795213340,\"principal_id\":\"principal:events-09\",\"scope\":{\"allowed_methods\":[\"book_venue\"],\"max_amount\":3500},\"v\":\"aep-mandate/1\"},\"sig\":\"3861d40f5c7b448379ff42a03cb2d96a7f86e93db44185bc51b9687a7544ee2168a2cd181f9048559abad64435d9101a1caf7cf677553c24d15d0ac921c5d505\"},\"measurements\":{\"action_sha256\":\"8d8af04f8dffc5da3f7985d2313f96dc506f6e043eafac6cb03d65dee6afbddc\",\"outcome_sha256\":\"5e949ee71e62f39688ca6bc2c4098be992e394f4f125e0da53104f8d9ba0fc1d\"},\"nonce\":\"n-62b66b6488222d4597e6\",\"outcome\":{\"hold_ref\":\"HD-7716\",\"status\":\"held\"},\"prev_hash\":\"c9782e857cbc4ad35b72e2219615fbe41075dcc7c96d3c779ce59cfae90aa22b\"}"
+  }
+]

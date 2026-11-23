@@ -1,0 +1,134 @@
+[
+  {
+    "file": "r1-01.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": true
+  },
+  {
+    "file": "r1-02.aep.json",
+    "verdict": "DENY",
+    "reason": "expired",
+    "in_profile": true
+  },
+  {
+    "file": "r1-03.aep.json",
+    "verdict": "DENY",
+    "reason": "measurement_mismatch",
+    "in_profile": true
+  },
+  {
+    "file": "r1-04.aep.json",
+    "verdict": "DENY",
+    "reason": "issuer_not_listed",
+    "in_profile": true
+  },
+  {
+    "file": "r1-05.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": true
+  },
+  {
+    "file": "r1-06.aep.json",
+    "verdict": "DENY",
+    "reason": "content_mutated",
+    "in_profile": true
+  },
+  {
+    "file": "r1-07.aep.json",
+    "verdict": "DENY",
+    "reason": "replayed",
+    "in_profile": true
+  },
+  {
+    "file": "r1-08.aep.json",
+    "verdict": "DENY",
+    "reason": "principal_sig_invalid",
+    "in_profile": true
+  },
+  {
+    "file": "r1-09.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": true
+  },
+  {
+    "file": "r1-10.aep.json",
+    "verdict": "DENY",
+    "reason": "scope_violation",
+    "in_profile": true
+  },
+  {
+    "file": "r1-11.aep.json",
+    "verdict": "DENY",
+    "reason": "agent_binding_mismatch",
+    "in_profile": true
+  },
+  {
+    "file": "r1-12.aep.json",
+    "verdict": "DENY",
+    "reason": "aep_sig_invalid",
+    "in_profile": true
+  },
+  {
+    "file": "r1-13.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": true
+  },
+  {
+    "file": "r1-14.aep.json",
+    "verdict": "DENY",
+    "reason": "expired",
+    "in_profile": true
+  },
+  {
+    "file": "r1-15.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": false
+  },
+  {
+    "file": "r1-16.aep.json",
+    "verdict": "DENY",
+    "reason": "credential_sig_invalid",
+    "in_profile": true
+  },
+  {
+    "file": "r1-17.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": true
+  },
+  {
+    "file": "r1-18.aep.json",
+    "verdict": "DENY",
+    "reason": "malformed_aep",
+    "in_profile": true
+  },
+  {
+    "file": "r1-19.aep.json",
+    "verdict": "DENY",
+    "reason": "malformed_mandate",
+    "in_profile": true
+  },
+  {
+    "file": "r1-20.aep.json",
+    "verdict": "DENY",
+    "reason": "scope_violation",
+    "in_profile": true
+  },
+  {
+    "file": "r1-21.aep.json",
+    "verdict": "ALLOW",
+    "reason": null,
+    "in_profile": true
+  },
+  {
+    "file": "r1-22.aep.json",
+    "verdict": "DENY",
+    "reason": "credential_sig_invalid",
+    "in_profile": true
+  }
+]

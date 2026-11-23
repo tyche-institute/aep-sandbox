@@ -1,0 +1,200 @@
+[
+  {
+    "file": "r1-01.aep.json",
+    "class": "probe",
+    "scored": false,
+    "verdict": "ALLOW",
+    "reason": null,
+    "spec_clause": "s2 Numbers ('integers within +-(2^53-1)', read as inclusive)",
+    "design_note": "signed payload carries 9007199254740991 and -9007199254740991; inside the profile if 'within' is inclusive; both references and the spec reading give ALLOW"
+  },
+  {
+    "file": "r1-02.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "expired",
+    "spec_clause": "s4 step 5g before step 6",
+    "design_note": "now is one day after exp; the nonce string is in the consumed set"
+  },
+  {
+    "file": "r1-03.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "measurement_mismatch",
+    "spec_clause": "s4 step 4 before step 5b",
+    "design_note": "measurements.outcome_sha256 is the digest of a different outcome (core re-signed); credential issued by an unlisted issuer id and key (anchor-c)"
+  },
+  {
+    "file": "r1-04.aep.json",
+    "class": "coverage",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "issuer_not_listed",
+    "spec_clause": "s4 step 5b ('with exactly the public key the credential carries')",
+    "design_note": "credential names listed issuer id anchor-b but carries (and is validly signed by) the anchor-a key; both ids and both keys are listed, the pair is not"
+  },
+  {
+    "file": "r1-05.aep.json",
+    "class": "probe",
+    "scored": false,
+    "verdict": null,
+    "reason": null,
+    "spec_clause": "s1 (a JSON object) and s2: the specification does not say how a duplicate member name is treated",
+    "design_note": "raw text carries the top-level nonce member twice: first a consumed decoy, then the signed value. Last-wins parsers: ALLOW; first-wins: content_mutated (hash over the decoy); a parser that rejects duplicates may say malformed_aep | NO ASSIGNED VALUE: python=ALLOW, js=ALLOW, spec reading=UNDEFINED"
+  },
+  {
+    "file": "r1-06.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "content_mutated",
+    "spec_clause": "s4 step 2 before step 5f",
+    "design_note": "receipt_hash is a well-formed lowercase hex SHA-256 of a different core (aep_sig is valid over the real core); amount 450 exceeds max_amount 300"
+  },
+  {
+    "file": "r1-07.aep.json",
+    "class": "boundary",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "replayed",
+    "spec_clause": "s4 step 6 (nonce string is in the consumed set, same value and type)",
+    "design_note": "consumed holds the exact nonce string between two decoys"
+  },
+  {
+    "file": "r1-08.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "principal_sig_invalid",
+    "spec_clause": "s4 step 5d before step 5e",
+    "design_note": "mandate signed by a key other than the credential's principal key (principal ids equal); mandate agent_id differs from the package agent_id (agent_pub equal)"
+  },
+  {
+    "file": "r1-09.aep.json",
+    "class": "probe",
+    "scored": false,
+    "verdict": null,
+    "reason": null,
+    "spec_clause": "s2 ('object keys sorted': the sort order is not defined)",
+    "design_note": "action.context member names U+FF34.. (fullwidth 'Tag') and U+1F4CE: code point / UTF-8 byte order puts U+FF34 first (Python signer); UTF-16 code unit order (JS sort) puts the emoji first -> different canonical bytes -> JS content_mutated | NO ASSIGNED VALUE: python=ALLOW, js=DENY:content_mutated, spec reading=UNDEFINED"
+  },
+  {
+    "file": "r1-10.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "scope_violation",
+    "spec_clause": "s4 step 5f before step 5g",
+    "design_note": "amount 1750 exceeds max_amount 1500; mandate body carries no exp (validly signed)"
+  },
+  {
+    "file": "r1-11.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "agent_binding_mismatch",
+    "spec_clause": "s4 step 5e before step 5f",
+    "design_note": "mandate validly signed but its agent_pub is another key (agent_id equal); method reboot_host is not in allowed_methods"
+  },
+  {
+    "file": "r1-12.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "aep_sig_invalid",
+    "spec_clause": "s4 step 3 before step 5g",
+    "design_note": "aep_sig made by a different key than agent_pub (receipt_hash correct); now is one hour after exp"
+  },
+  {
+    "file": "r1-13.aep.json",
+    "class": "boundary",
+    "scored": true,
+    "verdict": "ALLOW",
+    "reason": null,
+    "spec_clause": "s4 step 5f ('not exceed': amount == max_amount is in scope)",
+    "design_note": "args.amount equals scope.max_amount exactly (12500)"
+  },
+  {
+    "file": "r1-14.aep.json",
+    "class": "boundary",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "expired",
+    "spec_clause": "s4 step 5g ('after' the expiry: now == exp + 1)",
+    "design_note": "now is exactly one second after exp"
+  },
+  {
+    "file": "r1-15.aep.json",
+    "class": "probe",
+    "scored": false,
+    "verdict": null,
+    "reason": null,
+    "spec_clause": "s2 Numbers (non-integer number: outside the profile under a lexical reading; the spec does not define the verdict)",
+    "design_note": "args.amount written as 100.0; Python signs over '100.0', JS re-serialises 100 -> content_mutated in JS, ALLOW in Python | NO ASSIGNED VALUE: python=ALLOW, js=DENY:content_mutated, spec reading=UNDEFINED"
+  },
+  {
+    "file": "r1-16.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "credential_sig_invalid",
+    "spec_clause": "s4 step 5c before step 5d",
+    "design_note": "last byte of credential.sig altered; mandate principal_id differs from the credential principal_id (mandate validly signed by the principal key)"
+  },
+  {
+    "file": "r1-17.aep.json",
+    "class": "coverage",
+    "scored": true,
+    "verdict": "ALLOW",
+    "reason": null,
+    "spec_clause": "s4 step 5f ('an amount present': no amount, cap does not apply) + step 6 (consumed values differ from the nonce by value)",
+    "design_note": "amount-less action under a cap; consumed set holds near-miss strings of the nonce (upper case, one character changed, one character appended) but not the nonce"
+  },
+  {
+    "file": "r1-18.aep.json",
+    "class": "coverage",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "malformed_aep",
+    "spec_clause": "s4 step 1 ('measurements, if present, must be an object')",
+    "design_note": "measurements is a JSON array holding the two correct digests; core re-signed so only the structure defect is present"
+  },
+  {
+    "file": "r1-19.aep.json",
+    "class": "ordering",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "malformed_mandate",
+    "spec_clause": "s4 step 5a before step 5e",
+    "design_note": "credential.body is a JSON array wrapping the credential body (core re-signed); the mandate is validly signed but names another agent id and key"
+  },
+  {
+    "file": "r1-20.aep.json",
+    "class": "boundary",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "scope_violation",
+    "spec_clause": "s4 step 5f (amount exceeds max_amount by 1)",
+    "design_note": "args.amount = 2001, scope.max_amount = 2000"
+  },
+  {
+    "file": "r1-21.aep.json",
+    "class": "boundary",
+    "scored": true,
+    "verdict": "ALLOW",
+    "reason": null,
+    "spec_clause": "s4 step 5g + s5 first note (now == exp is not expired)",
+    "design_note": "now equals mandate exp exactly; strict comparison means not expired"
+  },
+  {
+    "file": "r1-22.aep.json",
+    "class": "coverage",
+    "scored": true,
+    "verdict": "DENY",
+    "reason": "credential_sig_invalid",
+    "spec_clause": "s4 step 5c",
+    "design_note": "credential.sig is a genuine anchor-a signature, but over a body whose principal_id differs by two transposed digits"
+  }
+]
