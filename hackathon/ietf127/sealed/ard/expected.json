@@ -1,0 +1,82 @@
+[
+  {
+    "id": "a2-01",
+    "outcome": "failed",
+    "reason": "manifest-expired",
+    "case": "expired-manifest",
+    "clause": "Section 3.5 'issuedAt' and 'expiresAt'",
+    "why": "Publisher manifest with expiresAt 2026-11-01T00:00:00Z; now (context.json) is 2026-11-14T12:00:00Z. Readings: failed; verified (expiresAt only for third-party evaluations, or no verifier rule); unverified."
+  },
+  {
+    "id": "a2-02",
+    "outcome": "failed",
+    "reason": "signed-bytes-not-jcs",
+    "case": "non-canonical-signing-input",
+    "clause": "Section 3.5 'signature' (JWS computed over the JCS serialization)",
+    "why": "Variant B; the embedded and signed payload is the manifest without signature as indented JSON in insertion order. The JWS verifies over those bytes; they are not the JCS bytes. A verifier that checks the JWS and then compares parsed values returns verified."
+  },
+  {
+    "id": "a2-03",
+    "outcome": "verified",
+    "reason": "all-checks-pass",
+    "case": "control-two-manifests",
+    "clause": "Section 3.5 (trustManifests), 3.5.1 Signer Profile",
+    "why": "trustManifests[] only (no trustManifest member); publisher manifest plus a second-slot manifest; both variant B (embedded). A verifier that reads only trustManifest, or only variant A, will not return verified."
+  },
+  {
+    "id": "a2-04",
+    "outcome": "failed",
+    "reason": "attestation-digest-mismatch",
+    "case": "attestation-digest-mismatch",
+    "clause": "Section 3.5.2 (Pinning the External Attestation Document); 6.4 External Attestation Pinning",
+    "why": "Validly signed manifest whose attestations[0].digest differs from the SHA-256 of evidence/action-record.cose in the last hex digit."
+  },
+  {
+    "id": "a2-05",
+    "outcome": "failed",
+    "reason": "attestation-subject-mismatch",
+    "case": "attestation-names-identifier-not-digest",
+    "clause": "Section 3.5.2 (signed subject claim that identifies the resource's identifier and/or the artifact's content digest); 6.4",
+    "why": "The pinned record (pin matches) is signed and names the right identifier, but the artifact digest of a previous artifact version (refund_limit_minor 20000). Our reading: the claim must match both the identifier and the entry digest. Reading 'identifier alone suffices' gives verified."
+  },
+  {
+    "id": "a2-06",
+    "outcome": "unverified",
+    "reason": "digest-alg-not-implemented",
+    "case": "unknown-digest-alg",
+    "clause": "Section 3.5.2 last paragraph (<alg>:<hex>, sha256 MTI); 3.2.3 digest; 6.4",
+    "why": "attestations[0].digest is 'x-test256:' + the correct SHA-256 hex. Our reading: the pin cannot be checked, the text defines no verdict, so unverified. Readings: failed (reject); verified (prefix ignored, hex compared)."
+  },
+  {
+    "id": "a2-07",
+    "outcome": "verified",
+    "reason": "all-checks-pass",
+    "case": "control-single",
+    "clause": "Section 3.5, 3.5.1 (a)-(c), 3.5.2, 6.4",
+    "why": "Single publisher manifest, variant A (detached). Every check passes."
+  },
+  {
+    "id": "a2-08",
+    "outcome": "failed",
+    "reason": "attestation-subject-mismatch",
+    "case": "attestation-transplant",
+    "clause": "Section 3.5.2 (Binding the Attestation to the Target Artifact); 6.1 Attestation Transplantation; 6.4",
+    "why": "Entry for other-assistant with a valid publisher manifest; the attestation item is copied from the refund-assistant entry (pin matches the file). The signed statement names refund-assistant and its artifact digest, not this entry."
+  },
+  {
+    "id": "a2-09",
+    "outcome": "failed",
+    "reason": "subject-entry-mismatch",
+    "case": "subject-entry-mismatch",
+    "clause": "Section 3.5.1 Publisher Profile (a)",
+    "why": "subject.version is 1.0.1; the parent entry says 1.0.0. Signature valid."
+  },
+  {
+    "id": "a2-10",
+    "outcome": "failed",
+    "reason": "kid-not-bound-to-identity",
+    "case": "key-not-bound-to-identity",
+    "clause": "Section 3.5 'identity' and 'signature' (kid); 3.5.1 (b), (c)",
+    "why": "identity is did:web:example.org; signed with the key of did:web:third-party.example.net and kid says so. A verifier that resolves kid from any known DID document and does not tie it to identity returns verified."
+  }
+]

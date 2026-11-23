@@ -1,0 +1,110 @@
+[
+  {
+    "id": "c1-01",
+    "outcome": "failed",
+    "reason": "held-value-rejected",
+    "side": "json",
+    "case": "jcs-duplicate-member",
+    "why": "Valid JSON-side record, but the held JSON text repeats member 'currency' with the same value. A lenient parser gets the same data model and a matching digest; RFC 8785 input must be I-JSON, which forbids duplicate names.",
+    "clause": "CPB -06 Conventions 'Failed' (obtained artifact is not input the construction accepts) and 'Cross-Profile Comparability' (not valid JSON for jcs); RFC 8785 Section 3.1; RFC 7493 Section 2.3"
+  },
+  {
+    "id": "c1-02",
+    "outcome": "failed",
+    "reason": "recreated-digest-mismatch",
+    "side": "cbor",
+    "case": "cbor-indefinite",
+    "why": "Digest over CBOR with an indefinite-length top-level map (bf ... ff); 271 = 1 claimed.",
+    "clause": "CDE -00 'Verifying the Content Binding'; RFC 8949 Section 4.2.1 (no indefinite-length items)"
+  },
+  {
+    "id": "c1-03",
+    "outcome": "failed",
+    "reason": "recreated-digest-mismatch",
+    "side": "cbor",
+    "case": "cbor-nonshortest-int",
+    "why": "Digest over CBOR with amount_minor in a 4-byte head (1a0000109a) instead of 19109a; 271 = 1 claimed.",
+    "clause": "CDE -00 'Verifying the Content Binding'; RFC 8949 Section 4.2.1 (preferred serialization, shortest argument)"
+  },
+  {
+    "id": "c1-04",
+    "outcome": "unverified",
+    "reason": "encoding-not-implemented",
+    "side": "cbor",
+    "case": "cbor-unknown-encoding",
+    "why": "271 = 99 (not registered); digest is the core deterministic digest, so a verifier that assumes value 1 reports verified.",
+    "clause": "CDE -00 'Verifying the Content Binding' (value not recognized: MUST report unverified rather than failed)"
+  },
+  {
+    "id": "c1-05",
+    "outcome": "failed",
+    "reason": "signature-invalid",
+    "side": "json",
+    "case": "json-bad-signature",
+    "why": "JSON-side reference record with the last signature byte flipped. Content binding alone would verify.",
+    "clause": "RFC 9052 Section 4.4; cell rule in README (a bad signature fails the vector); CPB -06 'Signature-Valid'"
+  },
+  {
+    "id": "c1-06",
+    "outcome": "failed",
+    "reason": "content-type-mismatch",
+    "side": "cbor",
+    "case": "cbor-encoding-with-json-ct",
+    "why": "271 = 1 paired with preimage-content-type application/json; digest is the correct core deterministic digest, so a verifier that skips the consistency check reports verified.",
+    "clause": "CDE -00 'Consistency with preimage-content-type' (MUST report failed, without recomputation; check comes first)"
+  },
+  {
+    "id": "c1-07",
+    "outcome": "verified",
+    "reason": "recreated-digest-match",
+    "side": "cbor",
+    "case": "reference-cbor",
+    "why": "CBOR-side reference record: label 271 = 1 and the digest of the core deterministic bytes.",
+    "clause": "CDE -00 'Verifying the Content Binding' (MUST encode with the identified encoding); RFC 8949 Section 4.2.1"
+  },
+  {
+    "id": "c1-08",
+    "outcome": "unverified",
+    "reason": "encoding-absent",
+    "side": "cbor",
+    "case": "cbor-encoding-absent",
+    "why": "No label 271; 259 = application/cbor; digest is the core deterministic digest. Inferring the encoding from 259 would give verified.",
+    "clause": "CDE -00 'Verifying the Content Binding' (absent: MUST NOT infer from 259; MUST report unverified)"
+  },
+  {
+    "id": "c1-09",
+    "outcome": "verified",
+    "reason": "recreated-digest-match",
+    "side": "json",
+    "case": "reference-json",
+    "why": "JSON-side reference record: Hash Envelope payload and cpb-refs digest both equal SHA-256 of the JCS bytes.",
+    "clause": "CPB -06 'Hash Envelope Mode' and 'Cross-Profile Comparability' (Verified); RFC 8785 Section 3"
+  },
+  {
+    "id": "c1-10",
+    "outcome": "failed",
+    "reason": "recreated-digest-mismatch",
+    "side": "json",
+    "case": "json-tampered-held-byte",
+    "why": "Valid JSON-side record; the held value has amount_minor 4251 instead of 4250 (one byte).",
+    "clause": "CPB -06 'Hash Envelope Mode' (compare the raw result to the COSE payload) and 'Cross-Profile Comparability' (unequal values produce Failed)"
+  },
+  {
+    "id": "c1-11",
+    "outcome": "failed",
+    "reason": "recreated-digest-mismatch",
+    "side": "cbor",
+    "case": "cbor-unsorted-keys",
+    "why": "Digest over CBOR whose map keys follow JCS (UTF-16) order, not bytewise order of encoded keys; 271 = 1 claimed.",
+    "clause": "CDE -00 'Verifying the Content Binding'; RFC 8949 Section 4.2.1 (bytewise lexicographic key order)"
+  },
+  {
+    "id": "c1-12",
+    "outcome": "failed",
+    "reason": "recreated-digest-mismatch",
+    "side": "cbor",
+    "case": "cbor-header-jcs-digest",
+    "why": "Header declares core-deterministic (271 = 1, application/cbor) but the digest was taken over the JCS bytes. A verifier holding the value re-creates the CBOR preimage and gets a different digest.",
+    "clause": "CDE -00 'Verifying the Content Binding' and Terminology 'Failed'; Security Considerations last paragraph"
+  }
+]

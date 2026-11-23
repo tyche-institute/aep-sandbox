@@ -37,15 +37,28 @@ python3 tools/score.py your-return.json --key sealed/round1/expected.json
 18 vectors are scored. 4 are unscored: r1-01, r1-05, r1-09 and r1-15. `findings.md`
 explains r1-05, r1-09 and r1-15: the specification leaves their verdict open.
 
+## Cell 1, cell 2 and the guess ledger
+
+Added later on 23 November 2026:
+
+| file | what it is |
+|:--|:--|
+| `cell1/expected.json` | the key of cell 1 (one payload, 2 declared encodings), 12 vectors |
+| `ard/expected.json` | the key of cell 2 (ARD trust manifest), 10 vectors |
+| `ard/QUESTIONS-FOR-ARD-AUTHORS.md` | our list of questions for the authors of the ARD draft |
+| `guesses/GUESS-LEDGER.md` | what we measured before the seal, what we predicted, and where the builders chose between readings; published unchanged, whether the predictions held or not |
+
+All 4 files named in `../SEAL.sha256` are now here. Check them (run in `hackathon/ietf127/`):
+
+```sh
+(cd sealed && sha256sum -c ../SEAL.sha256)
+```
+
 ## Not released
 
-- The test signing keys and the ordering salt that the generator reads from `keys/` stay
-  private: with them anyone could make valid-looking vectors. Without them the generator
-  can be read but does not reproduce the vectors.
+- The test signing keys of Round 1, cell 1 and cell 2, and the ordering salt that the
+  Round 1 generator reads from `keys/`, stay private: with them anyone could make
+  valid-looking vectors. Without them the generator can be read but does not reproduce
+  the vectors.
 - Results of returns. Each sender sees the report on their own return first (rules,
   section 8).
-
-## Still to come, by Sunday 29 November 2026
-
-The other 3 files named in `../SEAL.sha256` (`cell1/expected.json`, `ard/expected.json`,
-`guesses/GUESS-LEDGER.md`).
