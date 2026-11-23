@@ -60,5 +60,11 @@ All 4 files named in `../SEAL.sha256` are now here. Check them (run in `hackatho
   Round 1 generator reads from `keys/`, stay private: with them anyone could make
   valid-looking vectors. Without them the generator can be read but does not reproduce
   the vectors.
-- Results of returns. Each sender sees the report on their own return first (rules,
-  section 8).
+- The return files and the letters of the senders.
+
+## Results
+
+Added later on 23 November 2026, after each sender had reviewed the report on their own
+return (rules, section 8): `../results/round1/RESULTS.md` (the table of results) and
+`../results/round1/QUESTIONS-TO-SPEC-v1.md` (the places where the returns found the
+specification silent).
